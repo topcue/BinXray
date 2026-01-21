@@ -11,9 +11,9 @@ from my_config import (
     DBG_DIR,
 )
 
-target_proj = "d_link"
+target_proj = "expat"
 # CSV_PATH = os.path.join(OUTPUT_DIR, f"{target_proj}_funcs.csv")
-CSV_PATH = os.path.join(BASE_PATH, "dataset_sample", target_proj, "d_link_funcs2.csv")
+CSV_PATH = os.path.join(BASE_PATH, "dataset_sample", target_proj, "expat_funcs.csv")
 
 # IDA 7.7 + Python 3.8 port of the original IDA 6.8 script
 

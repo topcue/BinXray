@@ -24,7 +24,7 @@ IDB_PATH_WIN = wsl_to_win_path(IDB_PATH)
 
 
 def main():
-    target_proj = "d_link"
+    target_proj = "expat"
     INPUT_DIR = os.path.join(BASE_PATH, "dataset_sample", target_proj, "bin")
 
     print(f"[*] IDA_SCRIPT_PATH: {IDA_SCRIPT_PATH}")
@@ -47,7 +47,7 @@ def main():
             file_list.append(f)
 
     #! TODO: Fix me
-    file_list = file_list[:1]
+    file_list = file_list
 
     for item in file_list:
         TARGET_PATH = os.path.join(INPUT_DIR, item)
