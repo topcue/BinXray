@@ -3,23 +3,9 @@ from my_config import setup_ida_sys_path, wsl_to_win_path
 setup_ida_sys_path()
 
 from my_config import (
-    BASE_PATH,
-    DBG_DIR,
-    RESULT_DIR,
-    OUTPUT_DIR,
-    RESULT_DIR,
-    DBG_DIR,
+    PICKLE_PATH,
+    CSV_PATH
 )
-
-# CSV_PATH = os.path.join(BASE_PATH, "dataset_sample", target_proj, "d_link_funcs2.csv")
-
-#! expat
-# target_proj = "expat"
-# CSV_PATH = os.path.join(OUTPUT_DIR, f"{target_proj}_funcs.csv")
-
-#! ffmpeg
-target_proj = "ffmpeg"
-CSV_PATH = os.path.join(OUTPUT_DIR, f"{target_proj}_funcs.csv")
 
 
 # IDA 7.7 + Python 3.8 port of the original IDA 6.8 script
@@ -42,8 +28,7 @@ from capstone import *
 
 
 CSV_PATH = wsl_to_win_path(CSV_PATH)
-RESULT_DIR = wsl_to_win_path(RESULT_DIR)
-DBG_DIR = wsl_to_win_path(DBG_DIR)
+PICKLE_PATH = wsl_to_win_path(PICKLE_PATH)
 
 
 def get_list():
@@ -183,39 +168,40 @@ def save_function(bFunc):
     p_name = _get_input_basename()
     f_name = bFunc.name
 
-    os.makedirs(RESULT_DIR, exist_ok=True)
-    file_name = os.path.join(RESULT_DIR, f"{p_name}_{f_name}.pkl")
+    os.makedirs(PICKLE_PATH, exist_ok=True)
+    file_name = os.path.join(PICKLE_PATH, f"{p_name}_{f_name}.pkl")
 
     with open(file_name, "wb") as f:
         pickle.dump(bFunc, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-def _load_dbg_map():
-    p_name = _get_input_basename()
-    dbg_file = os.path.join(DBG_DIR, f"{p_name}.txt")
-    dbg = {}
-    if os.path.exists(dbg_file):
-        with open(dbg_file, "r", encoding="utf-8", errors="ignore") as d:
-            for line in d:
-                line = line.strip()
-                if not line or ":" not in line:
-                    continue
-                name, addr = line.split(":", 1)
-                name = name.strip()
-                addr = addr.strip()
-                if not name or not addr:
-                    continue
-                try:
-                    dbg[name] = int(addr, 16)
-                except ValueError:
-                    pass
-    return dbg
+# def _load_dbg_map():
+#     p_name = _get_input_basename()
+#     dbg_file = os.path.join(DBG_DIR, f"{p_name}.txt")
+#     dbg = {}
+#     if os.path.exists(dbg_file):
+#         with open(dbg_file, "r", encoding="utf-8", errors="ignore") as d:
+#             for line in d:
+#                 line = line.strip()
+#                 if not line or ":" not in line:
+#                     continue
+#                 name, addr = line.split(":", 1)
+#                 name = name.strip()
+#                 addr = addr.strip()
+#                 if not name or not addr:
+#                     continue
+#                 try:
+#                     dbg[name] = int(addr, 16)
+#                 except ValueError:
+#                     pass
+#     return dbg
 
 
 def main():
     idaapi.auto_wait()
 
-    dbg = _load_dbg_map()
+    # dbg = _load_dbg_map()
+    dbg = None
     dump_functions(dbg)
 
     # old: Exit(1)

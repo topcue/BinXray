@@ -1,10 +1,15 @@
 import sys
 
-PROJECT_NAME = "binxray"
+SYSTEM_NAME = "binxray"
+PROJECT_NAME = "expat"
+
+DATASET_NAME = "dataset_my"
+if PROJECT_NAME in (("expat")):
+    DATASET_NAME = "dataset_sample"
 
 def setup_ida_sys_path():
     # Add any extra paths needed by IDA python (example: your site-packages)
-    ida_site_pkgs = f"C:\\Users\\user\\workspace\\IDA-python\\{PROJECT_NAME}\\Lib\\site-packages"
+    ida_site_pkgs = f"C:\\Users\\user\\workspace\\IDA-python\\{SYSTEM_NAME}\\Lib\\site-packages"
     if ida_site_pkgs not in sys.path:
         sys.path.insert(0, ida_site_pkgs)
     
@@ -33,34 +38,28 @@ def win_to_wsl_path(p):
         return WSL_PREFIX + p[len(WIN_PREFIX):]
     return p
 
+#! =============================================================================
+
 IDA_PATH = "/home/user/win_workspace/IDA/idat64.exe"
+BASE_PATH = f"/home/user/win_workspace/storage/{SYSTEM_NAME}"
 
-BASE_PATH = f"/home/user/win_workspace/storage/{PROJECT_NAME}"
+# funcs.csv
+CSV_PATH = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, f"{PROJECT_NAME}_funcs.csv")
 
-DATA_ROOT = os.path.join(BASE_PATH, "dataset")
-STRIP_PATH = os.path.join(BASE_PATH, "dataset_strip")
-LOG_PATH = os.path.join(BASE_PATH, "log")
-IDB_PATH = os.path.join(BASE_PATH, "idb")
-SAVE_ROOT = os.path.join(BASE_PATH, "extract")
+OUTPUT_DIR = os.path.join(BASE_PATH, f"output_{DATASET_NAME}_{PROJECT_NAME}")
 
-LOG_PATH = os.path.join(BASE_PATH, "log")
-IDB_PATH = os.path.join(BASE_PATH, "idb")
+LOG_PATH = os.path.join(OUTPUT_DIR, "log")
+IDB_PATH = os.path.join(OUTPUT_DIR, "idb")
 
 cur_script_dir_path = os.path.dirname(os.path.abspath(__file__))
-IDA_SCRIPT_PATH = os.path.join(cur_script_dir_path, "process.py")
+IDA_SCRIPT_PATH = os.path.join(cur_script_dir_path, "extract.py")
 
-DATA_ROOT_WIN = wsl_to_win_path(DATA_ROOT)
-SAVE_ROOT_WIN = wsl_to_win_path(SAVE_ROOT)
+
+PICKLE_PATH = os.path.join(OUTPUT_DIR, "pkl")
+
+
 
 NUM_JOBS = 24
-
-#!
-
-OUTPUT_DIR = "/home/user/win_workspace/storage/binxray/output"
-# CSV_PATH = os.path.join(OUTPUT_DIR, f"{target_proj}_funcs.csv")
-RESULT_DIR = os.path.join(OUTPUT_DIR, "result")
-DBG_DIR = os.path.join(OUTPUT_DIR, "dbg")
-
 
 def run_ida(args):
     cmd, out_path, err_path, debug = args
