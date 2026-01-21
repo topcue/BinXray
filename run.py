@@ -1,12 +1,6 @@
 import os
 import subprocess
 
-
-# INPUT_DIR = "dataset/sample/d_link/bin"
-# LOG_FILE = "log/tmp.log"
-# SCRIPT_PATH = "/home/user/BinXray/extract.py"
-
-
 from my_config import wsl_to_win_path
 from my_config import (
     BASE_PATH,
@@ -24,8 +18,11 @@ IDB_PATH_WIN = wsl_to_win_path(IDB_PATH)
 
 
 def main():
-    target_proj = "expat"
-    INPUT_DIR = os.path.join(BASE_PATH, "dataset_sample", target_proj, "bin")
+    # target_proj = "expat"
+    # INPUT_DIR = os.path.join(BASE_PATH, "dataset_sample", target_proj, "bin")
+
+    target_proj = "ffmpeg"
+    INPUT_DIR = os.path.join(BASE_PATH, "dataset_my", target_proj, "bin")
 
     print(f"[*] IDA_SCRIPT_PATH: {IDA_SCRIPT_PATH}")
     print(f"[*] IDA_PATH:        {IDA_PATH}")

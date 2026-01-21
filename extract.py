@@ -11,9 +11,16 @@ from my_config import (
     DBG_DIR,
 )
 
-target_proj = "expat"
+# CSV_PATH = os.path.join(BASE_PATH, "dataset_sample", target_proj, "d_link_funcs2.csv")
+
+#! expat
+# target_proj = "expat"
 # CSV_PATH = os.path.join(OUTPUT_DIR, f"{target_proj}_funcs.csv")
-CSV_PATH = os.path.join(BASE_PATH, "dataset_sample", target_proj, "expat_funcs.csv")
+
+#! ffmpeg
+target_proj = "ffmpeg"
+CSV_PATH = os.path.join(OUTPUT_DIR, f"{target_proj}_funcs.csv")
+
 
 # IDA 7.7 + Python 3.8 port of the original IDA 6.8 script
 
@@ -33,10 +40,6 @@ import idc
 from bclass import *  # assumes BFunc/BBasicBlock/BInstr exist and are Py3-compatible
 from capstone import *
 
-
-# CSV_PATH = r"F:\everything\d_link\d_link_funcs.csv"
-# RESULT_DIR = r"F:\everything\d_link\d_link_results"
-# DBG_DIR = r"F:\everything\to_yifei\dbg"
 
 CSV_PATH = wsl_to_win_path(CSV_PATH)
 RESULT_DIR = wsl_to_win_path(RESULT_DIR)
