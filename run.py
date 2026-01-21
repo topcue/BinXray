@@ -4,7 +4,7 @@ import subprocess
 
 # INPUT_DIR = "dataset/sample/d_link/bin"
 # LOG_FILE = "log/tmp.log"
-# SCRIPT_PATH = "/home/user/BinXray/extract_new.py"
+# SCRIPT_PATH = "/home/user/BinXray/extract.py"
 
 
 from my_config import wsl_to_win_path
@@ -18,7 +18,7 @@ from my_config import (
     DBG_DIR,
 )
 
-IDA_SCRIPT_PATH = "/home/user/BinXray/extract_new.py"
+IDA_SCRIPT_PATH = "/home/user/BinXray/extract.py"
 
 IDB_PATH_WIN = wsl_to_win_path(IDB_PATH)
 
