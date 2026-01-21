@@ -10,6 +10,20 @@ import matplotlib.pyplot as plt
 import json
 import time
 
+#! Test expat
+# PICKLE_DIR = "/home/user/win_workspace/storage/binxray/output/result"
+PICKLE_DIR = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/pkl"
+CONFIG_FILE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_config.csv"
+VERSION_FILE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_version.csv"
+BIN_NAME = ""
+
+#! Test d_link -> failed due to BIN_NAME
+# PICKLE_DIR = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/pkl"
+# CONFIG_FILE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/d_link_config.csv"
+# VERSION_FILE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/d_link_version.csv"
+# BIN_NAME = "openssl"
+
+
 CMP_REGS_X64 = ["rax", "eax", "ax", "al", "rbx", "ebx", "bx", "bl", "rcx", "ecx", "cx", "cl",
 	"rdx", "edx", "dx", "dl", "rsi", "esi", "si", "sil", "rdi", "edi", "di", "dil", "rbp", "ebp",
 	"bp", "bpl", "rsp", "esp", "sp", "spl", "r8", "r8d", "r8w", "r8b", "r9", "r9d", "r9w", "r9b",
@@ -23,12 +37,28 @@ def get_bb_by_address(address, func):
 			return bb
 	return None
 
+#! TODO: Fix this logic
 def read_func_info(function_name, version):
-	input_path = r'F:\everything\binary_exp\freetype\pkl'+'\\' + version + '.bin@_@' + function_name + '.pkl'
+	# input_path = r'F:\everything\binary_exp\freetype\pkl'+'\\' + version + '.bin@_@' + function_name + '.pkl'
+	# input_path = os.path.join(PICKLE_DIR, f"{version}.bin@_@{function_name}.pkl")
+
+	input_path = os.path.join(PICKLE_DIR, f"{version}_{BIN_NAME}_{function_name}.pkl")
+	if not BIN_NAME:
+		input_path = os.path.join(PICKLE_DIR, f"{version}_{function_name}.pkl")
+	
+
+
+	print(f"[DEBUG] input_path: {input_path}")
+
+	if not os.path.isfile(input_path):
+		raise FileNotFoundError(input_path)
+
+
 	func = None
 	try:
 		with open(input_path, 'rb') as input:
 			func = pickle.load(input)
+			print(f"success: {function_name}")
 	except IOError as e:
 		print("error:", function_name)
 		return None
@@ -919,7 +949,7 @@ def match_decision(target_func, sig):
 def read_exp_config():
 	record_list = []
 
-	with open(r'F:\everything\binary_exp\freetype\freetype_config.csv', 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
+	with open(CONFIG_FILE_PATH, 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
 		r = csv.reader(csvfile, delimiter=',')
 		for row in r:
 			if len(row) >= 4:
@@ -991,7 +1021,7 @@ def controler(n_v):
 
 def read_versions():
 	version_list = []
-	with open(r'F:\everything\binary_exp\freetype\freetype_version.csv', 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
+	with open(VERSION_FILE_PATH, 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
 		r = csv.reader(csvfile, delimiter=',')
 		for row in r:
 			if len(row) == 1:
@@ -1153,8 +1183,8 @@ def cal_v2(res,cve,gt): #gt = {cve:p_ver}
 	print(cve_bad)
 
 
-def main():
-	pass
+# def main():
+# 	pass
 
 def unit_test(out,n_v):
 
@@ -1278,12 +1308,18 @@ def calculate_acc_v2(func_res,cve,cve_res,gt_file): #gt = {cve_id:v/p}
 
 if __name__ == '__main__':
 	#main()
-	out = r'F:\everything\binary_exp\freetype\out2.json'
-	unit_test(out,19)
-	with open(out,'r', encoding='utf-8', errors='ignore')as f:
+
+	num_vers = 4
+
+	OUTPUT_DIR = "/home/user/win_workspace/storage/binxray/output"
+	OUTPUT_PATH = os.path.join(OUTPUT_DIR, "out.json")
+
+	unit_test(OUTPUT_PATH, num_vers)
+
+	with open(OUTPUT_PATH,'r', encoding='utf-8', errors='ignore')as f:
 		res = json.load(f)
 	calculate_acc(res)
-	cve_file = r'F:\everything\binary_exp\freetype\freetype_config.csv'
+	cve_file = CONFIG_FILE_PATH
 	cve = {}
 	gt = {}
 	with open(cve_file, 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
