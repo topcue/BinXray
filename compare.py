@@ -10,17 +10,23 @@ import matplotlib.pyplot as plt
 import json
 import time
 
+from my_config import (
+    PICKLE_PATH,
+	CONFIG_CSV_PATH,
+	VERSION_CSV_PATH,
+	OUTPUT_DIR
+)
+
 #! Test expat
-# PICKLE_DIR = "/home/user/win_workspace/storage/binxray/output/result"
-PICKLE_DIR = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/pkl"
-CONFIG_FILE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_config.csv"
-VERSION_FILE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_version.csv"
+# PICKLE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/pkl"
+CONFIG_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_config.csv"
+VERSION_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_version.csv"
 BIN_NAME = ""
 
 #! Test d_link -> failed due to BIN_NAME
-# PICKLE_DIR = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/pkl"
-# CONFIG_FILE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/d_link_config.csv"
-# VERSION_FILE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/d_link_version.csv"
+# PICKLE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/pkl"
+# CONFIG_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/d_link_config.csv"
+# VERSION_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/d_link_version.csv"
 # BIN_NAME = "openssl"
 
 
@@ -40,12 +46,12 @@ def get_bb_by_address(address, func):
 #! TODO: Fix this logic
 def read_func_info(function_name, version):
 	# input_path = r'F:\everything\binary_exp\freetype\pkl'+'\\' + version + '.bin@_@' + function_name + '.pkl'
-	# input_path = os.path.join(PICKLE_DIR, f"{version}.bin@_@{function_name}.pkl")
+	# input_path = os.path.join(PICKLE_PATH, f"{version}.bin@_@{function_name}.pkl")
 
-	input_path = os.path.join(PICKLE_DIR, f"{version}_{BIN_NAME}_{function_name}.pkl")
+	input_path = os.path.join(PICKLE_PATH, f"{version}_{BIN_NAME}_{function_name}.pkl")
 	if not BIN_NAME:
-		input_path = os.path.join(PICKLE_DIR, f"{version}_{function_name}.pkl")
-	
+		input_path = os.path.join(PICKLE_PATH, f"{version}_{function_name}.pkl")
+
 
 
 	print(f"[DEBUG] input_path: {input_path}")
@@ -949,7 +955,7 @@ def match_decision(target_func, sig):
 def read_exp_config():
 	record_list = []
 
-	with open(CONFIG_FILE_PATH, 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
+	with open(CONFIG_CSV_PATH, 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
 		r = csv.reader(csvfile, delimiter=',')
 		for row in r:
 			if len(row) >= 4:
@@ -1021,7 +1027,7 @@ def controler(n_v):
 
 def read_versions():
 	version_list = []
-	with open(VERSION_FILE_PATH, 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
+	with open(VERSION_CSV_PATH, 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
 		r = csv.reader(csvfile, delimiter=',')
 		for row in r:
 			if len(row) == 1:
@@ -1183,9 +1189,6 @@ def cal_v2(res,cve,gt): #gt = {cve:p_ver}
 	print(cve_bad)
 
 
-# def main():
-# 	pass
-
 def unit_test(out,n_v):
 
 	r = controler(n_v)
@@ -1306,12 +1309,17 @@ def calculate_acc_v2(func_res,cve,cve_res,gt_file): #gt = {cve_id:v/p}
 	return good,bad,total_good,total_bad,no_diff,cant_tell
 
 
+def count_non_empty_lines(path: str) -> int:
+    count = 0
+    with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        for line in f:
+            if line.strip():
+                count += 1
+    return count
+
+
 if __name__ == '__main__':
-	#main()
-
-	num_vers = 4
-
-	OUTPUT_DIR = "/home/user/win_workspace/storage/binxray/output"
+	num_vers = count_non_empty_lines(VERSION_CSV_PATH)
 	OUTPUT_PATH = os.path.join(OUTPUT_DIR, "out.json")
 
 	unit_test(OUTPUT_PATH, num_vers)
@@ -1319,7 +1327,7 @@ if __name__ == '__main__':
 	with open(OUTPUT_PATH,'r', encoding='utf-8', errors='ignore')as f:
 		res = json.load(f)
 	calculate_acc(res)
-	cve_file = CONFIG_FILE_PATH
+	cve_file = CONFIG_CSV_PATH
 	cve = {}
 	gt = {}
 	with open(cve_file, 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:

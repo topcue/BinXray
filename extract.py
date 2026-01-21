@@ -4,7 +4,7 @@ setup_ida_sys_path()
 
 from my_config import (
     PICKLE_PATH,
-    CSV_PATH
+    FUNCS_CSV_PATH
 )
 
 
@@ -26,7 +26,7 @@ import idc
 from bclass import *  # assumes BFunc/BBasicBlock/BInstr exist and are Py3-compatible
 from capstone import *
 
-
+CSV_PATH = FUNCS_CSV_PATH
 CSV_PATH = wsl_to_win_path(CSV_PATH)
 PICKLE_PATH = wsl_to_win_path(PICKLE_PATH)
 

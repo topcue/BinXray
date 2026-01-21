@@ -43,8 +43,11 @@ def win_to_wsl_path(p):
 IDA_PATH = "/home/user/win_workspace/IDA/idat64.exe"
 BASE_PATH = f"/home/user/win_workspace/storage/{SYSTEM_NAME}"
 
-# funcs.csv
-CSV_PATH = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, f"{PROJECT_NAME}_funcs.csv")
+
+FUNCS_CSV_PATH = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, f"{PROJECT_NAME}_funcs.csv")
+CONFIG_CSV_PATH = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, f"{PROJECT_NAME}_config.csv")
+VERSION_CSV_PATH = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, f"{PROJECT_NAME}_version.csv")
+
 
 OUTPUT_DIR = os.path.join(BASE_PATH, f"output_{DATASET_NAME}_{PROJECT_NAME}")
 
