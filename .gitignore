@@ -1,2 +1,4 @@
 dataset/sample/
 env/wsl_venv/
+
+**/__pycache__
