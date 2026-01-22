@@ -1,4 +1,5 @@
 import os
+import argparse
 import multiprocessing
 from tqdm import tqdm
 
@@ -19,12 +20,22 @@ from my_config import (
 IDB_PATH_WIN = wsl_to_win_path(IDB_PATH)
 
 
-def collect_targets(input_dir: str, idb_dir: str):
-    """
-    Collect target binaries from input_dir.
-    Skip binaries that already have IDA results (.idb or .i64) in idb_dir.
-    """
+def parse_args():
+    parser = argparse.ArgumentParser(description="Run IDA analysis on binaries.")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Re-run IDA even if output (.idb/.i64) already exists"
+        )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Show more debugging messages."
+        )
+    return parser.parse_args()
 
+
+def collect_targets(input_dir: str, idb_dir: str, force: bool):
     # Collect already-processed binary names (stems)
     done = set()
     for name in os.listdir(idb_dir):
@@ -42,10 +53,10 @@ def collect_targets(input_dir: str, idb_dir: str):
             continue
         all_inputs.append(name)
 
-    # Filter targets that are not yet processed
+    # Filter targets
     targets = []
     for name in sorted(all_inputs):
-        if name in done:
+        if not force and name in done:
             continue
         targets.append(name)
 
@@ -54,14 +65,16 @@ def collect_targets(input_dir: str, idb_dir: str):
         "[*] Target collection summary\n"
         f"    - Input binaries      : {len(all_inputs)}\n"
         f"    - Already processed   : {len(done)}\n"
-        f"    - Targets to process  : {len(targets)}"
+        f"    - Targets to process  : {len(targets)}\n"
+        f"    - Force mode          : {force}"
     )
-
     return targets
 
 
 def main():
-    DEBUG = True
+    args = parse_args()
+    force = args.force
+    DEBUG = args.debug
 
     INPUT_DIR = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, "bin")
 
@@ -70,18 +83,20 @@ def main():
     print(f"[*] BASE_PATH:       {BASE_PATH}")
     print(f"[*] INPUT_DIR:       {INPUT_DIR}")
     print(f"[*] IDB_PATH:        {IDB_PATH}")
+    print(f"[*] FORCE:           {force}")
     print()
 
-    os.makedirs(LOG_PATH,   exist_ok=True)
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(LOG_PATH,    exist_ok=True)
+    os.makedirs(OUTPUT_DIR,  exist_ok=True)
     os.makedirs(PICKLE_PATH, exist_ok=True)
-    os.makedirs(IDB_PATH, exist_ok=True)
+    os.makedirs(IDB_PATH,    exist_ok=True)
 
     if DEBUG:
         print(f"[DEBUG] INPUT_DIR: {INPUT_DIR}")
         print(f"[DEBUG] IDB_PATH:  {IDB_PATH}")
 
-    file_list = collect_targets(INPUT_DIR, IDB_PATH)
+    file_list = collect_targets(INPUT_DIR, IDB_PATH, force)
+
     if DEBUG:
         for f in file_list:
             print(f"[DEBUG] target file: {f}")
@@ -91,15 +106,12 @@ def main():
         TARGET_PATH = os.path.join(INPUT_DIR, item)
         TARGET_PATH_WIN = wsl_to_win_path(TARGET_PATH)
         file_name = os.path.basename(TARGET_PATH)
+
         LOG_FILE = os.path.join(LOG_PATH, f"{file_name}.log")
         LOG_FILE_WIN = wsl_to_win_path(LOG_FILE)
 
         if DEBUG:
-            print(f"[*] TARGET_PATH:     {TARGET_PATH}")
-            # print(f"[*] TARGET_PATH_WIN: {TARGET_PATH_WIN}")
-            # print(f"[*] LOG_FILE:        {LOG_FILE}")
-            # print(f"[*] LOG_FILE_WIN:    {LOG_FILE_WIN}")
-            # print()
+            print(f"[*] TARGET_PATH: {TARGET_PATH}")
 
         cmd = [
             IDA_PATH,
@@ -110,8 +122,8 @@ def main():
             f"-o{os.path.join(IDB_PATH_WIN, file_name)}.idb",
             TARGET_PATH_WIN,
         ]
-        jobs.append((cmd, '', '', False))
-    
+        jobs.append((cmd, "", "", False))
+
     print("[*] IDA processing..")
     with multiprocessing.Pool(processes=NUM_JOBS) as pool:
         for _ in tqdm(
@@ -120,7 +132,9 @@ def main():
         ):
             pass
 
+
 if __name__ == "__main__":
     main()
+
 
 # EOF
