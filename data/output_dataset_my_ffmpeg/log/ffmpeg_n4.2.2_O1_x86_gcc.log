@@ -1,0 +1,401 @@
+BinDiff 7 (@377901646, Jun  7 2021), (c)2004-2011 zynamics GmbH, (c)2011-2021 Google LLC.
+BinExport 12 (@377901646, Jun  7 2021), (c)2004-2011 zynamics GmbH, (c)2011-2021 Google LLC.
+
+v7.7 48-B37B-7904-AC KAIST
+
+Your support plan expired on 2022-06-08.
+To renew it, please visit our web site for the instructions.
+
+https://www.hex-rays.com/idapro/idaupgrade.htm
+
+Thank you for using IDA! -> OK
+Possible file format: ELF64 for x86-64 (Shared object) (C:\Users\user\workspace\IDA\loaders\elf64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+134217728 16384 8192 allocating memory for b-tree...
+268435456 32768 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+402915328            total memory allocated
+
+Loading file 'C:\Users\user\workspace\storage\binxray\dataset_my\ffmpeg\bin\ffmpeg_n4.2.2_O1_x86_gcc' into database...
+Detected file format: ELF64 for x86-64 (Shared object)
+Loading processor module C:\Users\user\workspace\IDA\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+  0. Creating a new segment  (0000000000000000-00000000000E1C58) ... ... OK
+  1. Creating a new segment  (00000000000E2000-0000000000C4A0C5) ... ... OK
+  2. Creating a new segment  (0000000000C4B000-000000000104BD20) ... ... OK
+  3. Creating a new segment  (000000000104CF10-0000000001945748) ... ... OK
+Assuming __fastcall calling convention by default
+Type library 'gnulnx_x64' loaded. Applying types...
+Types applied to 0 names.
+  4. Creating a new segment  (00000000000E2000-00000000000E201B) ... ... OK
+     Deleting segment        (00000000000E201B-0000000000C4A0C5) ...
+  4. Creating a new segment  (00000000000E201B-0000000000C4A0C5) ... ... OK
+  5. Creating a new segment  (00000000000E2020-00000000000E2E20) ... ... OK
+  6. Creating a new segment  (00000000000E2E20-0000000000C4A0C5) ... ... OK
+  7. Creating a new segment  (00000000000E2E20-00000000000E2EB0) ... ... OK
+     Deleting segment        (00000000000E2EB0-0000000000C4A0C5) ...
+  7. Creating a new segment  (00000000000E2EB0-0000000000C4A0C5) ... ... OK
+  8. Creating a new segment  (00000000000E2EB0-0000000000C4A0B5) ... ... OK
+     Deleting segment        (0000000000C4A0B5-0000000000C4A0C5) ...
+  8. Creating a new segment  (0000000000C4A0B5-0000000000C4A0C5) ... ... OK
+  9. Creating a new segment  (0000000000C4A0B8-0000000000C4A0C5) ... ... OK
+ 10. Creating a new segment  (0000000000C4B000-0000000000F28F40) ... ... OK
+     Deleting segment        (0000000000F28F40-000000000104BD20) ...
+ 10. Creating a new segment  (0000000000F28F40-000000000104BD20) ... ... OK
+ 11. Creating a new segment  (0000000000F28F40-0000000000F4B6FC) ... ... OK
+     Deleting segment        (0000000000F4B6FC-000000000104BD20) ...
+ 11. Creating a new segment  (0000000000F4B6FC-000000000104BD20) ... ... OK
+ 12. Creating a new segment  (0000000000F4B700-000000000104BD20) ... ... OK
+ 13. Creating a new segment  (000000000104CF10-000000000104CF18) ... ... OK
+     Deleting segment        (000000000104CF18-0000000001945748) ...
+ 13. Creating a new segment  (000000000104CF18-0000000001945748) ... ... OK
+ 14. Creating a new segment  (000000000104CF18-000000000104CF20) ... ... OK
+     Deleting segment        (000000000104CF20-0000000001945748) ...
+ 14. Creating a new segment  (000000000104CF20-0000000001945748) ... ... OK
+ 15. Creating a new segment  (000000000104CF20-0000000001105110) ... ... OK
+     Deleting segment        (0000000001105110-0000000001945748) ...
+ 15. Creating a new segment  (0000000001105110-0000000001945748) ... ... OK
+ 16. Creating a new segment  (0000000001105360-0000000001105FF8) ... ... OK
+ 17. Creating a new segment  (0000000001105FF8-0000000001945748) ... ... OK
+ 18. Creating a new segment  (0000000001106000-00000000011516E0) ... ... OK
+ 19. Creating a new segment  (00000000011516E0-0000000001945748) ... ... OK
+     Deleting segment        (00000000011516E0-0000000001945748) ...
+ 19. Creating a new segment  (00000000011516E0-0000000001945748) ... ... OK
+ 20. Creating a new segment  (0000000001945748-0000000001945749) ... ... OK
+ 21. Creating a new segment  (0000000001945750-0000000001945F20) ... ... OK
+Processing relocations...
+DWARF: File "C:\Users\user\workspace\storage\binxray\dataset_my\ffmpeg\bin\ffmpeg_n4.2.2_O1_x86_gcc" contains DWARF information.
+DWARF: Functions: 18289 symbols applied
+DWARF: Globals: 7375 symbols applied
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\user\workspace\storage\binxray\dataset_my\ffmpeg\bin\ffmpeg_n4.2.2_O1_x86_gcc' has been successfully loaded into the database.
+Hex-Rays Decompiler plugin has been loaded (v7.7.0.220118)
+  License: 55-BF89-8844-08 KAIST (1 user)
+  The hotkeys are F5: decompile, Ctrl-F5: decompile all.
+
+  Please check the Edit/Plugins menu for more information.
+IDA is analysing the input file...
+You may start to explore the input file right now.
+[IDAPY] ==== sys.path ====
+[IDAPY] 0 C:\Users\user\workspace\IDA-python\binxray\Lib\site-packages
+[IDAPY] 1 C:\Users\user\workspace\IDA\python\3
+[IDAPY] 2 C:\Users\user\workspace\IDA\python\3\ida_64
+[IDAPY] 3 C:\Users\user\workspace\IDA-python\jtrans\python38.zip
+[IDAPY] 4 C:\Program Files\Python38\Lib
+[IDAPY] 5 C:\Program Files\Python38\DLLs
+[IDAPY] 6 C:\Users\user\workspace\IDA
+[IDAPY] 7 C:\Users\user\AppData\Roaming\Python\Python38\site-packages
+[IDAPY] 8 C:\Program Files\Python38
+[IDAPY] 9 C:\Program Files\Python38\lib\site-packages
+[IDAPY] 10 C:\Users\user\workspace\IDA\python
+[IDAPY] 11 C:\Users\user\workspace\IDA\python
+[IDAPY] 12 C:\Users\user\AppData\Roaming\Hex-Rays\IDA Pro\python\3
+[IDAPY] 13 C:/Users/user/workspace/IDA/loaders
+[IDAPY] 14 /home/user/BinXray
+[DEBUG] invoke idaapi.auto_wait()
+Propagating type information...
+Function argument information has been propagated
+The initial autoanalysis has been finished.
+[DEBUG] complete idaapi.auto_wait()
+
+[DEBUG] func_list from C:/Users/user/workspace/storage/binxray\dataset_my\ffmpeg\ffmpeg_funcs.csv
+[DEBUG] func: open_files
+
+[DEBUG] Segment name: .text
+BB name:       0xe8527
+BB preds:      []
+BB succs:      ['0xe8564', '0xe87fd']
+BB disam_list: push r15 push r14 push r13 push r12 push rbp push rbx sub rsp, 3D8h mov mem, l_0 mov mem, inout_0 mov mem, open_file_0 mov rax, fs:28h mov mem, rax xor eax, eax cmp mem, 0 jle func
+BB hash:       315f2fa449c8d33c268189f66f03658d
+   0xe8527 |               4157 |  | push    r15
+   0xe8529 |               4156 |  | push    r14
+   0xe852b |               4155 |  | push    r13
+   0xe852d |               4154 |  | push    r12
+   0xe852f |                 55 |  | push    rbp
+   0xe8530 |                 53 |  | push    rbx
+   0xe8531 |     4881ecd8030000 | stmle ip!, {r3, r6, r8, pc} ^ | sub     rsp, 3D8h
+   0xe8538 |         48897c2418 | ldrbths r8, [ip], #-0x948 | mov     [rsp+408h+l], l_0
+   0xe853d |         4889742420 | ldrbths r8, [r4], #-0x948 | mov     [rsp+408h+inout], inout_0
+   0xe8542 |         4889542428 | ldrbhs r8, [r4], #-0x948 | mov     [rsp+408h+open_file], open_file_0
+   0xe8547 | 64488b042528000000 | streq r4, [fp], #0x864 | mov     rax, fs:28h
+   0xe8550 |   48898424c8030000 | strhs r8, [r4], #0x948 | mov     [rsp+408h+var_40], rax
+   0xe8558 |               31c0 |  | xor     eax, eax
+   0xe855a |           837f1000 | andseq r7, r0, r3, lsl #31 | cmp     dword ptr [l_0+10h], 0
+   0xe855e |                    |  | jle     loc_E87FD
+BB name:       0xe8564
+BB preds:      ['0xe8527']
+BB succs:      ['0xe86ed']
+BB disam_list: mov r15d, 0 lea r13, mem jmp func
+BB hash:       93047e2e40efbf1bfb7c947127c4d3e3
+   0xe8564 |       41bf00000000 | andeq fp, r0, r1, asr #30 | mov     r15d, 0
+   0xe856a |         4c8d6c2430 | strbths r8, [ip], #-0xd4c | lea     r13, [rsp+408h+o]
+   0xe856f |                    |  | jmp     loc_E86ED
+BB name:       0xe8574
+BB preds:      ['0xe86ed']
+BB succs:      ['0xe8598']
+BB disam_list: mov r8, mem mov rcx, mem lea rdx, aErrorParsingOp mov esi, 10h mov edi, 0 mov eax, 0 call av_log
+BB hash:       d84a839bcdfee16ebf3a118d1438db8c
+   0xe8574 |           4d8b4608 | stmdaeq r6, {r0, r2, r3, r6, r8, sb, fp, pc} ^ | mov     r8, [g+8]
+   0xe8578 |         488b4c2420 | strbhs r8, [ip], #-0xb48 | mov     rcx, [rsp+408h+inout]
+   0xe857d |     488d15a43bb600 | ldrge r8, [r5], #-0xd48 | lea     rdx, aErrorParsingOp; "Error parsing options for %s file %s.\n"
+   0xe8584 |         be10000000 | strheq r1, [r0], -lr | mov     esi, 10h; level
+   0xe8589 |         bf00000000 | strheq r0, [r0], -pc | mov     edi, 0; avcl
+   0xe858e |         b800000000 | strheq r0, [r0], -r8 | mov     eax, 0
+   0xe8593 |                    |  | call    av_log
+BB name:       0xe8598
+BB preds:      ['0xe8574', '0xe87c7', '0xe87f0', '0xe87fd']
+BB succs:      ['0xe85af', '0xe880a']
+BB disam_list: mov rax, mem xor rax, fs:28h jnz func
+BB hash:       5e8684f0c532f8030ac22e87f2049626
+   0xe8598 |   488b8424c8030000 | strhs r8, [r4], #0xb48 | mov     rax, [rsp+408h+var_40]
+   0xe85a0 | 644833042528000000 | ldrteq r4, [r3], #-0x864 | xor     rax, fs:28h
+   0xe85a9 |                    |  | jnz     loc_E880A
+BB name:       0xe85af
+BB preds:      ['0xe8598']
+BB succs:      []
+BB disam_list: mov eax, mem add rsp, 3D8h pop rbx pop rbp pop r12 pop r13 pop r14 pop r15 retn
+BB hash:       eac6e3ae1bb8470a6da5b091f25dcd7d
+   0xe85af |           8b44240c | stceq p4, c4, [r4], #-0x22c | mov     eax, [rsp+408h+ret]
+   0xe85b3 |     4881c4d8030000 | stmle r4, {r3, r6, r8, pc} ^ | add     rsp, 3D8h
+   0xe85ba |                 5b |  | pop     rbx
+   0xe85bb |                 5d |  | pop     rbp
+   0xe85bc |               415c |  | pop     r12
+   0xe85be |               415d |  | pop     r13
+   0xe85c0 |               415e |  | pop     r14
+   0xe85c2 |               415f |  | pop     r15
+   0xe85c4 |                    |  | retn
+BB name:       0xe85c5
+BB preds:      ['0xe8627']
+BB succs:      ['0xe85cb', '0xe860d']
+BB disam_list: cmp mem, 0 jle func
+BB hash:       b0187273b4bafb015b1383b78ef088dc
+   0xe85c5 |           837b0800 | andeq r7, r8, r3, lsl #23 | cmp     dword ptr [rbx+8], 0
+   0xe85c9 |                    |  | jle     short loc_E860D
+BB name:       0xe85cb
+BB preds:      ['0xe85c5']
+BB succs:      ['0xe85ee']
+BB disam_list: mov r12d, 0 jmp func
+BB hash:       2a9f6e4e4a935a0b4ee8de71fe45208e
+   0xe85cb |       41bc00000000 | andeq fp, r0, r1, asr #24 | mov     r12d, 0
+   0xe85d1 |                    |  | jmp     short loc_E85EE
+BB name:       0xe85d3
+BB preds:      ['0xe860b']
+BB succs:      ['0xe85e4']
+BB disam_list: mov rdi, mem add rdi, mem add rdi, 8 call av_freep
+BB hash:       4cdeeea7a0adf9de8de6dd187482c9bf
+   0xe85d3 |         488b7c2410 | ldrbths r8, [ip], #-0xb48 | mov     rdi, [rsp+408h+var_3F8]
+   0xe85d8 |             48033b |  | add     rdi, [rbx]
+   0xe85db |           4883c708 | stmeq r7, {r3, r6, r8, sb, pc} ^ | add     rdi, 8; arg
+   0xe85df |                    |  | call    av_freep
+BB name:       0xe85e4
+BB preds:      ['0xe85d3', '0xe85ee']
+BB succs:      ['0xe85ee', '0xe860d']
+BB disam_list: add r12, 1 cmp mem, r12d jle func
+BB hash:       410f2c410d37eba1ba9f3584ad6fcdc4
+   0xe85e4 |           4983c401 | biceq r8, r4, sb, asr #6 | add     r12, 1
+   0xe85e8 |           44396308 | stmdaeq r3!, {r2, r6, r8, fp, ip, sp} ^ | cmp     [rbx+8], r12d
+   0xe85ec |                    |  | jle     short loc_E860D
+BB name:       0xe85ee
+BB preds:      ['0xe85cb', '0xe85e4']
+BB succs:      ['0xe85e4', '0xe860b']
+BB disam_list: mov rax, r12 shl rax, 4 mov mem, rax mov rdi, rax add rdi, mem call av_freep test mem, 8 jz func
+BB hash:       1ecd91c70093716fc968e44ef0a5f59a
+   0xe85ee |             4c89e0 |  | mov     rax, r12
+   0xe85f1 |           48c1e004 | strbteq ip, [r0], #0x148 | shl     rax, 4
+   0xe85f5 |         4889442410 | strbhs r8, [r4], #-0x948 | mov     [rsp+408h+var_3F8], rax
+   0xe85fa |             4889c7 |  | mov     rdi, rax
+   0xe85fd |             48033b |  | add     rdi, [rbx]; arg
+   0xe8600 |         e85f70b400 | ldrbtlt r5, [r0], #-0xfe8 | call    av_freep
+   0xe8605 |           f6450808 | stmdaeq r8, {r1, r2, r4, r5, r6, r7, r8, sl, lr} | test    byte ptr [rbp+8], 8
+   0xe8609 |                    |  | jz      short loc_E85E4
+BB name:       0xe860b
+BB preds:      ['0xe85ee']
+BB succs:      ['0xe85d3']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+   0xe860b |                    |  | jmp     short loc_E85D3
+BB name:       0xe860d
+BB preds:      ['0xe85c5', '0xe85e4']
+BB succs:      ['0xe861c']
+BB disam_list: mov rdi, rbx call av_freep mov mem, 0
+BB hash:       bda98537c51a1ca04bea89ea325a207c
+   0xe860d |             4889df |  | mov     rdi, rbx; arg
+   0xe8610 |         e84f70b400 | ldrbtlt r4, [r0], #-0xfe8 | call    av_freep
+   0xe8615 |                    |  | mov     dword ptr [rbx+8], 0
+BB name:       0xe861c
+BB preds:      ['0xe860d', '0xe8636', '0xe8642']
+BB succs:      ['0xe8627', '0xe864c']
+BB disam_list: add rbp, 28h cmp qmem, 0 jz func
+BB hash:       efd9b7f065f0189a5788435b68f91878
+   0xe861c |           4883c528 | stmhs r5, {r3, r6, r8, sb, pc} ^ | add     rbp, 28h ; '('
+   0xe8620 |         48837d0000 | rsbseq r8, sp, r8, asr #6 | cmp     qword ptr [rbp+0], 0
+   0xe8625 |                    |  | jz      short loc_E864C
+BB name:       0xe8627
+BB preds:      ['0xe861c', '0xe8785']
+BB succs:      ['0xe85c5', '0xe8636']
+BB disam_list: mov rbx, r13 add rbx, mem mov eax, mem test ah, 80h jnz func
+BB hash:       f754950677135d1c68827f5ca4cdbe7f
+   0xe8627 |             4c89eb |  | mov     rbx, r13
+   0xe862a |           48035d10 | subsne r0, sp, r8, asr #6 | add     rbx, [rbp+10h]
+   0xe862e |             8b4508 |  | mov     eax, [rbp+8]
+   0xe8631 |             f6c480 |  | test    ah, 80h
+   0xe8634 |                    |  | jnz     short loc_E85C5
+BB name:       0xe8636
+BB preds:      ['0xe8627']
+BB succs:      ['0xe861c', '0xe8642']
+BB disam_list: and eax, 4008h cmp eax, 4008h jnz func
+BB hash:       0f0435dbb1708629b840e102f99637d0
+   0xe8636 |         2508400000 | subeq r0, r0, r5, lsr #16 | and     eax, 4008h
+   0xe863b |         3d08400000 | subeq r0, r0, sp, lsr r8 | cmp     eax, 4008h
+   0xe8640 |                    |  | jnz     short loc_E861C
+BB name:       0xe8642
+BB preds:      ['0xe8636']
+BB succs:      ['0xe861c']
+BB disam_list: mov rdi, rbx call av_freep jmp func
+BB hash:       a494dd02da0f3b8320f5a117a673f616
+   0xe8642 |             4889df |  | mov     rdi, rbx; arg
+   0xe8645 |         e81a70b400 | ldrbtlt r1, [r0], #-0xae8 | call    av_freep
+   0xe864a |                    |  | jmp     short loc_E861C
+BB name:       0xe864c
+BB preds:      ['0xe861c']
+BB succs:      ['0xe8656', '0xe8680']
+BB disam_list: cmp mem, 0 jle func
+BB hash:       b0187273b4bafb015b1383b78ef088dc
+   0xe864c |   83bc243801000000 | stmdalo r4!, {r0, r1, r7, sl, fp, ip, sp, pc} | cmp     [rsp+408h+o.nb_stream_maps], 0
+   0xe8654 |                    |  | jle     short loc_E8680
+BB name:       0xe8656
+BB preds:      ['0xe864c']
+BB succs:      ['0xe865b']
+BB disam_list: mov ebx, 0
+BB hash:       ea59dc0b6980ab2c519fa933c496b42f
+   0xe8656 |                    |  | mov     ebx, 0
+BB name:       0xe865b
+BB preds:      ['0xe8656', '0xe865b']
+BB succs:      ['0xe8680', '0xe865b']
+BB disam_list: mov rdi, rbx shl rdi, 5 add rdi, mem add rdi, 18h call av_freep add rbx, 1 cmp mem, ebx jg func
+BB hash:       b2d4a1d315ff4444f1c6657ee475c812
+   0xe865b |             4889df |  | mov     rdi, rbx
+   0xe865e |           48c1e705 | strbeq ip, [r7, #0x148]! | shl     rdi, 5
+   0xe8662 |   4803bc2430010000 | ldrths r0, [ip], #0x348 | add     rdi, [rsp+408h+o.stream_maps]
+   0xe866a |           4883c718 | stmne r7, {r3, r6, r8, sb, pc} ^ | add     rdi, 18h; arg
+   0xe866e |         e8f16fb400 | strbtlt pc, [pc], #-0x1e8 | call    av_freep
+   0xe8673 |           4883c301 | biceq r8, r3, r8, asr #6 | add     rbx, 1
+   0xe8677 |     399c2438010000 | stmdalo r4!, {r0, r3, r4, r5, sl, fp, ip, pc} | cmp     [rsp+408h+o.nb_stream_maps], ebx
+   0xe867e |                    |  | jg      short loc_E865B
+BB name:       0xe8680
+BB preds:      ['0xe864c', '0xe865b']
+BB succs:      ['0xe86bf', '0xe87c7']
+BB disam_list: lea rdi, mem call av_freep lea rdi, mem call av_freep lea rdi, mem call av_freep lea rdi, mem call av_freep cmp mem, 0 js func
+BB hash:       30df07fb68ef64a1c25299ca84175e4e
+   0xe8680 |   488dbc2430010000 | ldrths r8, [ip], #0xd48 | lea     rdi, [rsp+408h+o.stream_maps]; arg
+   0xe8688 |         e8d76fb400 | strbtlt sp, [pc], #-0x7e8 | call    av_freep
+   0xe868d |   488dbc2440010000 | ldrths r8, [ip], #0xd48 | lea     rdi, [rsp+408h+o.audio_channel_maps]; arg
+   0xe8695 |         e8ca6fb400 | strbtlt ip, [pc], #-0xae8 | call    av_freep
+   0xe869a |   488dbc24a0010000 | ldrths r8, [ip], #0xd48 | lea     rdi, [rsp+408h+o.streamid_map]; arg
+   0xe86a2 |         e8bd6fb400 | strbtlt fp, [pc], #-0xde8 | call    av_freep
+   0xe86a7 |   488dbc2458010000 | ldrths r8, [ip], #0xd48 | lea     rdi, [rsp+408h+o.attachments]; arg
+   0xe86af |         e8b06fb400 | strbtlt fp, [pc], #-0xe8 | call    av_freep
+   0xe86b4 |         837c240c00 | stceq p12, c7, [r4], #-0x20c | cmp     [rsp+408h+ret], 0
+   0xe86b9 |                    |  | js      loc_E87C7
+BB name:       0xe86bf
+BB preds:      ['0xe8680']
+BB succs:      ['0xe86ed', '0xe87f0']
+BB disam_list: lea rdx, aSuccessfullyOp mov esi, 30h mov edi, 0 mov eax, 0 call av_log add r15, 1 mov rax, mem cmp mem, r15d jle func
+BB hash:       83841710b7e9c064ed0c9d40d0a98410
+   0xe86bf |     488d158a3ab600 | bhi #0x64bbe7 | lea     rdx, aSuccessfullyOp; "Successfully opened the file.\n"
+   0xe86c6 |         be30000000 | strheq r3, [r0], -lr | mov     esi, 30h ; '0'; level
+   0xe86cb |         bf00000000 | strheq r0, [r0], -pc | mov     edi, 0; avcl
+   0xe86d0 |         b800000000 | strheq r0, [r0], -r8 | mov     eax, 0
+   0xe86d5 |         e88c53b400 | ldrblt r8, [r3], #-0xce8 | call    av_log
+   0xe86da |           4983c701 | biceq r8, r7, sb, asr #6 | add     r15, 1
+   0xe86de |         488b442418 | strbhs r8, [r4], #-0xb48 | mov     rax, [rsp+408h+l]
+   0xe86e3 |           44397810 | rsbsne r3, r8, r4, asr #18 | cmp     [rax+10h], r15d
+   0xe86e7 |                    |  | jle     loc_E87F0
+BB name:       0xe86ed
+BB preds:      ['0xe8564', '0xe86bf']
+BB succs:      ['0xe8574', '0xe8785']
+BB disam_list: lea rax, mem mov rdx, mem mov rdx, mem lea r14, mem mov ecx, 72h mov eax, 0 mov rdi, r13 rep stosq mov rax, 7FFFFFFFFFFFFFFFh mov mem, rax mov mem, 3F333333h mov rcx, 8000000000000000h mov mem, rcx mov mem, rcx mov mem, rax mov mem, 0FFFFFFFFFFFFFFFFh mov mem, 7FFFFFFFh mov mem, 1 mov mem, g mov rsi, g mov rdi, r13 call parse_optgroup mov mem, eax test eax, eax js func
+BB hash:       ebe0b091982461f006c7c44384c3102d
+   0xe86ed |           4b8d04ff |  | lea     rax, [i+i*8]
+   0xe86f1 |         488b542418 | ldrbhs r8, [r4], #-0xb48 | mov     rdx, [rsp+408h+l]
+   0xe86f6 |           488b5208 | ldmdaeq r2, {r3, r6, r8, sb, fp, pc} ^ | mov     rdx, [rdx+8]
+   0xe86fa |           4c8d34c2 | eorsgt r8, r4, #76, #26 | lea     r14, [rdx+rax*8]
+   0xe86fe |         b972000000 | strheq r7, [r0], -sb | mov     ecx, 72h ; 'r'
+   0xe8703 |         b800000000 | strheq r0, [r0], -r8 | mov     eax, 0
+   0xe8708 |             4c89ef |  | mov     rdi, r13
+   0xe870b |             f348ab |  | rep stosq
+   0xe870e | 48b8ffffffffffffff7f |  | mov     rax, 7FFFFFFFFFFFFFFFh
+   0xe8718 |   4889842470010000 | strhs r8, [r4], #0x948 | mov     [rsp+408h+o.stop_time], rax
+   0xe8720 | c78424840100003333333f | strthi r8, [r4], #-0x4c7 | mov     [rsp+408h+o.mux_max_delay], 3F333333h
+   0xe872b | 48b90000000000000080 | andeq fp, r0, r8, asr #18 | mov     rcx, 8000000000000000h
+   0xe8735 |         48894c2438 | strbhs r8, [ip], #-0x948 | mov     [rsp+408h+o.start_time], rcx
+   0xe873a |         48894c2440 | strbhs r8, [ip], #-0x948 | mov     [rsp+408h+o.start_time_eof], rcx
+   0xe873f |   4889842468010000 | strhs r8, [r4], #0x948 | mov     [rsp+408h+o.recording_time], rax
+   0xe8747 | 48c7842478010000ffffffff | strhs ip, [r4], #0x748 | mov     [rsp+408h+o.limit_filesize], 0FFFFFFFFFFFFFFFFh
+   0xe8753 | c7842464010000ffffff7f | strtvs r8, [r4], #-0x4c7 | mov     [rsp+408h+o.chapters_input_file], 7FFFFFFFh
+   0xe875e | c78424c800000001000000 | stmdagt r4!, {r0, r1, r2, r6, r7, sl, pc} | mov     [rsp+408h+o.accurate_seek], 1
+   0xe8769 |         4c89742430 | ldrbths r8, [r4], #-0x94c | mov     [rsp+408h+o.g], g
+   0xe876e |             4c89f6 |  | mov     rsi, g; g
+   0xe8771 |             4c89ef |  | mov     rdi, r13; optctx
+   0xe8774 |         e8bed20000 | sbcseq fp, r2, r8, ror #29 | call    parse_optgroup
+   0xe8779 |           8944240c | stceq p4, c4, [r4], #-0x224 | mov     [rsp+408h+ret], eax
+   0xe877d |               85c0 |  | test    eax, eax
+   0xe877f |                    |  | js      loc_E8574
+BB name:       0xe8785
+BB preds:      ['0xe86ed']
+BB succs:      ['0xe8627']
+BB disam_list: mov r8, mem mov rcx, mem lea rdx, aOpeningAnSFile mov esi, 30h mov edi, 0 mov eax, 0 call av_log mov rsi, mem mov rdi, r13 mov rax, mem call rax mov mem, eax lea rbp, options_139 jmp func
+BB hash:       2d14baf60b4291dcaaf5d8e8626528c3
+   0xe8785 |           4d8b4608 | stmdaeq r6, {r0, r2, r3, r6, r8, sb, fp, pc} ^ | mov     r8, [g+8]
+   0xe8789 |         488b4c2420 | strbhs r8, [ip], #-0xb48 | mov     rcx, [rsp+408h+inout]
+   0xe878e |     488d154a5ab600 | bmi #0x64bcb6 | lea     rdx, aOpeningAnSFile; "Opening an %s file: %s.\n"
+   0xe8795 |         be30000000 | strheq r3, [r0], -lr | mov     esi, 30h ; '0'; level
+   0xe879a |         bf00000000 | strheq r0, [r0], -pc | mov     edi, 0; avcl
+   0xe879f |         b800000000 | strheq r0, [r0], -r8 | mov     eax, 0
+   0xe87a4 |         e8bd52b400 | ldrblt fp, [r2], #-0xde8 | call    av_log
+   0xe87a9 |           498b7608 | ldmdaeq r6!, {r0, r3, r6, r8, sb, fp, pc} ^ | mov     rsi, [g+8]
+   0xe87ad |             4c89ef |  | mov     rdi, r13
+   0xe87b0 |         488b442428 | strbhs r8, [r4], #-0xb48 | mov     rax, [rsp+408h+open_file]
+   0xe87b5 |               ffd0 |  | call    rax
+   0xe87b7 |           8944240c | stceq p4, c4, [r4], #-0x224 | mov     [rsp+408h+ret], eax
+   0xe87bb |     488d2dde140001 | cdple p13, #2, c8, c13, c8, #2 | lea     rbp, options_139
+   0xe87c2 |                    |  | jmp     loc_E8627
+BB name:       0xe87c7
+BB preds:      ['0xe8680']
+BB succs:      ['0xe8598']
+BB disam_list: mov r8, mem mov rcx, mem lea rdx, aErrorOpeningSF mov esi, 10h mov edi, 0 mov eax, 0 call av_log jmp func
+BB hash:       7e1b8b9cec527c2e9ccab6dcbe6f696a
+   0xe87c7 |           4d8b4608 | stmdaeq r6, {r0, r2, r3, r6, r8, sb, fp, pc} ^ | mov     r8, [g+8]
+   0xe87cb |         488b4c2420 | strbhs r8, [ip], #-0xb48 | mov     rcx, [rsp+408h+inout]
+   0xe87d0 |     488d15215ab600 | tsths r5, r8, asr #26 | lea     rdx, aErrorOpeningSF; "Error opening %s file %s.\n"
+   0xe87d7 |         be10000000 | strheq r1, [r0], -lr | mov     esi, 10h; level
+   0xe87dc |         bf00000000 | strheq r0, [r0], -pc | mov     edi, 0; avcl
+   0xe87e1 |         b800000000 | strheq r0, [r0], -r8 | mov     eax, 0
+   0xe87e6 |         e87b52b400 | ldrblt r7, [r2], #-0xbe8 | call    av_log
+   0xe87eb |                    |  | jmp     loc_E8598
+BB name:       0xe87f0
+BB preds:      ['0xe86bf']
+BB succs:      ['0xe8598']
+BB disam_list: mov mem, 0 jmp func
+BB hash:       7cf882b8c6f2a7fee5b65dbb6327183a
+   0xe87f0 |   c744240c00000000 | stceq p4, c4, [r4], #-0x31c | mov     [rsp+408h+ret], 0
+   0xe87f8 |                    |  | jmp     loc_E8598
+BB name:       0xe87fd
+BB preds:      ['0xe8527']
+BB succs:      ['0xe8598']
+BB disam_list: mov mem, 0 jmp func
+BB hash:       7cf882b8c6f2a7fee5b65dbb6327183a
+   0xe87fd |   c744240c00000000 | stceq p4, c4, [r4], #-0x31c | mov     [rsp+408h+ret], 0
+   0xe8805 |                    |  | jmp     loc_E8598
+BB name:       0xe880a
+BB preds:      ['0xe8598']
+BB succs:      []
+BB disam_list: call ___stack_chk_fail
+BB hash:       6c4bd113f8d8742ccde174ff64486807
+   0xe880a |                    |  | call    ___stack_chk_fail
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\user\workspace\IDA\procs\pc64.dll...

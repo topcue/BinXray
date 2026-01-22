@@ -1,0 +1,2 @@
+idb (IDA database) files are too large at 17GB and are therefore excluded.
+
