@@ -31,18 +31,29 @@ CSV_PATH = wsl_to_win_path(CSV_PATH)
 PICKLE_PATH = wsl_to_win_path(PICKLE_PATH)
 
 
+def _dbg_str(tag: str, s: str):
+    print(f"[DEBUG] {tag}: repr={repr(s)} len={len(s)} codepoints={[hex(ord(c)) for c in s]}")
+
+
 def get_list():
+    if not os.path.isfile(CSV_PATH):
+        msg = f"[ERROR] function list CSV not found: {CSV_PATH}"
+        print(msg)
+        raise FileNotFoundError(msg)
+
     function_list = []
-    # Python 3: use text mode + newline=''
-    with open(CSV_PATH, "r", newline="", encoding="utf-8", errors="ignore") as csvfile:
+
+    with open(CSV_PATH, "r", newline="", encoding="utf-8-sig", errors="ignore") as csvfile:
         r = csv.reader(csvfile, delimiter=",")
         for row in r:
             for item in row:
                 if item:
                     item = item.replace("*", "")
+                    item = item.replace("\ufeff", "").replace("\r", "").replace("\n", "")
                     item = item.strip()
                     if item:
                         function_list.append(item)
+
     return function_list
 
 
@@ -53,7 +64,7 @@ def _get_input_basename():
 
 
 def dump_function_details(func_ea, name=None):
-    print(f"  [DEBUG] dump_function_details({func_ea})")
+    # print(f"  [DEBUG] dump_function_details({func_ea})")
     # NOTE: original code hard-coded ARM mode.
     md = Cs(CS_ARCH_ARM, CS_MODE_ARM)
 
@@ -61,7 +72,7 @@ def dump_function_details(func_ea, name=None):
     if not func_name:
         func_name = f"sub_{func_ea:X}"
 
-    print(f"  [DEBUG] func_name: {func_name}")
+    # print(f"  [DEBUG] func_name: {func_name}")
 
     bFunc = BFunc(func_ea)
     bFunc.name = func_name
@@ -71,7 +82,7 @@ def dump_function_details(func_ea, name=None):
         # Not a function in IDA database
         return None
 
-    print(f"  [DEBUG] {func_name} in ida_funcs")
+    # print(f"  [DEBUG] {func_name} in ida_funcs")
 
     # flags=idaapi.FC_PREDS keeps predecessor info similar to original
     for bb in ida_gdl.FlowChart(f, flags=idaapi.FC_PREDS):
@@ -157,6 +168,7 @@ def dump_functions(dbg):  # dbg = {name: addr}
     print(f"[DEBUG] func_list from {CSV_PATH}")
     for func in func_list:
         print(f"[DEBUG] func: {func}")
+        # _dbg_str("ida func name", func)
     print()
 
     if dbg:
@@ -172,8 +184,10 @@ def dump_functions(dbg):  # dbg = {name: addr}
             print(f"[DEBUG] Segment name: .text")
             for func_ea in idautils.Functions(seg_ea):
                 name = idc.get_func_name(func_ea)
+                # print(f" [DEBUG] name: {name}")
+                # _dbg_str("ida name", name)
                 if name in func_list:
-                    print(f"[DEBUG] func_name from ida: {name}")
+                    # print(f"[DEBUG] func_name from ida: {name}")
                     dump_function_details(func_ea)
 
 
