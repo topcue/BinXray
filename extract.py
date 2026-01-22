@@ -204,10 +204,10 @@ def main():
     dbg = None
     dump_functions(dbg)
 
-    # old: Exit(1)
-    # In IDA 7.x, use idc.qexit / ida_pro.qexit
     idc.qexit(0)
 
 
 if __name__ == "__main__":
     main()
+
+# EOF

@@ -1,7 +1,9 @@
 import sys
 
 SYSTEM_NAME = "binxray"
+
 PROJECT_NAME = "expat"
+# PROJECT_NAME = "ffmpeg"
 
 DATASET_NAME = "dataset_my"
 if PROJECT_NAME in (("expat")):

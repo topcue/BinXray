@@ -40,7 +40,8 @@ def main():
         if (".i64" not in f) and ("idb" not in f):
             file_list.append(f)
 
-    #! TODO: Fix me
+    
+
     file_list = file_list
 
     jobs = []
