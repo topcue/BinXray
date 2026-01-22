@@ -51,23 +51,21 @@ def read_func_info(function_name, version):
     if not BIN_NAME:
         input_path = os.path.join(PICKLE_PATH, f"{version}_{function_name}.pkl")
 
-
-
-    print(f"[DEBUG] input_path: {input_path}")
+    print(f"  [DEBUG] input_path: {input_path}")
 
     if not os.path.isfile(input_path):
         raise FileNotFoundError(input_path)
-
 
     func = None
     try:
         with open(input_path, 'rb') as input:
             func = pickle.load(input)
-            print(f"success: {function_name}")
+            print(f"  [+] success: {function_name}")
     except IOError as e:
-        print("error:", function_name)
+        print("  [-] error:", function_name)
         return None
     return func
+
 
 def preprocess_func(func):
     for bb in func.bbs:
@@ -85,6 +83,7 @@ def preprocess_func(func):
 
         bb.neighbour_disasm_list = [pred_disam_list, succ_disam_list]
     return func
+
 
 def update_map(map, key, value, index):
     if index == 0:
@@ -106,6 +105,8 @@ def match_two_funcs(func1, func2):
         update_map(map, bb2.hash_v2, bb2, 2)
     return map
 
+
+#! Contains dead code.
 def match_two_funcs_v2(func1, func2):
     map = {}
     index = 0
@@ -116,7 +117,6 @@ def match_two_funcs_v2(func1, func2):
 
     for bb2 in func2.bbs:
         mnen2.append(bb2.mnen_list)
-
 
 
 def cal_score_trace(trace0, trace1):
@@ -773,6 +773,7 @@ def match_decision_v2(target_func, sig,all_paths):
 
 
 def match_decision(target_func, sig):
+    # print('1')
     vul_func = sig[0]
     patch_func = sig[1]
     diff = sig[2]
@@ -789,7 +790,6 @@ def match_decision(target_func, sig):
     same_v = isEmpty(diff_v_to_t)
     same_p = isEmpty(diff_p_to_t)
 
-
     if same_v and same_p:
         return "N VT/PT no diff",[]
     elif same_p:
@@ -797,14 +797,10 @@ def match_decision(target_func, sig):
     elif same_v:
         return "V",[]
 
-
     print("handle")
-
 
     s_v = find_surruding(diff[0], vul_func)
     s_p = find_surruding(diff[1], patch_func)
-
-
 
     matched_bb_list_v_t = []
     if s_v:
@@ -837,8 +833,8 @@ def match_decision(target_func, sig):
         patch_vp = build_trace_graph_v2(diff[1] , s_p, patch_func) #T2
         print("get T2")
     else:
-
         DIFF1 = True
+
     if matched_bb_list_p_t:
         tar_vt = build_trace_graph_v2(diff_v_to_t[1] , matched_bb_list_p_t, target_func) #T3
         cbb1 = set(diff_v_to_t[1])
@@ -859,16 +855,13 @@ def match_decision(target_func, sig):
         bbb2 = set(matched_bb_list_p_t).union(cbb1)
     print("get T5")
 
-
     cbb = cbb1.union(cbb2)
     bbb = bbb1.union(bbb2)
     cbb_len = len(cbb)
     bbb_len = len(bbb)
 
-
     if vul_vt == -1 or patch_pt == -1 or vul_vp == -1 or patch_vp == -1 or tar_vt == -1 or tar_pt == -1:
         return "NA too much diff",[]
-
 
     tar_vt_reduced = []
     if not len(diff[1]) == 0:
@@ -891,7 +884,6 @@ def match_decision(target_func, sig):
         tar_pt_reduced = tar_pt
     tar_pt_reduced = tar_pt
 
-
     if len(tar_vt_reduced) == 0 and len(tar_pt_reduced) == 0:
         return "NT no trace",[cbb_len,bbb_len]
     elif len(tar_vt_reduced) == 0:
@@ -902,8 +894,6 @@ def match_decision(target_func, sig):
     print("start get trace list")
     trace_list_vul_vp = get_instr_list(vul_func, vul_vp)
     trace_list_patch_vp = get_instr_list(patch_func, patch_vp)
-
-
 
     trace_list_vul_vt = get_instr_list(vul_func, vul_vt)
 
@@ -918,7 +908,6 @@ def match_decision(target_func, sig):
     s_pt = matching_v2(trace_list_patch_vp, trace_list_tar_vt) #(T2,T3)
     print("end matching")
 
-
     threshold = 0.5
     if not DIFF0 and not DIFF1:
         if s_vt > s_pt:
@@ -928,7 +917,6 @@ def match_decision(target_func, sig):
         else:
             return "C can't tell",[cbb_len,bbb_len]
     elif DIFF0:
-
         s_vt = matching_v2(trace_list_patch_vp, trace_list_patch_pt) #(T2,T6)
         s_pt = matching_v2(trace_list_patch_vp, trace_list_tar_vt) #(T2,T3)
         if s_vt > s_pt:
@@ -937,9 +925,7 @@ def match_decision(target_func, sig):
             return "P " + str(s_vt) + "/" + str(s_pt) +" "+ str(len(diff_v_to_t[1])) + "/" + str(len(diff_p_to_t[1])),[cbb_len,bbb_len]
         else:
             return "C can't tell",[cbb_len,bbb_len]
-
     elif DIFF1:
-
         s_vt = matching_v2(trace_list_vul_vp, trace_list_tar_pt) #(T1,T5)
         s_pt = matching_v2(trace_list_vul_vp, trace_list_vul_vt) #(T1,T4)
         if s_vt > s_pt:
@@ -948,7 +934,6 @@ def match_decision(target_func, sig):
             return "P " + str(s_vt) + "/" + str(s_pt) +" "+ str(len(diff_v_to_t[1])) + "/" + str(len(diff_p_to_t[1])),[cbb_len,bbb_len]
         else:
             return "C can't tell",[cbb_len,bbb_len]
-
 
 
 def read_exp_config():
@@ -975,8 +960,14 @@ def read_exp_config():
 
 
 def controler(n_v):
-    config = read_exp_config()
-    config = set(tuple(row) for row in config)
+    config_list = read_exp_config()
+    # config = set(tuple(row) for row in config)
+    config = list(dict.fromkeys(map(tuple, config_list))) 
+
+    for record in config:
+        print(f"[DEBUG] record in config: {record}")
+    print()
+
 
     result = []
     cost = 0
@@ -995,6 +986,8 @@ def controler(n_v):
         list_head = [CVE_id,function_name, patch_version, vul_version]
 
         tmp,time,bb,f = run_one_exp(function_name, vul_version, patch_version)
+        print(f"Exit in controler()")
+        exit(0)
 
         if len(tmp) == n_v:
             list_head.extend(tmp)
@@ -1006,6 +999,7 @@ def controler(n_v):
             b_count += bb[2]
             f_bb += f[0]
             f_count += f[1]
+
     print("cost:",cost)
     print("func_count:",func_count)
     print("one func time:",cost / float(func_count))
@@ -1034,10 +1028,14 @@ def read_versions():
     return version_list
 
 def run_one_exp(function_name, vul_version, patch_version):
-    print("analysing " + function_name)
-
+    print(f"  [*] analysing function_name: {function_name}")
+    print()
 
     sig = extract_sig(function_name, vul_version, patch_version) #sig includes [vul_func, patch_func, diff]
+    print("\n[*] extract_sig() done.\n")
+
+    # print(f"Exit in run_one_exp()")
+    # exit(0)
 
     if not sig:
         return ["ERROR"],[],[],[]
@@ -1061,7 +1059,7 @@ def run_one_exp(function_name, vul_version, patch_version):
         f_count += 1
 
         start = time.time()
-        decision,bb_len = match_decision(target_func, sig)
+        decision, bb_len = match_decision(target_func, sig)
         end = time.time()
         cost += (end - start)
         count += 1
@@ -1069,7 +1067,7 @@ def run_one_exp(function_name, vul_version, patch_version):
             b_count += 1
             cbb += bb_len[0]
             bbb += bb_len[1]
-        print("decision:",decision)
+        print("  [*] decision:",decision)
         result_list.append(decision)
     return result_list,[cost,count],[cbb,bbb,b_count],[f_bb,f_count]
 
@@ -1188,13 +1186,12 @@ def cal_v2(res,cve,gt): #gt = {cve:p_ver}
     print(cve_bad)
 
 
-def unit_test(out,n_v):
-
+def unit_test(out, n_v):
     r = controler(n_v)
     for rr in r:
-        print("rr:",rr)
+        print(f"[*] rr: {rr}")
 
-    with open(out,'w', encoding='utf-8', newline='') as f:
+    with open(out, 'w', encoding='utf-8', newline='') as f:
         json.dump(r, f)
 
 
@@ -1321,7 +1318,11 @@ def main():
     num_vers = count_non_empty_lines(VERSION_CSV_PATH)
     OUTPUT_PATH = os.path.join(OUTPUT_DIR, "out.json")
 
+    print(f"[DEBUG] invoke unit_test({OUTPUT_PATH}, {num_vers})")
     unit_test(OUTPUT_PATH, num_vers)
+    print(f"[DEBUG] unit_test() done..")
+
+    return
 
     with open(OUTPUT_PATH,'r', encoding='utf-8', errors='ignore')as f:
         res = json.load(f)
