@@ -76,6 +76,8 @@ def main():
     force = args.force
     DEBUG = args.debug
 
+    print(f"[*] PROJECT_NAME: {PROJECT_NAME}\n")
+
     INPUT_DIR = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, "bin")
 
     print(f"[*] IDA_SCRIPT_PATH: {IDA_SCRIPT_PATH}")
