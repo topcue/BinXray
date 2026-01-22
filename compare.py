@@ -9,10 +9,13 @@ import json
 import time
 
 from my_config import (
+    PROJECT_NAME,
     PICKLE_PATH,
     CONFIG_CSV_PATH,
     VERSION_CSV_PATH,
-    OUTPUT_DIR
+    OUTPUT_DIR,
+    BASE_PATH,
+    DATASET_NAME,
 )
 
 #! Test expat
@@ -27,7 +30,8 @@ BIN_NAME = ""
 # BIN_NAME = "openssl"
 
 #! Test ffmpeg
-
+# CONFIG_CSV_PATH = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, f"{PROJECT_NAME}_config.csv")
+CONFIG_INPUT_CSV_PATH = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, f"{PROJECT_NAME}_config_input.csv")
 
 CMP_REGS_X64 = ["rax", "eax", "ax", "al", "rbx", "ebx", "bx", "bl", "rcx", "ecx", "cx", "cl",
     "rdx", "edx", "dx", "dl", "rsi", "esi", "si", "sil", "rdi", "edi", "di", "dil", "rbp", "ebp",
@@ -50,6 +54,25 @@ def read_func_info(function_name, version):
     input_path = os.path.join(PICKLE_PATH, f"{version}_{BIN_NAME}_{function_name}.pkl")
     if not BIN_NAME:
         input_path = os.path.join(PICKLE_PATH, f"{version}_{function_name}.pkl")
+
+    print(f"  [-][DEBUG] input_path: {input_path}")
+
+    if not os.path.isfile(input_path):
+        raise FileNotFoundError(input_path)
+
+    func = None
+    try:
+        with open(input_path, 'rb') as input:
+            func = pickle.load(input)
+            print(f"  [+] success: {function_name}")
+    except IOError as e:
+        print("  [-] error:", function_name)
+        return None
+    return func
+
+
+def read_func_info_by_path(file_path, function_name):
+    input_path = file_path
 
     print(f"  [DEBUG] input_path: {input_path}")
 
@@ -327,14 +350,54 @@ def get_diff_bbs_v2(map):
     return [func1_bb_list, func2_bb_list]
 
 
-def extract_sig(function_name, vul_version, patch_version):
+def read_rows(csv_path: str):
+    if not os.path.isfile(csv_path):
+        raise FileNotFoundError(csv_path)
 
-    vul_func = read_func_info(function_name, vul_version)
+    rows = []
+    with open(csv_path, "r", newline="", encoding="utf-8-sig") as f:
+        reader = csv.reader(f, delimiter=",")
+        for row in reader:
+            rows.append(row)
+    return rows
+
+
+def extract_sig(function_name, vul_version, patch_version, idx):
+
+    print(CONFIG_CSV_PATH)
+    print(CONFIG_INPUT_CSV_PATH)
+
+    rows = read_rows(CONFIG_INPUT_CSV_PATH)
+    # print(rows)
+
+    target_row = rows[idx]
+
+    print(f"[*] target_row: {target_row}")
+
+    cve_id, vul_ver, patch_ver, func_name, bin_name = target_row
+
+    vul_file_name = f"{vul_version}_{bin_name}_{function_name}.pkl"
+    patch_file_name = f"{patch_version}_{bin_name}_{function_name}.pkl"
+
+    #! For expat case
+    if not bin_name:
+        vul_file_name = f"{vul_version}_{function_name}.pkl"
+        patch_file_name = f"{patch_version}_{function_name}.pkl"
+
+    vuln_file_path = os.path.join(PICKLE_PATH, vul_file_name)
+    patch_file_path = os.path.join(PICKLE_PATH, patch_file_name)
+
+    print(f"[*] vuln_file_path:  {vuln_file_path}")
+    print(f"[*] patch_file_path: {patch_file_path}")
+
+    # vul_func = read_func_info(function_name, vul_version)
+    vul_func = read_func_info_by_path(vuln_file_path, function_name)
     if not vul_func:
         return None
     vul_func = preprocess_func(vul_func)
 
-    patch_func = read_func_info(function_name, patch_version)
+    # patch_func = read_func_info(function_name, patch_version)
+    patch_func = read_func_info_by_path(patch_file_path, function_name)
     if not patch_func:
         return None
     patch_func = preprocess_func(patch_func)
@@ -345,8 +408,10 @@ def extract_sig(function_name, vul_version, patch_version):
 
     return [vul_func, patch_func, diff]
 
-def load_target_func(function_name, target_version):
-    target_func = read_func_info(function_name, target_version)
+
+def load_target_func(function_name, target_version, file_path):
+    # target_func = read_func_info(function_name, target_version)
+    target_func = read_func_info_by_path(file_path, function_name)
     if not target_func:
         return None
     target_func = preprocess_func(target_func)
@@ -409,7 +474,6 @@ def build_trace_graph_v2(bb_add_list_changed, bb_add_list_root, func):
 
     bb_add_list_root_in_func = get_root_bbs_add(func)
 
-
     bb_add_list_in_graph = list(set(bb_add_list_changed).union(set(bb_add_list_root)))
     bb_list_in_graph = add_list_to_bb_list(bb_add_list_in_graph, func)
     print("get bb list:")
@@ -441,10 +505,8 @@ def build_trace_graph_v2(bb_add_list_changed, bb_add_list_root, func):
     all_paths = []
     for root in root_list:
         for leaf in leaf_list:
-
             if root == leaf and root in bb_add_list_root:
                 all_paths.extend([[root]])
-
             paths = nx.all_simple_paths(G, root, leaf)
 
             if paths:
@@ -457,7 +519,6 @@ def build_trace_graph_v2(bb_add_list_changed, bb_add_list_root, func):
                             ppath.append(path)
                             break
                 all_paths.extend(ppath)
-
     return all_paths
 
 
@@ -513,11 +574,10 @@ def matching(source_trace_list, match_trace_list):
             dist = editdistance.eval(item1 , item2)
             value = float(lenn - dist) / float(lenn)
             total_score += value * (len1 + len2) / base
-
-
     matching_score = total_score
 
     return matching_score
+
 
 def matching_v2(source_trace_list, match_trace_list):
     trace_count = 0
@@ -540,6 +600,7 @@ def matching_v2(source_trace_list, match_trace_list):
         return float(total_score) / float(trace_count)
     else:
         return -1
+
 
 def matching_v3(source_trace_list, match_trace_list):
     total_score = 0
@@ -567,6 +628,7 @@ def matching_v3(source_trace_list, match_trace_list):
         return float(total_score) / float(total_len)
     else:
         return -1
+
 
 def matching_v4(source_trace_list, match_trace_list):
     trace_count = 0
@@ -598,6 +660,7 @@ def matching_v4(source_trace_list, match_trace_list):
     else:
         return -1
 
+
 def find_surruding(bb_address_list, func):
     result_list = []
     for bb in func.bbs:
@@ -608,7 +671,6 @@ def find_surruding(bb_address_list, func):
     return_re = list(return_re)
     #print return_re
     return return_re
-
 
 
 def find_matched_bb(bb, map_x_to_t):
@@ -624,7 +686,6 @@ def find_matched_bb(bb, map_x_to_t):
         return record[1][matched_index].start_address
     else:
         return None
-
 
 
 def find_matched_bbs(bb_list, map_x_to_t, index):
@@ -684,101 +745,91 @@ def get_slice(target_func):
     return all_paths
 
 
-def match_decision_v2(target_func, sig,all_paths):
-    vul_func = sig[0]
-    patch_func = sig[1]
-    diff = sig[2]
+# def match_decision_v2(target_func, sig,all_paths):
+#     vul_func = sig[0]
+#     patch_func = sig[1]
+#     diff = sig[2]
 
-    if isEmpty(diff):
-        return "N VP no diff"
+#     if isEmpty(diff):
+#         return "N VP no diff"
 
-    v_to_t = match_two_funcs(vul_func, target_func)
-    diff_v_to_t = get_diff_bbs_v2(v_to_t)
+#     v_to_t = match_two_funcs(vul_func, target_func)
+#     diff_v_to_t = get_diff_bbs_v2(v_to_t)
 
-    p_to_t = match_two_funcs(patch_func, target_func)
-    diff_p_to_t = get_diff_bbs_v2(p_to_t)
+#     p_to_t = match_two_funcs(patch_func, target_func)
+#     diff_p_to_t = get_diff_bbs_v2(p_to_t)
 
-    same_v = isEmpty(diff_v_to_t)
-    same_p = isEmpty(diff_p_to_t)
+#     same_v = isEmpty(diff_v_to_t)
+#     same_p = isEmpty(diff_p_to_t)
 
-    if same_v and same_p:
-        return "N VT/PT no diff"
-    elif same_p:
-        return "P"
-    elif same_v:
-        return "V"
+#     if same_v and same_p:
+#         return "N VT/PT no diff"
+#     elif same_p:
+#         return "P"
+#     elif same_v:
+#         return "V"
 
-    print("handle")
+#     print("handle")
 
-    print("start find surruding")
-    s_v = find_surruding(diff[0], vul_func)
-    s_p = find_surruding(diff[1], patch_func)
-    print("end find surruding")
+#     print("start find surruding")
+#     s_v = find_surruding(diff[0], vul_func)
+#     s_p = find_surruding(diff[1], patch_func)
+#     print("end find surruding")
 
-    DIFF0 = False
-    DIFF1 = False
+#     DIFF0 = False
+#     DIFF1 = False
 
-    vul_vp = []
-    patch_vp = []
+#     vul_vp = []
+#     patch_vp = []
 
-    print("diff0:",diff[0])
-    print("diff1:",diff[1])
-    if diff[0]:
-        vul_vp = build_trace_graph_v2(diff[0] , s_v, vul_func) #T1
-        print("get T1:")
-    else:
+#     print("diff0:",diff[0])
+#     print("diff1:",diff[1])
+#     if diff[0]:
+#         vul_vp = build_trace_graph_v2(diff[0] , s_v, vul_func) #T1
+#         print("get T1:")
+#     else:
+#         DIFF0 = True
+#     if diff[1]:
+#         patch_vp = build_trace_graph_v2(diff[1] , s_p, patch_func) #T2
+#         print("get T2")
+#     else:
+#         DIFF1 = True
 
-        DIFF0 = True
-    if diff[1]:
-        patch_vp = build_trace_graph_v2(diff[1] , s_p, patch_func) #T2
-        print("get T2")
-    else:
+#     trace_list_vul_vp = get_instr_list(vul_func, vul_vp)
+#     trace_list_patch_vp = get_instr_list(patch_func, patch_vp)
+#     trace_list_tar = get_instr_list(target_func, all_paths)
 
-        DIFF1 = True
+#     s_vt = matching_v3(trace_list_vul_vp, trace_list_tar)
+#     s_pt = matching_v3(trace_list_patch_vp, trace_list_tar)
 
-
-
-
-    trace_list_vul_vp = get_instr_list(vul_func, vul_vp)
-
-    trace_list_patch_vp = get_instr_list(patch_func, patch_vp)
-
-
-    trace_list_tar = get_instr_list(target_func, all_paths)
-
-    s_vt = matching_v3(trace_list_vul_vp, trace_list_tar)
-    s_pt = matching_v3(trace_list_patch_vp, trace_list_tar)
-
-    threshold = 0.5
-    if not DIFF0 and not DIFF1:
-        if s_vt > s_pt:
-            return "V " + str(s_vt) + "/" + str(s_pt)
-        if s_vt < s_pt:
-            return "P " + str(s_vt) + "/" + str(s_pt)
-        else:
-            return "C can't tell"
-    if not DIFF0 and  DIFF1:
-        if 0.5 < s_pt:
-            return "P " + str(s_pt)
-        else:
-            return "V " + str(s_pt)
-    if  DIFF0 and not DIFF1:
-        if 0.5 < s_vt:
-            return "V " + str(s_vt)
-        else:
-            return "P " + str(s_vt)
-    return "C can't tell"
-
-
+#     threshold = 0.5
+#     if not DIFF0 and not DIFF1:
+#         if s_vt > s_pt:
+#             return "V " + str(s_vt) + "/" + str(s_pt)
+#         if s_vt < s_pt:
+#             return "P " + str(s_vt) + "/" + str(s_pt)
+#         else:
+#             return "C can't tell"
+#     if not DIFF0 and  DIFF1:
+#         if 0.5 < s_pt:
+#             return "P " + str(s_pt)
+#         else:
+#             return "V " + str(s_pt)
+#     if  DIFF0 and not DIFF1:
+#         if 0.5 < s_vt:
+#             return "V " + str(s_vt)
+#         else:
+#             return "P " + str(s_vt)
+#     return "C can't tell"
 
 
 def match_decision(target_func, sig):
-    # print('1')
     vul_func = sig[0]
     patch_func = sig[1]
     diff = sig[2]
 
     if isEmpty(diff):
+        print(f"[*] isEmpty(diff): {isEmpty(diff)}")
         return "N VP no diff",[]
 
     v_to_t = match_two_funcs(vul_func, target_func)
@@ -797,7 +848,8 @@ def match_decision(target_func, sig):
     elif same_v:
         return "V",[]
 
-    print("handle")
+    print()
+    print("[*] handle")
 
     s_v = find_surruding(diff[0], vul_func)
     s_p = find_surruding(diff[1], patch_func)
@@ -827,8 +879,8 @@ def match_decision(target_func, sig):
         vul_vp = build_trace_graph_v2(diff[0] , s_v, vul_func) #T1
         print("get T1")
     else:
-
         DIFF0 = True
+
     if diff[1]:
         patch_vp = build_trace_graph_v2(diff[1] , s_p, patch_func) #T2
         print("get T2")
@@ -861,7 +913,10 @@ def match_decision(target_func, sig):
     bbb_len = len(bbb)
 
     if vul_vt == -1 or patch_pt == -1 or vul_vp == -1 or patch_vp == -1 or tar_vt == -1 or tar_pt == -1:
-        return "NA too much diff",[]
+        return "NA too much diff", []
+
+    # print(f"[ASD] tar_vt: {tar_vt}")
+    # print(f"[ASD] tar_pt: {tar_pt}")
 
     tar_vt_reduced = []
     if not len(diff[1]) == 0:
@@ -961,8 +1016,7 @@ def read_exp_config():
 
 def controler(n_v):
     config_list = read_exp_config()
-    # config = set(tuple(row) for row in config)
-    config = list(dict.fromkeys(map(tuple, config_list))) 
+    config = list(dict.fromkeys(map(tuple, config_list)))
 
     for record in config:
         print(f"[DEBUG] record in config: {record}")
@@ -977,7 +1031,10 @@ def controler(n_v):
     b_count = 0
     f_bb = 0
     f_count = 0
+    idx = 0
     for record in config:
+        print(f"\n[*] ======== line number of config: {idx+1} ========")
+
         CVE_id = record[3]
         function_name = record[0]
         patch_version = record[2]
@@ -985,12 +1042,12 @@ def controler(n_v):
 
         list_head = [CVE_id,function_name, patch_version, vul_version]
 
-        tmp,time,bb,f = run_one_exp(function_name, vul_version, patch_version)
-        print(f"Exit in controler()")
-        exit(0)
+        result_list, time, bb, f, my_result_list = run_one_exp(function_name, vul_version, patch_version, idx)
+        print(f"  [*] run_one_exp() done..")
 
-        if len(tmp) == n_v:
-            list_head.extend(tmp)
+        # if len(result_list) == n_v:
+        if True:
+            list_head.extend(result_list)
             result.append(list_head)
             cost += time[0]
             func_count += time[1]
@@ -999,10 +1056,16 @@ def controler(n_v):
             b_count += bb[2]
             f_bb += f[0]
             f_count += f[1]
+        idx += 1
+
+        print("[RESULT]")
+        for item in my_result_list:
+            file_name, decision = item.split(':')
+            print(f"[*] {file_name} : {decision}")
 
     print("cost:",cost)
     print("func_count:",func_count)
-    print("one func time:",cost / float(func_count))
+    # print("one func time:",cost / float(func_count))
     print("cbb:",cbb)
     print("bbb:",bbb)
     print("b_count:",b_count)
@@ -1014,33 +1077,54 @@ def controler(n_v):
         print("avr_cbb+bbb:",0)
     print("f_bb:",f_bb)
     print("f_count:",f_count)
-    print("avr_bb",float(f_bb) / float(f_count))
+    # print("avr_bb",float(f_bb) / float(f_count))
+
     return result
 
 
 def read_versions():
     version_list = []
-    with open(VERSION_CSV_PATH, 'r', newline='', encoding='utf-8', errors='ignore') as csvfile:
+    with open(VERSION_CSV_PATH, 'r', newline='', encoding='utf-8-sig', errors='ignore') as csvfile:
         r = csv.reader(csvfile, delimiter=',')
         for row in r:
             if len(row) == 1:
                 version_list.append(row[0])
     return version_list
 
-def run_one_exp(function_name, vul_version, patch_version):
+
+def run_one_exp(function_name, vul_version, patch_version, idx):
     print(f"  [*] analysing function_name: {function_name}")
     print()
 
-    sig = extract_sig(function_name, vul_version, patch_version) #sig includes [vul_func, patch_func, diff]
+    print("\n[*] invoke extract_sig()\n")
+    sig = extract_sig(function_name, vul_version, patch_version, idx) #sig includes [vul_func, patch_func, diff]
     print("\n[*] extract_sig() done.\n")
 
-    # print(f"Exit in run_one_exp()")
-    # exit(0)
+    print(f"\n[TRACE]")
+    vul_func, patch_func, diff = sig
+
+    print(f"[*] diff: {diff}")
+
+    print(f"[*] vul_func's info")
+    print(f"[*] name: {vul_func.name}")
+    print(f"[*] Basic blocks:")
+    print(">" * 40 + " vul_func " + ">" * 40)
+    vul_func.print_func_v1()
+    print("<" * 40 + " vul_func " + "<" * 40)
+
+    print(f"[*] patch_func's info")
+    print(f"[*] name: {patch_func.name}")
+    print(f"[*] Basic blocks:")
+    print(">" * 40 + " patch_func " + ">" * 40)
+    patch_func.print_func_v1()
+    print("<" * 40 + " patch_func " + "<" * 40)
 
     if not sig:
         return ["ERROR"],[],[],[]
 
     version_list = read_versions()
+    print(version_list)
+
     result_list = []
     cost = 0
     count = 0
@@ -1049,27 +1133,56 @@ def run_one_exp(function_name, vul_version, patch_version):
     b_count = 0
     f_bb = 0
     f_count = 0
+    my_result_list = []
+
     for version in version_list:
+        #! all pkl contain fuction_name
+        print("=" * 80)
+        print(function_name, version)
+        print(f"[*] funcion_name: {function_name}")
+        print(f"[*] version: {version}")
+        print(PICKLE_PATH)
 
-        target_func = load_target_func(function_name, version)
-        if not target_func:
-            result_list.append("NA")
-            continue
-        f_bb += len(target_func.bbs)
-        f_count += 1
+        pkl_files = os.listdir(PICKLE_PATH)
+        target_pkl_file = ""
+        for pkl_file in pkl_files:
+            # print(pkl_file)
+            if pkl_file.startswith(f"{version}_") and pkl_file.endswith(f"{function_name}.pkl"):
+                print(f"! {pkl_file}")
 
-        start = time.time()
-        decision, bb_len = match_decision(target_func, sig)
-        end = time.time()
-        cost += (end - start)
-        count += 1
-        if bb_len:
-            b_count += 1
-            cbb += bb_len[0]
-            bbb += bb_len[1]
-        print("  [*] decision:",decision)
-        result_list.append(decision)
-    return result_list,[cost,count],[cbb,bbb,b_count],[f_bb,f_count]
+                target_pkl_file = pkl_file
+
+                if not target_pkl_file:
+                    print("[-] no pkl file.")
+                    exit(9)
+
+                pkl_file_path = os.path.join(PICKLE_PATH, target_pkl_file)
+                print(f"[*] target pkl_file_path: {pkl_file_path}")
+
+                target_func = load_target_func(function_name, version, pkl_file_path)
+                if not target_func:
+                    result_list.append("NA")
+                    continue
+                f_bb += len(target_func.bbs)
+                f_count += 1
+
+                start = time.time()
+                decision, bb_len = match_decision(target_func, sig)
+
+                #! Fix me
+                my_result = f"{target_pkl_file}:{decision}"
+                my_result_list.append(my_result)
+
+                end = time.time()
+                cost += (end - start)
+                count += 1
+                if bb_len:
+                    b_count += 1
+                    cbb += bb_len[0]
+                    bbb += bb_len[1]
+                print("  [*] decision:", decision)
+                result_list.append(decision)
+    return result_list, [cost, count], [cbb, bbb, b_count], [f_bb,f_count], my_result_list
 
 def calculate_acc(raw_result):
     acc = 0
@@ -1190,6 +1303,8 @@ def unit_test(out, n_v):
     r = controler(n_v)
     for rr in r:
         print(f"[*] rr: {rr}")
+        for item in rr:
+            print(item)
 
     with open(out, 'w', encoding='utf-8', newline='') as f:
         json.dump(r, f)
@@ -1322,7 +1437,7 @@ def main():
     unit_test(OUTPUT_PATH, num_vers)
     print(f"[DEBUG] unit_test() done..")
 
-    return
+    # return
 
     with open(OUTPUT_PATH,'r', encoding='utf-8', errors='ignore')as f:
         res = json.load(f)
