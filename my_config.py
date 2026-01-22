@@ -2,8 +2,8 @@ import sys
 
 SYSTEM_NAME = "binxray"
 
-PROJECT_NAME = "expat"
-# PROJECT_NAME = "ffmpeg"
+# PROJECT_NAME = "expat"
+PROJECT_NAME = "ffmpeg"
 
 DATASET_NAME = "dataset_my"
 if PROJECT_NAME in (("expat")):
@@ -14,7 +14,7 @@ def setup_ida_sys_path():
     ida_site_pkgs = f"C:\\Users\\user\\workspace\\IDA-python\\{SYSTEM_NAME}\\Lib\\site-packages"
     if ida_site_pkgs not in sys.path:
         sys.path.insert(0, ida_site_pkgs)
-    
+
     def p(*a):
         print("[IDAPY]", *a)
 
