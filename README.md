@@ -20,6 +20,9 @@ This repository is intended to support experimental evaluation in our research.
 The original authors provided artifact materials via the following page:
 - https://sites.google.com/view/submission-for-issta-2020
 
+The original scripts released by the authors were used as a reference
+during reimplementation, but are not redistributed in this repository.
+
 ## What this repository contains
 
 - A runnable pipeline for BinXray-style feature extraction / matching, adapted for:
