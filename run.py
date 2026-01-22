@@ -85,6 +85,7 @@ def main():
     print(f"[*] BASE_PATH:       {BASE_PATH}")
     print(f"[*] INPUT_DIR:       {INPUT_DIR}")
     print(f"[*] IDB_PATH:        {IDB_PATH}")
+    print(f"[*] PICKLE_PATH:     {PICKLE_PATH}")
     print(f"[*] FORCE:           {force}")
     print()
 

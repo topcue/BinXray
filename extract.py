@@ -198,7 +198,9 @@ def save_function(bFunc):
 
 
 def main():
+    print("[DEBUG] invoke idaapi.auto_wait()")
     idaapi.auto_wait()
+    print("[DEBUG] complete idaapi.auto_wait()")
 
     # dbg = _load_dbg_map()
     dbg = None
