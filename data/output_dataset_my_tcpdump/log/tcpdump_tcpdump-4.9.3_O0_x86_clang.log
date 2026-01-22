@@ -1,0 +1,2465 @@
+BinDiff 7 (@377901646, Jun  7 2021), (c)2004-2011 zynamics GmbH, (c)2011-2021 Google LLC.
+BinExport 12 (@377901646, Jun  7 2021), (c)2004-2011 zynamics GmbH, (c)2011-2021 Google LLC.
+
+v7.7 48-B37B-7904-AC KAIST
+
+Your support plan expired on 2022-06-08.
+To renew it, please visit our web site for the instructions.
+
+https://www.hex-rays.com/idapro/idaupgrade.htm
+
+Thank you for using IDA! -> OK
+Possible file format: ELF64 for x86-64 (Executable) (C:\Users\user\workspace\IDA\loaders\elf64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8781824  1072 8192 allocating memory for b-tree...
+  8781824  1072 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17825792            total memory allocated
+
+Loading file 'C:\Users\user\workspace\storage\binxray\dataset_my\tcpdump\bin\tcpdump_tcpdump-4.9.3_O0_x86_clang' into database...
+Detected file format: ELF64 for x86-64 (Executable)
+Loading processor module C:\Users\user\workspace\IDA\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+  0. Creating a new segment  (0000000000400000-0000000000402640) ... ... OK
+  1. Creating a new segment  (0000000000403000-00000000004E4251) ... ... OK
+  2. Creating a new segment  (00000000004E5000-0000000000531448) ... ... OK
+  3. Creating a new segment  (0000000000532DF0-0000000000698228) ... ... OK
+Assuming __fastcall calling convention by default
+Type library 'gnulnx_x64' loaded. Applying types...
+Types applied to 0 names.
+  4. Creating a new segment  (0000000000403000-000000000040301B) ... ... OK
+     Deleting segment        (000000000040301B-00000000004E4251) ...
+  4. Creating a new segment  (000000000040301B-00000000004E4251) ... ... OK
+  5. Creating a new segment  (0000000000403020-0000000000403890) ... ... OK
+  6. Creating a new segment  (0000000000403890-00000000004E4251) ... ... OK
+  7. Creating a new segment  (0000000000403890-00000000004E4243) ... ... OK
+     Deleting segment        (00000000004E4243-00000000004E4251) ...
+  7. Creating a new segment  (00000000004E4243-00000000004E4251) ... ... OK
+  8. Creating a new segment  (00000000004E4244-00000000004E4251) ... ... OK
+  9. Creating a new segment  (00000000004E5000-00000000005259BA) ... ... OK
+     Deleting segment        (00000000005259BA-0000000000531448) ...
+  9. Creating a new segment  (00000000005259BA-0000000000531448) ... ... OK
+ 10. Creating a new segment  (00000000005259BC-0000000000527ED0) ... ... OK
+ 11. Creating a new segment  (0000000000527ED0-0000000000531448) ... ... OK
+     Deleting segment        (0000000000527ED0-0000000000531448) ...
+ 11. Creating a new segment  (0000000000527ED0-0000000000531448) ... ... OK
+ 12. Creating a new segment  (0000000000532DF0-0000000000532DF8) ... ... OK
+     Deleting segment        (0000000000532DF8-0000000000698228) ...
+ 12. Creating a new segment  (0000000000532DF8-0000000000698228) ... ... OK
+ 13. Creating a new segment  (0000000000532DF8-0000000000532E00) ... ... OK
+     Deleting segment        (0000000000532E00-0000000000698228) ...
+ 13. Creating a new segment  (0000000000532E00-0000000000698228) ... ... OK
+ 14. Creating a new segment  (0000000000532FF0-0000000000533000) ... ... OK
+ 15. Creating a new segment  (0000000000533000-0000000000698228) ... ... OK
+ 16. Creating a new segment  (0000000000533000-0000000000533448) ... ... OK
+     Deleting segment        (0000000000533448-0000000000698228) ...
+ 16. Creating a new segment  (0000000000533448-0000000000698228) ... ... OK
+ 17. Creating a new segment  (0000000000533450-0000000000539870) ... ... OK
+ 18. Creating a new segment  (0000000000539870-0000000000698228) ... ... OK
+ 19. Creating a new segment  (0000000000539880-0000000000698228) ... ... OK
+ 20. Creating a new segment  (0000000000698228-0000000000698229) ... ... OK
+ 21. Creating a new segment  (0000000000698230-0000000000698670) ... ... OK
+Processing relocations...
+DWARF: File "C:\Users\user\workspace\storage\binxray\dataset_my\tcpdump\bin\tcpdump_tcpdump-4.9.3_O0_x86_clang" contains DWARF information.
+DWARF: Functions: 1717 symbols applied
+DWARF: Globals: 1076 symbols applied
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\user\workspace\storage\binxray\dataset_my\tcpdump\bin\tcpdump_tcpdump-4.9.3_O0_x86_clang' has been successfully loaded into the database.
+Hex-Rays Decompiler plugin has been loaded (v7.7.0.220118)
+  License: 55-BF89-8844-08 KAIST (1 user)
+  The hotkeys are F5: decompile, Ctrl-F5: decompile all.
+
+  Please check the Edit/Plugins menu for more information.
+IDA is analysing the input file...
+You may start to explore the input file right now.
+[IDAPY] ==== sys.path ====
+[IDAPY] 0 C:\Users\user\workspace\IDA-python\binxray\Lib\site-packages
+[IDAPY] 1 C:\Users\user\workspace\IDA\python\3
+[IDAPY] 2 C:\Users\user\workspace\IDA\python\3\ida_64
+[IDAPY] 3 C:\Users\user\workspace\IDA-python\jtrans\python38.zip
+[IDAPY] 4 C:\Program Files\Python38\Lib
+[IDAPY] 5 C:\Program Files\Python38\DLLs
+[IDAPY] 6 C:\Users\user\workspace\IDA
+[IDAPY] 7 C:\Users\user\AppData\Roaming\Python\Python38\site-packages
+[IDAPY] 8 C:\Program Files\Python38
+[IDAPY] 9 C:\Program Files\Python38\lib\site-packages
+[IDAPY] 10 C:\Users\user\workspace\IDA\python
+[IDAPY] 11 C:\Users\user\workspace\IDA\python
+[IDAPY] 12 C:\Users\user\AppData\Roaming\Hex-Rays\IDA Pro\python\3
+[IDAPY] 13 C:/Users/user/workspace/IDA/loaders
+[IDAPY] 14 /home/user/BinXray
+[DEBUG] invoke idaapi.auto_wait()
+Propagating type information...
+Function argument information has been propagated
+The initial autoanalysis has been finished.
+[DEBUG] complete idaapi.auto_wait()
+
+[DEBUG] func_list from C:/Users/user/workspace/storage/binxray\dataset_my\tcpdump\tcpdump_funcs.csv
+[DEBUG] func: babel_print_v2
+
+[DEBUG] Segment name: .text
+BB name:       0x41cfc0
+BB preds:      []
+BB succs:      ['0x41d022', '0x41d03e']
+BB disam_list: push rbp mov rbp, rsp push rbx sub rsp, 3A8h mov mem, rdi mov mem, rsi mov mem, edx mov rax, ds:func mov qmem, rax mov rax, ds:func mov qmem, rax lea rdi, mem xor esi, esi mov edx, 10h call _memset mov rax, mem mov rax, mem sub rax, 4 mov rcx, mem mov rcx, mem cmp rax, rcx ja func
+BB hash:       d8fd29f2fc13d7a17fe5586c4d842966
+  0x41cfc0 |                 55 |  | push    rbp
+  0x41cfc1 |             4889e5 |  | mov     rbp, rsp
+  0x41cfc4 |                 53 |  | push    rbx
+  0x41cfc5 |     4881eca8030000 | stmge ip!, {r3, r6, r8, pc} ^ | sub     rsp, 3A8h
+  0x41cfcc |           48897df0 |  | mov     [rbp+ndo], rdi
+  0x41cfd0 |           488975e8 | ldmda r5!, {r3, r6, r8, fp, pc} ^ | mov     [rbp+cp], rsi
+  0x41cfd4 |             8955e4 |  | mov     [rbp+length], edx
+  0x41cfd7 |   488b0425c0f84e00 | strhs r8, [r4, #-0xb48] | mov     rax, ds:qword_4EF8C0
+  0x41cfdf |           488945c0 | subgt r8, r5, r8, asr #18 | mov     qword ptr [rbp+v4_prefix], rax
+  0x41cfe3 |   488b0425c8f84e00 | strhs r8, [r4, #-0xb48] | mov     rax, ds:qword_4EF8C8
+  0x41cfeb |           488945c8 | stmdagt r5, {r3, r6, r8, fp, pc} ^ | mov     qword ptr [rbp+v4_prefix+8], rax
+  0x41cfef |           488d7db0 | rsbslt r8, sp, r8, asr #26 | lea     rdi, [rbp+v6_prefix]; s
+  0x41cff3 |               31f6 |  | xor     esi, esi; c
+  0x41cff5 |         ba10000000 | strheq r1, [r0], -sl | mov     edx, 10h; n
+  0x41cffa |         e8b160feff | cdp2 p1, #6, c11, c0, c8, #7 | call    _memset
+  0x41cfff |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d003 |     488b8080000000 | addhi r8, r0, r8, asr #22 | mov     rax, [rax+80h]
+  0x41d00a |           4883e804 | strbteq r8, [r8], #0x348 | sub     rax, 4
+  0x41d00e |           488b4df0 |  | mov     rcx, [rbp+ndo]
+  0x41d012 |     488b8980000000 | addhi r8, sb, r8, asr #22 | mov     rcx, [rcx+80h]
+  0x41d019 |             4839c8 |  | cmp     rax, rcx
+  0x41d01c |                    |  | ja      loc_41D03E
+BB name:       0x41d022
+BB preds:      ['0x41cfc0']
+BB succs:      ['0x41d03e', '0x41d043']
+BB disam_list: mov rax, mem mov rcx, mem mov rcx, mem sub rcx, 4 cmp rax, rcx jbe func
+BB hash:       ef44fbd02037ac9090cb7f7498b2cf0c
+  0x41d022 |           488b45e8 | stmda r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+cp]
+  0x41d026 |           488b4df0 |  | mov     rcx, [rbp+ndo]
+  0x41d02a |     488b8980000000 | addhi r8, sb, r8, asr #22 | mov     rcx, [rcx+80h]
+  0x41d031 |           4883e904 | strbteq r8, [sb], #0x348 | sub     rcx, 4
+  0x41d035 |             4839c8 |  | cmp     rax, rcx
+  0x41d038 |                    |  | jbe     loc_41D043
+BB name:       0x41d03e
+BB preds:      ['0x41cfc0', '0x41d022']
+BB succs:      ['0x41ea79']
+BB disam_list: jmp trunc
+BB hash:       f45b844caae7635e68d089e10f384285
+  0x41d03e |                    |  | jmp     trunc
+BB name:       0x41d043
+BB preds:      ['0x41d022']
+BB succs:      ['0x41d04d', '0x41d052']
+BB disam_list: cmp mem, 4 jnb func
+BB hash:       c684e39dd8a7d3adf7726b928ec00a28
+  0x41d043 |           837de404 | strbteq r7, [r4], #0xd83 | cmp     [rbp+length], 4
+  0x41d047 |                    |  | jnb     loc_41D052
+BB name:       0x41d04d
+BB preds:      ['0x41d043']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d04d |                    |  | jmp     invalid
+BB name:       0x41d052
+BB preds:      ['0x41d043']
+BB succs:      ['0x41d094', '0x41d099']
+BB disam_list: mov rdi, mem add rdi, 2 call EXTRACT_16BITS_6 mov mem, ax mov rax, mem mov rcx, mem mov rdi, mem movzx edx, mem mov rsi, offset aU_0 mov al, 0 call rcx movzx eax, mem add eax, 4 cmp eax, mem jbe func
+BB hash:       c54d2d39df392a60c196229a2894369e
+  0x41d052 |           488b7de8 | ldmda sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+cp]
+  0x41d056 |           4883c702 | sbceq r8, r7, #72, #6 | add     rdi, 2; p
+  0x41d05a |         e8811a0000 | andseq r8, sl, r8, ror #3 | call    EXTRACT_16BITS_6
+  0x41d05f |           668945de | vmlsle.f16 s17, s10, s13 | mov     [rbp+bodylen], ax
+  0x41d063 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d067 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d06e |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d072 |           0fb755de | cdple p7, #5, c11, c5, c15, #0 | movzx   edx, [rbp+bodylen]
+  0x41d076 | 48be60d7500000000000 | strble fp, [r0, -r8, asr #28]! | mov     rsi, offset aU_0; " (%u)"
+  0x41d080 |               b000 |  | mov     al, 0
+  0x41d082 |               ffd1 |  | call    rcx
+  0x41d084 |           0fb745de | cdple p7, #4, c11, c5, c15, #0 | movzx   eax, [rbp+bodylen]
+  0x41d088 |             83c004 |  | add     eax, 4
+  0x41d08b |             3b45e4 |  | cmp     eax, [rbp+length]
+  0x41d08e |                    |  | jbe     loc_41D099
+BB name:       0x41d094
+BB preds:      ['0x41d052']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d094 |                    |  | jmp     invalid
+BB name:       0x41d099
+BB preds:      ['0x41d052']
+BB succs:      ['0x41d0a0']
+BB disam_list: mov mem, 0
+BB hash:       de0bb209f421163e523f24128b669bdf
+  0x41d099 |                    |  | mov     [rbp+i], 0
+BB name:       0x41d0a0
+BB preds:      ['0x41d099', '0x41d118', '0x41ea63']
+BB succs:      ['0x41d0af', '0x41ea74']
+BB disam_list: mov eax, mem movzx ecx, mem cmp eax, ecx jnb func
+BB hash:       b5bca57f62a580639b3952de686964d8
+  0x41d0a0 |             8b45e0 |  | mov     eax, [rbp+i]
+  0x41d0a3 |           0fb74dde | cdple p7, #4, c11, c13, c15, #0 | movzx   ecx, [rbp+bodylen]
+  0x41d0a7 |               39c8 |  | cmp     eax, ecx
+  0x41d0a9 |                    |  | jnb     loc_41EA74
+BB name:       0x41d0af
+BB preds:      ['0x41d0a0']
+BB succs:      ['0x41d0e4', '0x41d100']
+BB disam_list: mov rax, mem add rax, 4 mov ecx, mem add rax, rcx mov mem, rax mov rax, mem mov rax, mem sub rax, 1 mov rcx, mem mov rcx, mem cmp rax, rcx ja func
+BB hash:       b46b14733170764086e3f8fdb3523217
+  0x41d0af |           488b45e8 | stmda r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+cp]
+  0x41d0b3 |           4883c004 | strbeq r8, [r0], #0x348 | add     rax, 4
+  0x41d0b7 |             8b4de0 |  | mov     ecx, [rbp+i]
+  0x41d0ba |             4801c8 |  | add     rax, rcx
+  0x41d0bd |           488945a8 | stmdage r5, {r3, r6, r8, fp, pc} ^ | mov     [rbp+message], rax
+  0x41d0c1 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d0c5 |     488b8080000000 | addhi r8, r0, r8, asr #22 | mov     rax, [rax+80h]
+  0x41d0cc |           4883e801 | mvneq r8, r8, asr #6 | sub     rax, 1
+  0x41d0d0 |           488b4df0 |  | mov     rcx, [rbp+ndo]
+  0x41d0d4 |     488b8980000000 | addhi r8, sb, r8, asr #22 | mov     rcx, [rcx+80h]
+  0x41d0db |             4839c8 |  | cmp     rax, rcx
+  0x41d0de |                    |  | ja      loc_41D100
+BB name:       0x41d0e4
+BB preds:      ['0x41d0af']
+BB succs:      ['0x41d100', '0x41d105']
+BB disam_list: mov rax, mem mov rcx, mem mov rcx, mem sub rcx, 1 cmp rax, rcx jbe func
+BB hash:       1eb4a8a8a3b988d9e7c67da50e16e596
+  0x41d0e4 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d0e8 |           488b4df0 |  | mov     rcx, [rbp+ndo]
+  0x41d0ec |     488b8980000000 | addhi r8, sb, r8, asr #22 | mov     rcx, [rcx+80h]
+  0x41d0f3 |           4883e901 | mvneq r8, r8, asr #6 | sub     rcx, 1
+  0x41d0f7 |             4839c8 |  | cmp     rax, rcx
+  0x41d0fa |                    |  | jbe     loc_41D105
+BB name:       0x41d100
+BB preds:      ['0x41d0af', '0x41d0e4']
+BB succs:      ['0x41ea79']
+BB disam_list: jmp trunc
+BB hash:       f45b844caae7635e68d089e10f384285
+  0x41d100 |                    |  | jmp     trunc
+BB name:       0x41d105
+BB preds:      ['0x41d0e4']
+BB succs:      ['0x41d118', '0x41d15b']
+BB disam_list: mov rax, mem movzx eax, mem mov mem, eax cmp eax, 0 jnz func
+BB hash:       b1b289a9905f5c7d545ae5e6360ab725
+  0x41d105 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d109 |             0fb600 |  | movzx   eax, byte ptr [rax]
+  0x41d10c |             8945a4 |  | mov     [rbp+type], eax
+  0x41d10f |             83f800 |  | cmp     eax, 0
+  0x41d112 |                    |  | jnz     loc_41D15B
+BB name:       0x41d118
+BB preds:      ['0x41d105']
+BB succs:      ['0x41d0a0']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rax, mem mov edx, mem mov rsi, offset aPad1 mov rax, offset aPad1_0 cmp edx, 0 cmovnz rsi, rax mov al, 0 call rcx mov eax, mem add eax, 1 mov mem, eax jmp func
+BB hash:       52b50ff521976b40e1bd679f6efad037
+  0x41d118 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d11c |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d123 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d127 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d12b |             8b5028 |  | mov     edx, [rax+28h]
+  0x41d12e | 48be54e74f0000000000 | ldrb fp, [r4, -r8, asr #28] | mov     rsi, offset aPad1; " pad1"
+  0x41d138 | 48b8d7f54e0000000000 |  | mov     rax, offset aPad1_0; "\n\tPad 1"
+  0x41d142 |             83fa00 |  | cmp     edx, 0
+  0x41d145 |           480f45f0 |  | cmovnz  rsi, rax
+  0x41d149 |               b000 |  | mov     al, 0
+  0x41d14b |               ffd1 |  | call    rcx
+  0x41d14d |             8b45e0 |  | mov     eax, [rbp+i]
+  0x41d150 |             83c001 |  | add     eax, 1
+  0x41d153 |             8945e0 |  | mov     [rbp+i], eax
+  0x41d156 |                    |  | jmp     loc_41D0A0
+BB name:       0x41d15b
+BB preds:      ['0x41d105']
+BB succs:      ['0x41d17e', '0x41d19a']
+BB disam_list: mov rax, mem mov rax, mem sub rax, 2 mov rcx, mem mov rcx, mem cmp rax, rcx ja func
+BB hash:       9ac53febe65986cddd4db3cdd095f1c5
+  0x41d15b |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d15f |     488b8080000000 | addhi r8, r0, r8, asr #22 | mov     rax, [rax+80h]
+  0x41d166 |           4883e802 | rsceq r8, r8, #72, #6 | sub     rax, 2
+  0x41d16a |           488b4df0 |  | mov     rcx, [rbp+ndo]
+  0x41d16e |     488b8980000000 | addhi r8, sb, r8, asr #22 | mov     rcx, [rcx+80h]
+  0x41d175 |             4839c8 |  | cmp     rax, rcx
+  0x41d178 |                    |  | ja      loc_41D19A
+BB name:       0x41d17e
+BB preds:      ['0x41d15b']
+BB succs:      ['0x41d19a', '0x41d19f']
+BB disam_list: mov rax, mem mov rcx, mem mov rcx, mem sub rcx, 2 cmp rax, rcx jbe func
+BB hash:       0379332d00f5ed95bec74330b4bebe6a
+  0x41d17e |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d182 |           488b4df0 |  | mov     rcx, [rbp+ndo]
+  0x41d186 |     488b8980000000 | addhi r8, sb, r8, asr #22 | mov     rcx, [rcx+80h]
+  0x41d18d |           4883e902 | rsceq r8, sb, #72, #6 | sub     rcx, 2
+  0x41d191 |             4839c8 |  | cmp     rax, rcx
+  0x41d194 |                    |  | jbe     loc_41D19F
+BB name:       0x41d19a
+BB preds:      ['0x41d15b', '0x41d17e']
+BB succs:      ['0x41ea79']
+BB disam_list: jmp trunc
+BB hash:       f45b844caae7635e68d089e10f384285
+  0x41d19a |                    |  | jmp     trunc
+BB name:       0x41d19f
+BB preds:      ['0x41d17e']
+BB succs:      ['0x41d1b1', '0x41d1c0']
+BB disam_list: mov eax, mem add eax, 2 movzx ecx, mem cmp eax, ecx ja func
+BB hash:       5df983eabe08fe9569166835959cfafd
+  0x41d19f |             8b45e0 |  | mov     eax, [rbp+i]
+  0x41d1a2 |             83c002 |  | add     eax, 2
+  0x41d1a5 |           0fb74dde | cdple p7, #4, c11, c13, c15, #0 | movzx   ecx, [rbp+bodylen]
+  0x41d1a9 |               39c8 |  | cmp     eax, ecx
+  0x41d1ab |                    |  | ja      loc_41D1C0
+BB name:       0x41d1b1
+BB preds:      ['0x41d19f']
+BB succs:      ['0x41d1c0', '0x41d1c5']
+BB disam_list: mov eax, mem add eax, 2 cmp eax, mem jbe func
+BB hash:       642d31c867f0fb02a83336a5abbbe861
+  0x41d1b1 |             8b45e0 |  | mov     eax, [rbp+i]
+  0x41d1b4 |             83c002 |  | add     eax, 2
+  0x41d1b7 |             3b45e4 |  | cmp     eax, [rbp+length]
+  0x41d1ba |                    |  | jbe     loc_41D1C5
+BB name:       0x41d1c0
+BB preds:      ['0x41d19f', '0x41d1b1']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d1c0 |                    |  | jmp     invalid
+BB name:       0x41d1c5
+BB preds:      ['0x41d1b1']
+BB succs:      ['0x41d1df', '0x41d1ee']
+BB disam_list: mov rax, mem movzx eax, mem mov mem, eax mov eax, mem add eax, 2 cmp eax, 0 ja func
+BB hash:       4e81cda8f7bfa3d59cdeda294d687ae1
+  0x41d1c5 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d1c9 |           0fb64001 |  | movzx   eax, byte ptr [rax+1]
+  0x41d1cd |             8945a0 |  | mov     [rbp+len], eax
+  0x41d1d0 |             8b45a0 |  | mov     eax, [rbp+len]
+  0x41d1d3 |             83c002 |  | add     eax, 2
+  0x41d1d6 |             83f800 |  | cmp     eax, 0
+  0x41d1d9 |                    |  | ja      loc_41D1EE
+BB name:       0x41d1df
+BB preds:      ['0x41d1c5']
+BB succs:      ['0x41d1ee', '0x41d23b']
+BB disam_list: mov eax, mem add eax, 2 cmp eax, 0 jnz func
+BB hash:       8d989a8c180f4ef6a4ce2fdcf05b82b0
+  0x41d1df |             8b45a0 |  | mov     eax, [rbp+len]
+  0x41d1e2 |             83c002 |  | add     eax, 2
+  0x41d1e5 |             83f800 |  | cmp     eax, 0
+  0x41d1e8 |                    |  | jnz     loc_41D23B
+BB name:       0x41d1ee
+BB preds:      ['0x41d1c5', '0x41d1df']
+BB succs:      ['0x41d218', '0x41d23b']
+BB disam_list: mov rax, mem mov rax, mem mov ecx, mem add ecx, 2 mov ecx, ecx sub rax, rcx mov rcx, mem mov rcx, mem cmp rax, rcx ja func
+BB hash:       2465b5e163cceb14569416498000fc84
+  0x41d1ee |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d1f2 |     488b8080000000 | addhi r8, r0, r8, asr #22 | mov     rax, [rax+80h]
+  0x41d1f9 |             8b4da0 |  | mov     ecx, [rbp+len]
+  0x41d1fc |             83c102 |  | add     ecx, 2
+  0x41d1ff |               89c9 |  | mov     ecx, ecx
+  0x41d201 |             4829c8 |  | sub     rax, rcx
+  0x41d204 |           488b4df0 |  | mov     rcx, [rbp+ndo]
+  0x41d208 |     488b8980000000 | addhi r8, sb, r8, asr #22 | mov     rcx, [rcx+80h]
+  0x41d20f |             4839c8 |  | cmp     rax, rcx
+  0x41d212 |                    |  | ja      loc_41D23B
+BB name:       0x41d218
+BB preds:      ['0x41d1ee']
+BB succs:      ['0x41d23b', '0x41d240']
+BB disam_list: mov rax, mem mov rcx, mem mov rcx, mem mov edx, mem add edx, 2 mov edx, edx sub rcx, rdx cmp rax, rcx jbe func
+BB hash:       59e9a1df5ed5f550f6f86847576f99dc
+  0x41d218 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d21c |           488b4df0 |  | mov     rcx, [rbp+ndo]
+  0x41d220 |     488b8980000000 | addhi r8, sb, r8, asr #22 | mov     rcx, [rcx+80h]
+  0x41d227 |             8b55a0 |  | mov     edx, [rbp+len]
+  0x41d22a |             83c202 |  | add     edx, 2
+  0x41d22d |               89d2 |  | mov     edx, edx
+  0x41d22f |             4829d1 |  | sub     rcx, rdx
+  0x41d232 |             4839c8 |  | cmp     rax, rcx
+  0x41d235 |                    |  | jbe     loc_41D240
+BB name:       0x41d23b
+BB preds:      ['0x41d1df', '0x41d1ee', '0x41d218']
+BB succs:      ['0x41ea79']
+BB disam_list: jmp trunc
+BB hash:       f45b844caae7635e68d089e10f384285
+  0x41d23b |                    |  | jmp     trunc
+BB name:       0x41d240
+BB preds:      ['0x41d218']
+BB succs:      ['0x41d257', '0x41d26b']
+BB disam_list: mov eax, mem mov ecx, mem add ecx, 2 add eax, ecx movzx ecx, mem cmp eax, ecx ja func
+BB hash:       1fa84c79111ff818335e9e02d3c8527b
+  0x41d240 |             8b45e0 |  | mov     eax, [rbp+i]
+  0x41d243 |             8b4da0 |  | mov     ecx, [rbp+len]
+  0x41d246 |             83c102 |  | add     ecx, 2
+  0x41d249 |               01c8 |  | add     eax, ecx
+  0x41d24b |           0fb74dde | cdple p7, #4, c11, c13, c15, #0 | movzx   ecx, [rbp+bodylen]
+  0x41d24f |               39c8 |  | cmp     eax, ecx
+  0x41d251 |                    |  | ja      loc_41D26B
+BB name:       0x41d257
+BB preds:      ['0x41d240']
+BB succs:      ['0x41d26b', '0x41d270']
+BB disam_list: mov eax, mem mov ecx, mem add ecx, 2 add eax, ecx cmp eax, mem jbe func
+BB hash:       023da841ca11441fcdde98dc375e5240
+  0x41d257 |             8b45e0 |  | mov     eax, [rbp+i]
+  0x41d25a |             8b4da0 |  | mov     ecx, [rbp+len]
+  0x41d25d |             83c102 |  | add     ecx, 2
+  0x41d260 |               01c8 |  | add     eax, ecx
+  0x41d262 |             3b45e4 |  | cmp     eax, [rbp+length]
+  0x41d265 |                    |  | jbe     loc_41D270
+BB name:       0x41d26b
+BB preds:      ['0x41d240', '0x41d257']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d26b |                    |  | jmp     invalid
+BB name:       0x41d270
+BB preds:      ['0x41d257']
+BB succs:      ['0x41d288', '0x41ea0e']
+BB disam_list: mov eax, mem add eax, 0FFFFFFFFh mov ecx, eax mov mem, rcx sub eax, 0Eh ja func
+BB hash:       cc7f7e1ab94e41c7d17951e0d1b695bb
+  0x41d270 |             8b45a4 |  | mov     eax, [rbp+type]
+  0x41d273 |             83c0ff |  | add     eax, 0FFFFFFFFh; switch 15 cases
+  0x41d276 |               89c1 |  | mov     ecx, eax
+  0x41d278 |     48898d48feffff | stmmi sp, {r3, r6, r8, fp, pc} | mov     [rbp+var_1B8], rcx
+  0x41d27f |             83e80e |  | sub     eax, 0Eh
+  0x41d282 |                    |  | ja      def_41D297; jumptable 000000000041D297 default case
+BB name:       0x41d288
+BB preds:      ['0x41d270']
+BB succs:      ['0x41d299', '0x41d2f1', '0x41d3ca', '0x41d45d', '0x41d56a', '0x41d704', '0x41d7ae', '0x41d895', '0x41dca2', '0x41ddfa', '0x41df78', '0x41e03c', '0x41e154', '0x41e4d4', '0x41e757']
+BB disam_list: mov rax, mem mov rax, ds:jpt_41D297mem jmp rax
+BB hash:       716eebb7f66e3557572fa145da45f86c
+  0x41d288 |     488b8548feffff | stmmi r5, {r3, r6, r8, sb, fp, pc} | mov     rax, [rbp+var_1B8]
+  0x41d28f |   488b04c5c0f44e00 | strgt r8, [r4, #-0xb48] | mov     rax, ds:jpt_41D297[rax*8]
+  0x41d297 |                    |  | jmp     rax; switch jump
+BB name:       0x41d299
+BB preds:      ['0x41d288']
+BB succs:      ['0x41d2a7', '0x41d2c9']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41d299 |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 1
+  0x41d29d |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41d2a1 |                    |  | jnz     loc_41D2C9
+BB name:       0x41d2a7
+BB preds:      ['0x41d299']
+BB succs:      ['0x41d2ec']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aPadn mov al, 0 call rcx jmp func
+BB hash:       644d08d66f9704e7f85b36e13ee9a2ec
+  0x41d2a7 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d2ab |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d2b2 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d2b6 | 48bedff54e0000000000 |  | mov     rsi, offset aPadn; " padN"
+  0x41d2c0 |               b000 |  | mov     al, 0
+  0x41d2c2 |               ffd1 |  | call    rcx
+  0x41d2c4 |                    |  | jmp     loc_41D2EC
+BB name:       0x41d2c9
+BB preds:      ['0x41d299']
+BB succs:      ['0x41d2ec']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov edx, mem add edx, 2 mov rsi, offset aPadD mov al, 0 call rcx
+BB hash:       aef11d69e0f1cef8fa4676fbc36d3fc9
+  0x41d2c9 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d2cd |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d2d4 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d2d8 |             8b55a0 |  | mov     edx, [rbp+len]
+  0x41d2db |             83c202 |  | add     edx, 2
+  0x41d2de | 48bee5f54e0000000000 |  | mov     rsi, offset aPadD; "\n\tPad %d"
+  0x41d2e8 |               b000 |  | mov     al, 0
+  0x41d2ea |                    |  | call    rcx
+BB name:       0x41d2ec
+BB preds:      ['0x41d2a7', '0x41d2c9']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41d2ec |                    |  | jmp     loc_41EA63
+BB name:       0x41d2f1
+BB preds:      ['0x41d288']
+BB succs:      ['0x41d2ff', '0x41d321']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41d2f1 |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 2
+  0x41d2f5 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41d2f9 |                    |  | jnz     loc_41D321
+BB name:       0x41d2ff
+BB preds:      ['0x41d2f1']
+BB succs:      ['0x41d3c5']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aAckReq mov al, 0 call rcx jmp func
+BB hash:       37ce34cb8ed27726443f73537619bd2d
+  0x41d2ff |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d303 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d30a |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d30e | 48beeef54e0000000000 |  | mov     rsi, offset aAckReq; " ack-req"
+  0x41d318 |               b000 |  | mov     al, 0
+  0x41d31a |               ffd1 |  | call    rcx
+  0x41d31c |                    |  | jmp     loc_41D3C5
+BB name:       0x41d321
+BB preds:      ['0x41d2f1']
+BB succs:      ['0x41d348', '0x41d34d']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aAcknowledgment mov al, 0 call rcx cmp mem, 6 jnb func
+BB hash:       3148e43bb0db5de4ead74a020380959c
+  0x41d321 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d325 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d32c |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d330 | 48bef7f54e0000000000 |  | mov     rsi, offset aAcknowledgment; "\n\tAcknowledgment Request "
+  0x41d33a |               b000 |  | mov     al, 0
+  0x41d33c |               ffd1 |  | call    rcx
+  0x41d33e |           837da006 | strteq r7, [r0], r3, lsl #27 | cmp     [rbp+len], 6
+  0x41d342 |                    |  | jnb     loc_41D34D
+BB name:       0x41d348
+BB preds:      ['0x41d321']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d348 |                    |  | jmp     invalid
+BB name:       0x41d34d
+BB preds:      ['0x41d321']
+BB succs:      ['0x41d3c5']
+BB disam_list: mov rdi, mem add rdi, 4 call EXTRACT_16BITS_6 mov mem, ax mov rdi, mem add rdi, 6 call EXTRACT_16BITS_6 mov mem, ax mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax movzx eax, mem mov mem, eax movzx edi, mem call format_interval mov rdi, mem mov edx, mem mov r8, mem mov rcx, rax mov rsi, offset a04xS_0 mov al, 0 call r8
+BB hash:       a9c7108742becdedb3a8fb93ef2a43ef
+  0x41d34d |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41d351 |           4883c704 | strbeq r8, [r7], #0x348 | add     rdi, 4; p
+  0x41d355 |         e886170000 | andseq r8, r7, r8, ror #13 | call    EXTRACT_16BITS_6
+  0x41d35a |           6689459e | vmlsls.f16 s17, s10, s13 | mov     [rbp+nonce], ax
+  0x41d35e |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41d362 |           4883c706 | strbeq r8, [r7], r8, asr #6 | add     rdi, 6; p
+  0x41d366 |         e875170000 | andseq r7, r7, r8, ror #11 | call    EXTRACT_16BITS_6
+  0x41d36b |           6689459c | mcrrls p9, #6, r8, r5, c6 | mov     [rbp+interval], ax
+  0x41d36f |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d373 |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41d37a |     48898540feffff | addmi r8, r5, r8, asr #18 | mov     [rbp+var_1C0], rax
+  0x41d381 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d385 |     48898530feffff | addlo r8, r5, r8, asr #18 | mov     [rbp+var_1D0], rax
+  0x41d38c |           0fb7459e | cdpls p7, #4, c11, c5, c15, #0 | movzx   eax, [rbp+nonce]
+  0x41d390 |       89853cfeffff | cdp2 p5, #3, c8, c12, c9, #4 | mov     [rbp+var_1C4], eax
+  0x41d396 |           0fb77d9c | ldclls p7, c11, [sp], #-0x3c | movzx   edi, [rbp+interval]; i
+  0x41d39a |         e871170000 | andseq r7, r7, r8, ror #3 | call    format_interval
+  0x41d39f |     488bbd30feffff | adcslo r8, sp, r8, asr #22 | mov     rdi, [rbp+var_1D0]
+  0x41d3a6 |       8b953cfeffff | cdp2 p5, #3, c9, c12, c11, #4 | mov     edx, [rbp+var_1C4]
+  0x41d3ac |     4c8b8540feffff | addmi r8, r5, ip, asr #22 | mov     r8, [rbp+var_1C0]
+  0x41d3b3 |             4889c1 |  | mov     rcx, rax
+  0x41d3b6 | 48be11f64e0000000000 |  | mov     rsi, offset a04xS_0; "%04x %s"
+  0x41d3c0 |               b000 |  | mov     al, 0
+  0x41d3c2 |                    |  | call    r8
+BB name:       0x41d3c5
+BB preds:      ['0x41d2ff', '0x41d34d']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41d3c5 |                    |  | jmp     loc_41EA63
+BB name:       0x41d3ca
+BB preds:      ['0x41d288']
+BB succs:      ['0x41d3d8', '0x41d3fa']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41d3ca |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 3
+  0x41d3ce |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41d3d2 |                    |  | jnz     loc_41D3FA
+BB name:       0x41d3d8
+BB preds:      ['0x41d3ca']
+BB succs:      ['0x41d458']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aAck mov al, 0 call rcx jmp func
+BB hash:       f005799c35cd90afcc8c5beabf0a4dc5
+  0x41d3d8 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d3dc |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d3e3 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d3e7 | 48be89bf510000000000 | svclt #0x89be48 | mov     rsi, offset aAck; " ack"
+  0x41d3f1 |               b000 |  | mov     al, 0
+  0x41d3f3 |               ffd1 |  | call    rcx
+  0x41d3f5 |                    |  | jmp     loc_41D458
+BB name:       0x41d3fa
+BB preds:      ['0x41d3ca']
+BB succs:      ['0x41d421', '0x41d426']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aAcknowledgment_0 mov al, 0 call rcx cmp mem, 2 jnb func
+BB hash:       c611d50a273342d0eb841205ffae8ed9
+  0x41d3fa |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d3fe |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d405 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d409 | 48be19f64e0000000000 |  | mov     rsi, offset aAcknowledgment_0; "\n\tAcknowledgment "
+  0x41d413 |               b000 |  | mov     al, 0
+  0x41d415 |               ffd1 |  | call    rcx
+  0x41d417 |           837da002 | adceq r7, r0, #0x20c0 | cmp     [rbp+len], 2
+  0x41d41b |                    |  | jnb     loc_41D426
+BB name:       0x41d421
+BB preds:      ['0x41d3fa']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d421 |                    |  | jmp     invalid
+BB name:       0x41d426
+BB preds:      ['0x41d3fa']
+BB succs:      ['0x41d458']
+BB disam_list: mov rdi, mem add rdi, 2 call EXTRACT_16BITS_6 mov mem, ax mov rax, mem mov rcx, mem mov rdi, mem movzx edx, mem mov rsi, offset a04x mov al, 0 call rcx
+BB hash:       d5550536ae6ee70f5d0175172d6f7fbe
+  0x41d426 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41d42a |           4883c702 | sbceq r8, r7, #72, #6 | add     rdi, 2; p
+  0x41d42e |         e8ad160000 | andseq sl, r6, r8, ror #27 | call    EXTRACT_16BITS_6
+  0x41d433 |           6689459a | bls #0x157f9d3 | mov     [rbp+nonce_0], ax
+  0x41d437 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d43b |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d442 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d446 |           0fb7559a | bls #0x198b08a | movzx   edx, [rbp+nonce_0]
+  0x41d44a | 48bec504510000000000 | strbeq fp, [r5], #0xe48 | mov     rsi, offset a04x; "%04x"
+  0x41d454 |               b000 |  | mov     al, 0
+  0x41d456 |                    |  | call    rcx
+BB name:       0x41d458
+BB preds:      ['0x41d3d8', '0x41d426']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41d458 |                    |  | jmp     loc_41EA63
+BB name:       0x41d45d
+BB preds:      ['0x41d288']
+BB succs:      ['0x41d46b', '0x41d48d']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41d45d |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 4
+  0x41d461 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41d465 |                    |  | jnz     loc_41D48D
+BB name:       0x41d46b
+BB preds:      ['0x41d45d']
+BB succs:      ['0x41d565']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aHello_0 mov al, 0 call rcx jmp func
+BB hash:       16372d1eb54c435386b81bfd80e1302c
+  0x41d46b |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d46f |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d476 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d47a | 48be2bf64e0000000000 |  | mov     rsi, offset aHello_0; " hello"
+  0x41d484 |               b000 |  | mov     al, 0
+  0x41d486 |               ffd1 |  | call    rcx
+  0x41d488 |                    |  | jmp     loc_41D565
+BB name:       0x41d48d
+BB preds:      ['0x41d45d']
+BB succs:      ['0x41d4b4', '0x41d4b9']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aHello_1 mov al, 0 call rcx cmp mem, 6 jnb func
+BB hash:       fecf03fd9600d375ac437cb1968b8f7f
+  0x41d48d |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d491 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d498 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d49c | 48be32f64e0000000000 |  | mov     rsi, offset aHello_1; "\n\tHello "
+  0x41d4a6 |               b000 |  | mov     al, 0
+  0x41d4a8 |               ffd1 |  | call    rcx
+  0x41d4aa |           837da006 | strteq r7, [r0], r3, lsl #27 | cmp     [rbp+len], 6
+  0x41d4ae |                    |  | jnb     loc_41D4B9
+BB name:       0x41d4b4
+BB preds:      ['0x41d48d']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d4b4 |                    |  | jmp     invalid
+BB name:       0x41d4b9
+BB preds:      ['0x41d48d']
+BB succs:      ['0x41d53b', '0x41d560']
+BB disam_list: mov rdi, mem add rdi, 4 call EXTRACT_16BITS_6 mov mem, ax mov rdi, mem add rdi, 6 call EXTRACT_16BITS_6 mov mem, ax mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax movzx eax, mem mov mem, eax movzx edi, mem call format_interval mov rdi, mem mov edx, mem mov r8, mem mov rcx, rax mov rsi, offset aSeqnoUInterval mov al, 0 call r8 cmp mem, 6 jbe func
+BB hash:       7c8455b08e783dd0da54bc63b2243f90
+  0x41d4b9 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41d4bd |           4883c704 | strbeq r8, [r7], #0x348 | add     rdi, 4; p
+  0x41d4c1 |         e81a160000 | andseq r1, r6, r8, ror #21 | call    EXTRACT_16BITS_6
+  0x41d4c6 |           66894598 | stmdals r5, {r1, r2, r5, r6, r8, fp, pc} ^ | mov     [rbp+seqno], ax
+  0x41d4ca |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41d4ce |           4883c706 | strbeq r8, [r7], r8, asr #6 | add     rdi, 6; p
+  0x41d4d2 |         e809160000 | andseq r0, r6, r8, ror #19 | call    EXTRACT_16BITS_6
+  0x41d4d7 |           66894596 | strbls r8, [r5], -r6, ror #18 | mov     [rbp+interval_0], ax
+  0x41d4db |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d4df |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41d4e6 |     48898528feffff | stmhs r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_1D8], rax
+  0x41d4ed |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d4f1 |     48898518feffff | stmne r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_1E8], rax
+  0x41d4f8 |           0fb74598 | stmdals r5, {r0, r1, r2, r3, r8, sb, sl, ip, sp, pc} ^ | movzx   eax, [rbp+seqno]
+  0x41d4fc |       898524feffff | cdp2 p5, #2, c8, c4, c9, #4 | mov     [rbp+var_1DC], eax
+  0x41d502 |           0fb77d96 | ldrbtls fp, [sp], -pc, lsl #14 | movzx   edi, [rbp+interval_0]; i
+  0x41d506 |         e805160000 | andseq r0, r6, r8, ror #11 | call    format_interval
+  0x41d50b |     488bbd18feffff | popne {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_1E8]
+  0x41d512 |       8b9524feffff | cdp2 p5, #2, c9, c4, c11, #4 | mov     edx, [rbp+var_1DC]
+  0x41d518 |     4c8b8528feffff | stmhs r5, {r2, r3, r6, r8, sb, fp, pc} | mov     r8, [rbp+var_1D8]
+  0x41d51f |             4889c1 |  | mov     rcx, rax
+  0x41d522 | 48becbf64e0000000000 |  | mov     rsi, offset aSeqnoUInterval; "seqno %u interval %s"
+  0x41d52c |               b000 |  | mov     al, 0
+  0x41d52e |             41ffd0 |  | call    r8
+  0x41d531 |           837da006 | strteq r7, [r0], r3, lsl #27 | cmp     [rbp+len], 6
+  0x41d535 |                    |  | jbe     loc_41D560
+BB name:       0x41d53b
+BB preds:      ['0x41d4b9']
+BB succs:      ['0x41d560']
+BB disam_list: mov rdi, mem mov rsi, mem add rsi, 8 mov rdx, mem add rdx, 2 mov eax, mem add rdx, rax mov eax, mem movzx ecx, al call subtlvs_print
+BB hash:       d0873fa28340e66a258566ac9c180bda
+  0x41d53b |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41d53f |           488b75a8 | ldmdage r5!, {r3, r6, r8, sb, fp, pc} ^ | mov     rsi, [rbp+message]
+  0x41d543 |           4883c608 | stmeq r6, {r3, r6, r8, sb, pc} ^ | add     rsi, 8; cp
+  0x41d547 |           488b55a8 | ldmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rdx, [rbp+message]
+  0x41d54b |           4883c202 | sbceq r8, r2, #72, #6 | add     rdx, 2
+  0x41d54f |             8b45a0 |  | mov     eax, [rbp+len]
+  0x41d552 |             4801c2 |  | add     rdx, rax; ep
+  0x41d555 |             8b45a4 |  | mov     eax, [rbp+type]
+  0x41d558 |             0fb6c8 |  | movzx   ecx, al; tlv_type
+  0x41d55b |                    |  | call    subtlvs_print
+BB name:       0x41d560
+BB preds:      ['0x41d4b9', '0x41d53b']
+BB succs:      ['0x41d565']
+BB disam_list: jmp $+5
+BB hash:       3da5e501534789d1c32de9e74c64760a
+  0x41d560 |                    |  | jmp     $+5
+BB name:       0x41d565
+BB preds:      ['0x41d46b', '0x41d560']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41d565 |                    |  | jmp     loc_41EA63
+BB name:       0x41d56a
+BB preds:      ['0x41d288']
+BB succs:      ['0x41d578', '0x41d59a']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41d56a |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 5
+  0x41d56e |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41d572 |                    |  | jnz     loc_41D59A
+BB name:       0x41d578
+BB preds:      ['0x41d56a']
+BB succs:      ['0x41d6ff']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aIhu mov al, 0 call rcx jmp func
+BB hash:       93114efac3bad7a2ed9ecf4de6f89ec3
+  0x41d578 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d57c |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d583 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d587 | 48be3bf64e0000000000 |  | mov     rsi, offset aIhu; " ihu"
+  0x41d591 |               b000 |  | mov     al, 0
+  0x41d593 |               ffd1 |  | call    rcx
+  0x41d595 |                    |  | jmp     loc_41D6FF
+BB name:       0x41d59a
+BB preds:      ['0x41d56a']
+BB succs:      ['0x41d5c1', '0x41d5c6']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aIhu_0 mov al, 0 call rcx cmp mem, 6 jnb func
+BB hash:       63dcd03a0b2fa98adf883b58a4f6a9ec
+  0x41d59a |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d59e |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d5a5 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d5a9 | 48be40f64e0000000000 |  | mov     rsi, offset aIhu_0; "\n\tIHU "
+  0x41d5b3 |               b000 |  | mov     al, 0
+  0x41d5b5 |               ffd1 |  | call    rcx
+  0x41d5b7 |           837da006 | strteq r7, [r0], r3, lsl #27 | cmp     [rbp+len], 6
+  0x41d5bb |                    |  | jnb     loc_41D5C6
+BB name:       0x41d5c1
+BB preds:      ['0x41d59a']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d5c1 |                    |  | jmp     invalid
+BB name:       0x41d5c6
+BB preds:      ['0x41d59a']
+BB succs:      ['0x41d61a', '0x41d646']
+BB disam_list: mov rdi, mem add rdi, 4 call EXTRACT_16BITS_6 mov mem, ax mov rdi, mem add rdi, 6 call EXTRACT_16BITS_6 mov mem, ax mov rax, mem movzx edi, mem mov rsi, mem add rsi, 8 mov edx, mem sub edx, 6 lea rcx, mem call network_address mov mem, eax cmp mem, 0 jge func
+BB hash:       6d259c3ae460efb1bdda4881df34cf8f
+  0x41d5c6 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41d5ca |           4883c704 | strbeq r8, [r7], #0x348 | add     rdi, 4; p
+  0x41d5ce |         e80d150000 | andseq r0, r5, r8, ror #27 | call    EXTRACT_16BITS_6
+  0x41d5d3 |           66894594 | strbls r8, [r5], #-0x966 | mov     [rbp+txcost], ax
+  0x41d5d7 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41d5db |           4883c706 | strbeq r8, [r7], r8, asr #6 | add     rdi, 6; p
+  0x41d5df |         e8fc140000 | andseq pc, r4, r8, ror #25 | call    EXTRACT_16BITS_6
+  0x41d5e4 |           66894592 | subls r8, r5, #0x198000 | mov     [rbp+interval_1], ax
+  0x41d5e8 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d5ec |           0fb67802 | rsbseq fp, r8, #0xf00000 | movzx   edi, byte ptr [rax+2]; ae
+  0x41d5f0 |           488b75a8 | ldmdage r5!, {r3, r6, r8, sb, fp, pc} ^ | mov     rsi, [rbp+message]
+  0x41d5f4 |           4883c608 | stmeq r6, {r3, r6, r8, sb, pc} ^ | add     rsi, 8; a
+  0x41d5f8 |             8b55a0 |  | mov     edx, [rbp+len]
+  0x41d5fb |             83ea06 |  | sub     edx, 6; len
+  0x41d5fe |           488d4d80 | subhi r8, sp, r8, asr #26 | lea     rcx, [rbp+address]; a_r
+  0x41d602 |         e8b9190000 | andseq fp, sb, r8, ror #19 | call    network_address
+  0x41d607 |       89857cffffff |  | mov     [rbp+rc], eax
+  0x41d60d |     83bd7cffffff00 |  | cmp     [rbp+rc], 0
+  0x41d614 |                    |  | jge     loc_41D646
+BB name:       0x41d61a
+BB preds:      ['0x41d5c6']
+BB succs:      ['0x41ea63']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, (offset aS_32+3) mov rdx, offset tstr_5 mov al, 0 call rcx jmp func
+BB hash:       71256a8798b265cb48f4ef3a07f84ded
+  0x41d61a |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d61e |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d625 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d629 | 48bea3ea500000000000 | b #0xfed0cf51 | mov     rsi, (offset aS_32+3); "%s"
+  0x41d633 | 48ba58f54e0000000000 |  | mov     rdx, offset tstr_5; "[|babel]"
+  0x41d63d |               b000 |  | mov     al, 0
+  0x41d63f |               ffd1 |  | call    rcx
+  0x41d641 |                    |  | jmp     loc_41EA63
+BB name:       0x41d646
+BB preds:      ['0x41d5c6']
+BB succs:      ['0x41d6cb', '0x41d6fa']
+BB disam_list: mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem lea rsi, mem call format_address mov mem, rax movzx eax, mem mov mem, eax movzx edi, mem call format_interval mov rdi, mem mov rdx, mem mov ecx, mem mov r9, mem mov r8, rax mov rsi, offset aSTxcostUInterv mov al, 0 call r9 mov eax, mem mov ecx, mem sub ecx, 6 cmp eax, ecx jnb func
+BB hash:       d14062f8efb7a7a29a2fc12313a10dda
+  0x41d646 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d64a |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41d651 |     48898510feffff | addne r8, r5, r8, asr #18 | mov     [rbp+var_1F0], rax
+  0x41d658 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d65c |     488985f8fdffff |  | mov     [rbp+var_208], rax
+  0x41d663 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41d667 |           488d7580 | rsbshi r8, r5, r8, asr #26 | lea     rsi, [rbp+address]; prefix
+  0x41d66b |         e890190000 | andseq sb, sb, r8, ror #1 | call    format_address
+  0x41d670 |     48898500feffff | addeq r8, r5, r8, asr #18 | mov     [rbp+var_200], rax
+  0x41d677 |           0fb74594 | strbls fp, [r5], #-0x70f | movzx   eax, [rbp+txcost]
+  0x41d67b |       89850cfeffff | cdp2 p5, #0, c8, c12, c9, #4 | mov     [rbp+var_1F4], eax
+  0x41d681 |           0fb77d92 | rsbsls fp, sp, #0x3c0000 | movzx   edi, [rbp+interval_1]; i
+  0x41d685 |         e886140000 | andseq r8, r4, r8, ror #13 | call    format_interval
+  0x41d68a |     488bbdf8fdffff | rfeia #1! | mov     rdi, [rbp+var_208]
+  0x41d691 |     488b9500feffff | addseq r8, r5, r8, asr #22 | mov     rdx, [rbp+var_200]
+  0x41d698 |       8b8d0cfeffff | cdp2 p13, #0, c8, c12, c11, #4 | mov     ecx, [rbp+var_1F4]
+  0x41d69e |     4c8b8d10feffff | addne r8, sp, ip, asr #22 | mov     r9, [rbp+var_1F0]
+  0x41d6a5 |             4989c0 |  | mov     r8, rax
+  0x41d6a8 | 48be47f64e0000000000 |  | mov     rsi, offset aSTxcostUInterv; "%s txcost %u interval %s"
+  0x41d6b2 |               b000 |  | mov     al, 0
+  0x41d6b4 |             41ffd1 |  | call    r9
+  0x41d6b7 |       8b857cffffff |  | mov     eax, [rbp+rc]
+  0x41d6bd |             8b4da0 |  | mov     ecx, [rbp+len]
+  0x41d6c0 |             83e906 |  | sub     ecx, 6
+  0x41d6c3 |               39c8 |  | cmp     eax, ecx
+  0x41d6c5 |                    |  | jnb     loc_41D6FA
+BB name:       0x41d6cb
+BB preds:      ['0x41d646']
+BB succs:      ['0x41d6fa']
+BB disam_list: mov rdi, mem mov rsi, mem add rsi, 8 movsxd rax, mem add rsi, rax mov rdx, mem add rdx, 2 mov eax, mem add rdx, rax mov eax, mem movzx ecx, al call subtlvs_print
+BB hash:       52b500609bf25c92d14d920c6ec8bab9
+  0x41d6cb |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41d6cf |           488b75a8 | ldmdage r5!, {r3, r6, r8, sb, fp, pc} ^ | mov     rsi, [rbp+message]
+  0x41d6d3 |           4883c608 | stmeq r6, {r3, r6, r8, sb, pc} ^ | add     rsi, 8
+  0x41d6d7 |     4863857cffffff | stcvc p3, c6, [r5], {0x48} | movsxd  rax, [rbp+rc]
+  0x41d6de |             4801c6 |  | add     rsi, rax; cp
+  0x41d6e1 |           488b55a8 | ldmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rdx, [rbp+message]
+  0x41d6e5 |           4883c202 | sbceq r8, r2, #72, #6 | add     rdx, 2
+  0x41d6e9 |             8b45a0 |  | mov     eax, [rbp+len]
+  0x41d6ec |             4801c2 |  | add     rdx, rax; ep
+  0x41d6ef |             8b45a4 |  | mov     eax, [rbp+type]
+  0x41d6f2 |             0fb6c8 |  | movzx   ecx, al; tlv_type
+  0x41d6f5 |                    |  | call    subtlvs_print
+BB name:       0x41d6fa
+BB preds:      ['0x41d646', '0x41d6cb']
+BB succs:      ['0x41d6ff']
+BB disam_list: jmp $+5
+BB hash:       3da5e501534789d1c32de9e74c64760a
+  0x41d6fa |                    |  | jmp     $+5
+BB name:       0x41d6ff
+BB preds:      ['0x41d578', '0x41d6fa']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41d6ff |                    |  | jmp     loc_41EA63
+BB name:       0x41d704
+BB preds:      ['0x41d288']
+BB succs:      ['0x41d712', '0x41d734']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41d704 |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 6
+  0x41d708 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41d70c |                    |  | jnz     loc_41D734
+BB name:       0x41d712
+BB preds:      ['0x41d704']
+BB succs:      ['0x41d7a9']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aRouterId mov al, 0 call rcx jmp func
+BB hash:       52f27ed0cb6a7430ac62d834e4258e27
+  0x41d712 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d716 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d71d |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d721 | 48be60f64e0000000000 |  | mov     rsi, offset aRouterId; " router-id"
+  0x41d72b |               b000 |  | mov     al, 0
+  0x41d72d |               ffd1 |  | call    rcx
+  0x41d72f |                    |  | jmp     loc_41D7A9
+BB name:       0x41d734
+BB preds:      ['0x41d704']
+BB succs:      ['0x41d75b', '0x41d760']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aRouterId_0 mov al, 0 call rcx cmp mem, 0Ah jnb func
+BB hash:       2b1d55962dd96441f5cdd2e849a8a179
+  0x41d734 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d738 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d73f |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d743 | 48be6bf64e0000000000 |  | mov     rsi, offset aRouterId_0; "\n\tRouter Id"
+  0x41d74d |               b000 |  | mov     al, 0
+  0x41d74f |               ffd1 |  | call    rcx
+  0x41d751 |           837da00a | beq #0xfec3cd65 | cmp     [rbp+len], 0Ah
+  0x41d755 |                    |  | jnb     loc_41D760
+BB name:       0x41d75b
+BB preds:      ['0x41d734']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d75b |                    |  | jmp     invalid
+BB name:       0x41d760
+BB preds:      ['0x41d734']
+BB succs:      ['0x41d7a9']
+BB disam_list: mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem add rdi, 4 call format_id mov rdi, mem mov rcx, mem mov rdx, rax mov rsi, 4ED752h mov al, 0 call rcx
+BB hash:       7ae2b5f84815ba9f2cb6402501d276c6
+  0x41d760 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d764 |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41d76b |     488985f0fdffff |  | mov     [rbp+var_210], rax
+  0x41d772 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d776 |     488985e8fdffff | stm r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_218], rax
+  0x41d77d |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41d781 |           4883c704 | strbeq r8, [r7], #0x348 | add     rdi, 4; id
+  0x41d785 |         e8e6180000 | andseq lr, r8, r8, ror #13 | call    format_id
+  0x41d78a |     488bbde8fdffff | pop {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_218]
+  0x41d791 |     488b8df0fdffff |  | mov     rcx, [rbp+var_210]
+  0x41d798 |             4889c2 |  | mov     rdx, rax
+  0x41d79b | 48be52d74e0000000000 | ldrble fp, [r2, -r8, asr #28] | mov     rsi, 4ED752h
+  0x41d7a5 |               b000 |  | mov     al, 0
+  0x41d7a7 |                    |  | call    rcx
+BB name:       0x41d7a9
+BB preds:      ['0x41d712', '0x41d760']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41d7a9 |                    |  | jmp     loc_41EA63
+BB name:       0x41d7ae
+BB preds:      ['0x41d288']
+BB succs:      ['0x41d7bc', '0x41d7de']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41d7ae |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 7
+  0x41d7b2 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41d7b6 |                    |  | jnz     loc_41D7DE
+BB name:       0x41d7bc
+BB preds:      ['0x41d7ae']
+BB succs:      ['0x41d890']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset func mov al, 0 call rcx jmp func
+BB hash:       5bd7d86c1d2edf99d4a1dbe58f07a8e3
+  0x41d7bc |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d7c0 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d7c7 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d7cb | 48be77f64e0000000000 |  | mov     rsi, offset off_4EF677
+  0x41d7d5 |               b000 |  | mov     al, 0
+  0x41d7d7 |               ffd1 |  | call    rcx
+  0x41d7d9 |                    |  | jmp     loc_41D890
+BB name:       0x41d7de
+BB preds:      ['0x41d7ae']
+BB succs:      ['0x41d805', '0x41d80a']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aNextHop mov al, 0 call rcx cmp mem, 2 jnb func
+BB hash:       069262c30087140befdd1346ee6ec7cc
+  0x41d7de |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d7e2 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d7e9 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d7ed | 48be7bf64e0000000000 |  | mov     rsi, offset aNextHop; "\n\tNext Hop"
+  0x41d7f7 |               b000 |  | mov     al, 0
+  0x41d7f9 |               ffd1 |  | call    rcx
+  0x41d7fb |           837da002 | adceq r7, r0, #0x20c0 | cmp     [rbp+len], 2
+  0x41d7ff |                    |  | jnb     loc_41D80A
+BB name:       0x41d805
+BB preds:      ['0x41d7de']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d805 |                    |  | jmp     invalid
+BB name:       0x41d80a
+BB preds:      ['0x41d7de']
+BB succs:      ['0x41d83f', '0x41d844']
+BB disam_list: mov rax, mem movzx edi, mem mov rsi, mem add rsi, 4 mov edx, mem sub edx, 2 lea rcx, mem call network_address mov mem, eax cmp mem, 0 jge func
+BB hash:       a254a733a594d6491e79b7abb1f1f780
+  0x41d80a |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d80e |           0fb67802 | rsbseq fp, r8, #0xf00000 | movzx   edi, byte ptr [rax+2]; ae
+  0x41d812 |           488b75a8 | ldmdage r5!, {r3, r6, r8, sb, fp, pc} ^ | mov     rsi, [rbp+message]
+  0x41d816 |           4883c604 | strbeq r8, [r6], #0x348 | add     rsi, 4; a
+  0x41d81a |             8b55a0 |  | mov     edx, [rbp+len]
+  0x41d81d |             83ea02 |  | sub     edx, 2; len
+  0x41d820 |     488d8d60ffffff | addvs r8, sp, r8, asr #26 | lea     rcx, [rbp+nh]; a_r
+  0x41d827 |         e894170000 | andseq sb, r7, r8, ror #9 | call    network_address
+  0x41d82c |       898578ffffff |  | mov     [rbp+rc_0], eax
+  0x41d832 |     83bd78ffffff00 |  | cmp     [rbp+rc_0], 0
+  0x41d839 |                    |  | jge     loc_41D844
+BB name:       0x41d83f
+BB preds:      ['0x41d80a']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d83f |                    |  | jmp     invalid
+BB name:       0x41d844
+BB preds:      ['0x41d80a']
+BB succs:      ['0x41d890']
+BB disam_list: mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem lea rsi, mem call format_address mov rdi, mem mov rcx, mem mov rdx, rax mov rsi, 4ED752h mov al, 0 call rcx
+BB hash:       a53b60fa96863fd457cd01f41120536e
+  0x41d844 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d848 |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41d84f |     488985e0fdffff | add r8, r5, r8, asr #18 | mov     [rbp+var_220], rax
+  0x41d856 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d85a |     488985d8fdffff | stmle r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_228], rax
+  0x41d861 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41d865 |     488db560ffffff | adcsvs r8, r5, r8, asr #26 | lea     rsi, [rbp+nh]; prefix
+  0x41d86c |         e88f170000 | andseq r8, r7, r8, ror #31 | call    format_address
+  0x41d871 |     488bbdd8fdffff | pople {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_228]
+  0x41d878 |     488b8de0fdffff | add r8, sp, r8, asr #22 | mov     rcx, [rbp+var_220]
+  0x41d87f |             4889c2 |  | mov     rdx, rax
+  0x41d882 | 48be52d74e0000000000 | ldrble fp, [r2, -r8, asr #28] | mov     rsi, 4ED752h
+  0x41d88c |               b000 |  | mov     al, 0
+  0x41d88e |                    |  | call    rcx
+BB name:       0x41d890
+BB preds:      ['0x41d7bc', '0x41d844']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41d890 |                    |  | jmp     loc_41EA63
+BB name:       0x41d895
+BB preds:      ['0x41d288']
+BB succs:      ['0x41d8a3', '0x41d984']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41d895 |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 8
+  0x41d899 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41d89d |                    |  | jnz     loc_41D984
+BB name:       0x41d8a3
+BB preds:      ['0x41d895']
+BB succs:      ['0x41d8ca', '0x41d8ec']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aUpdate mov al, 0 call rcx cmp mem, 0Ah jnb func
+BB hash:       d861ee7ae5f0a8de213fcf67ac95376d
+  0x41d8a3 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d8a7 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d8ae |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d8b2 | 48be86f64e0000000000 |  | mov     rsi, offset aUpdate; " update"
+  0x41d8bc |               b000 |  | mov     al, 0
+  0x41d8be |               ffd1 |  | call    rcx
+  0x41d8c0 |           837da00a | beq #0xfec3ced4 | cmp     [rbp+len], 0Ah
+  0x41d8c4 |                    |  | jnb     loc_41D8EC
+BB name:       0x41d8ca
+BB preds:      ['0x41d8a3']
+BB succs:      ['0x41d97f']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aTruncated_0 mov al, 0 call rcx jmp func
+BB hash:       204c0d10f89ff996c2c2f7b11540365f
+  0x41d8ca |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d8ce |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d8d5 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d8d9 | 48be8ef64e0000000000 |  | mov     rsi, offset aTruncated_0; "/truncated"
+  0x41d8e3 |               b000 |  | mov     al, 0
+  0x41d8e5 |               ffd1 |  | call    rcx
+  0x41d8e7 |                    |  | jmp     loc_41D97F
+BB name:       0x41d8ec
+BB preds:      ['0x41d8a3']
+BB succs:      ['0x41d97f']
+BB disam_list: mov rax, mem mov r9, mem mov rdi, mem mov rax, mem movzx ecx, mem and ecx, 80h mov rdx, (offset func+5) mov rax, offset aPrefix cmp ecx, 0 cmovnz rdx, rax mov rax, mem movzx esi, mem and esi, 40h mov rcx, (offset func+5) mov rax, offset func cmp esi, 0 cmovnz rcx, rax mov rax, mem movzx esi, mem and esi, 3Fh mov r8, (offset func+5) mov rax, offset aUnknown_1 cmp esi, 0 cmovnz r8, rax mov rsi, offset aSSS_0 mov al, 0 call r9
+BB hash:       de679b6ae4299308ea68df138e98c8ed
+  0x41d8ec |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d8f0 |     4c8b8898000000 | stmls r8, {r2, r3, r6, r8, sb, fp, pc} | mov     r9, [rax+98h]
+  0x41d8f7 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d8fb |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d8ff |           0fb64803 | movteq fp, #0x860f | movzx   ecx, byte ptr [rax+3]
+  0x41d903 |       81e180000000 | addeq lr, r0, r1, lsl #3 | and     ecx, 80h
+  0x41d909 | 48baae35520000000000 | strlo fp, [lr, #0xa48]! | mov     rdx, (offset asc_5235A9+5); ""
+  0x41d913 | 48b899f64e0000000000 |  | mov     rax, offset aPrefix; "/prefix"
+  0x41d91d |             83f900 |  | cmp     ecx, 0
+  0x41d920 |           480f45d0 | suble r0, r5, r8, asr #30 | cmovnz  rdx, rax
+  0x41d924 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d928 |           0fb67003 | cmneq r0, #0xf00000 | movzx   esi, byte ptr [rax+3]
+  0x41d92c |             83e640 |  | and     esi, 40h
+  0x41d92f | 48b9ae35520000000000 | strlo fp, [lr, #0x948]! | mov     rcx, (offset asc_5235A9+5); ""
+  0x41d939 | 48b8a1f64e0000000000 |  | mov     rax, offset off_4EF6A1
+  0x41d943 |             83fe00 |  | cmp     esi, 0
+  0x41d946 |           480f45c8 | stmdagt r5, {r3, r6, r8, sb, sl, fp} ^ | cmovnz  rcx, rax
+  0x41d94a |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d94e |           0fb67003 | cmneq r0, #0xf00000 | movzx   esi, byte ptr [rax+3]
+  0x41d952 |             83e63f |  | and     esi, 3Fh
+  0x41d955 | 49b8ae35520000000000 | strlo fp, [lr, #0x849]! | mov     r8, (offset asc_5235A9+5); ""
+  0x41d95f | 48b8a5f64e0000000000 |  | mov     rax, offset aUnknown_1; "/unknown"
+  0x41d969 |             83fe00 |  | cmp     esi, 0
+  0x41d96c |           4c0f45c0 | subgt r0, r5, ip, asr #30 | cmovnz  r8, rax
+  0x41d970 | 48be1d62510000000000 | andsvs fp, sp, #72, #28 | mov     rsi, offset aSSS_0; "%s%s%s"
+  0x41d97a |               b000 |  | mov     al, 0
+  0x41d97c |                    |  | call    r9
+BB name:       0x41d97f
+BB preds:      ['0x41d8ca', '0x41d8ec']
+BB succs:      ['0x41dc9d']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41d97f |                    |  | jmp     loc_41DC9D
+BB name:       0x41d984
+BB preds:      ['0x41d895']
+BB succs:      ['0x41d9ab', '0x41d9b0']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aUpdate_0 mov al, 0 call rcx cmp mem, 0Ah jnb func
+BB hash:       594bd2bd2dcb33379f78a4a2b5ccb99c
+  0x41d984 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41d988 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41d98f |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41d993 | 48beaef64e0000000000 |  | mov     rsi, offset aUpdate_0; "\n\tUpdate"
+  0x41d99d |               b000 |  | mov     al, 0
+  0x41d99f |               ffd1 |  | call    rcx
+  0x41d9a1 |           837da00a | beq #0xfec3cfb5 | cmp     [rbp+len], 0Ah
+  0x41d9a5 |                    |  | jnb     loc_41D9B0
+BB name:       0x41d9ab
+BB preds:      ['0x41d984']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41d9ab |                    |  | jmp     invalid
+BB name:       0x41d9b0
+BB preds:      ['0x41d984']
+BB succs:      ['0x41da1f', '0x41da2f']
+BB disam_list: mov rax, mem movzx eax, mem mov rcx, mem movzx esi, mem xor ecx, ecx mov edx, 60h cmp esi, 1 cmovz ecx, edx add eax, ecx mov mem, al mov rax, mem movzx eax, mem mov mem, eax mov rax, mem movzx eax, mem mov mem, eax mov rax, mem movzx eax, mem mov mem, eax mov rax, mem add rax, 0Ch mov mem, rax mov rax, mem movzx eax, mem cmp eax, 1 jnz func
+BB hash:       c9d0dd10d862fa8932b61c64e50f0ca1
+  0x41d9b0 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d9b4 |           0fb64004 | strbeq fp, [r0], #-0x60f | movzx   eax, byte ptr [rax+4]
+  0x41d9b8 |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41d9bc |           0fb67102 | rsbseq fp, r1, #0xf00000 | movzx   esi, byte ptr [rcx+2]
+  0x41d9c0 |               31c9 |  | xor     ecx, ecx
+  0x41d9c2 |         ba60000000 | strheq r6, [r0], -sl | mov     edx, 60h ; '`'
+  0x41d9c7 |             83fe01 |  | cmp     esi, 1
+  0x41d9ca |             0f44ca |  | cmovz   ecx, edx
+  0x41d9cd |               01c8 |  | add     eax, ecx
+  0x41d9cf |       888559ffffff |  | mov     [rbp+plen], al
+  0x41d9d5 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d9d9 |           0fb64002 | subeq fp, r0, #0xf00000 | movzx   eax, byte ptr [rax+2]
+  0x41d9dd |       8985c4fdffff | stc2l p5, c8, [r4, #0x224] | mov     [rbp+var_23C], eax
+  0x41d9e3 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d9e7 |           0fb64004 | strbeq fp, [r0], #-0x60f | movzx   eax, byte ptr [rax+4]
+  0x41d9eb |       8985c8fdffff | stc2l p5, c8, [r8, #0x224] | mov     [rbp+var_238], eax
+  0x41d9f1 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41d9f5 |           0fb64005 | strbeq fp, [r0, #-0x60f] | movzx   eax, byte ptr [rax+5]
+  0x41d9f9 |       8985ccfdffff | stc2l p5, c8, [ip, #0x224] | mov     [rbp+var_234], eax
+  0x41d9ff |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41da03 |           4883c00c | stcleq p3, c8, [r0], {0x48} | add     rax, 0Ch
+  0x41da07 |     488985d0fdffff | addle r8, r5, r8, asr #18 | mov     [rbp+p], rax
+  0x41da0e |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41da12 |           0fb64002 | subeq fp, r0, #0xf00000 | movzx   eax, byte ptr [rax+2]
+  0x41da16 |             83f801 |  | cmp     eax, 1
+  0x41da19 |                    |  | jnz     loc_41DA2F
+BB name:       0x41da1f
+BB preds:      ['0x41d9b0']
+BB succs:      ['0x41da3a']
+BB disam_list: lea rax, mem mov mem, rax jmp func
+BB hash:       ba4eebab62e5dfbe2137c9818e6de4d5
+  0x41da1f |           488d45c0 | subgt r8, r5, r8, asr #26 | lea     rax, [rbp+v4_prefix]
+  0x41da23 |     488985b8fdffff | stmlt r5, {r3, r6, r8, fp, pc} | mov     [rbp+dp], rax
+  0x41da2a |                    |  | jmp     loc_41DA3A
+BB name:       0x41da2f
+BB preds:      ['0x41d9b0']
+BB succs:      ['0x41da3a']
+BB disam_list: lea rax, mem mov mem, rax
+BB hash:       f767615ef7f98f8627fedef860f1955d
+  0x41da2f |           488d45b0 | sublt r8, r5, r8, asr #26 | lea     rax, [rbp+v6_prefix]
+  0x41da33 |                    |  | mov     [rbp+dp], rax
+BB name:       0x41da3a
+BB preds:      ['0x41da1f', '0x41da2f']
+BB succs:      ['0x41da85', '0x41da8a']
+BB disam_list: mov rcx, mem mov edx, mem mov esi, mem mov edi, mem mov r8, mem mov r9d, mem sub r9d, 0Ah lea rax, mem mov mem, rax call network_prefix mov mem, eax cmp mem, 0 jge func
+BB hash:       d3d68bbe27181bd6a0ee057b62377eb1
+  0x41da3a |     488b8dd0fdffff | addle r8, sp, r8, asr #22 | mov     rcx, [rbp+p]; p
+  0x41da41 |       8b95ccfdffff | stc2l p5, c9, [ip, #0x22c] | mov     edx, [rbp+var_234]; omitted
+  0x41da47 |       8bb5c8fdffff | stc2l p5, c11, [r8, #0x22c] | mov     esi, [rbp+var_238]; plen
+  0x41da4d |       8bbdc4fdffff | stc2l p13, c11, [r4, #0x22c] | mov     edi, [rbp+var_23C]; ae
+  0x41da53 |     4c8b85b8fdffff | stmlt r5, {r2, r3, r6, r8, sb, fp, pc} | mov     r8, [rbp+dp]; dp
+  0x41da5a |           448b4da0 | subge r8, sp, r4, asr #22 | mov     r9d, [rbp+len]
+  0x41da5e |           4183e90a | beq #0xffe7e76a | sub     r9d, 0Ah; len
+  0x41da62 |     488d8540ffffff | addmi r8, r5, r8, asr #26 | lea     rax, [rbp+prefix]
+  0x41da69 |           48890424 | strhs r8, [r4], #-0x948 | mov     [rsp+3B0h+p_r], rax; p_r
+  0x41da6d |         e8ae160000 | andseq sl, r6, r8, ror #29 | call    network_prefix
+  0x41da72 |       898554ffffff |  | mov     [rbp+rc_1], eax
+  0x41da78 |     83bd54ffffff00 |  | cmp     [rbp+rc_1], 0
+  0x41da7f |                    |  | jge     loc_41DA8A
+BB name:       0x41da85
+BB preds:      ['0x41da3a']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41da85 |                    |  | jmp     invalid
+BB name:       0x41da8a
+BB preds:      ['0x41da3a']
+BB succs:      ['0x41dc0e', '0x41dc55']
+BB disam_list: mov rdi, mem add rdi, 6 call EXTRACT_16BITS_6 mov mem, ax mov rdi, mem add rdi, 8 call EXTRACT_16BITS_6 mov mem, ax mov rdi, mem add rdi, 0Ah call EXTRACT_16BITS_6 mov mem, ax mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rax, mem movzx edx, mem and edx, 80h mov rax, (offset func+5) mov rcx, offset aPrefix cmp edx, 0 cmovnz rax, rcx mov mem, rax mov rax, mem movzx edx, mem and edx, 40h mov rax, (offset func+5) mov rcx, offset func cmp edx, 0 cmovnz rax, rcx mov mem, rax mov rax, mem movzx edx, mem and edx, 3Fh mov rax, (offset func+5) mov rcx, offset aUnknown_1 cmp edx, 0 cmovnz rax, rcx mov mem, rax mov rdi, mem lea rsi, mem movzx edx, mem call format_prefix mov mem, rax movzx ebx, mem movzx eax, mem mov mem, eax movzx edi, mem call format_interval_update mov rdi, mem mov rdx, mem mov rcx, mem mov r8, mem mov r9, mem mov r11d, mem mov r10, mem mov rsi, offset func mov mem, ebx mov mem, r11d mov mem, rax mov al, 0 call r10 mov rax, mem movzx eax, mem and eax, 80h cmp eax, 0 jz func
+BB hash:       7bbc5473fb1fec0d7478837a56db3fdc
+  0x41da8a |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41da8e |           4883c706 | strbeq r8, [r7], r8, asr #6 | add     rdi, 6; p
+  0x41da92 |         e849100000 | andseq r4, r0, r8, ror #19 | call    EXTRACT_16BITS_6
+  0x41da97 |     6689855effffff | cdppl p9, #8, c8, c5, c6, #3 | mov     [rbp+interval_2], ax
+  0x41da9e |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41daa2 |           4883c708 | stmeq r7, {r3, r6, r8, sb, pc} ^ | add     rdi, 8; p
+  0x41daa6 |         e835100000 | andseq r3, r0, r8, ror #11 | call    EXTRACT_16BITS_6
+  0x41daab |     6689855cffffff | stcpl p9, c8, [r5], {0x66} | mov     [rbp+seqno_0], ax
+  0x41dab2 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41dab6 |           4883c70a | beq #0xff5fe7de | add     rdi, 0Ah; p
+  0x41daba |         e821100000 | andseq r2, r0, r8, ror #3 | call    EXTRACT_16BITS_6
+  0x41dabf |     6689855affffff | bpl #0xfe58005f | mov     [rbp+metric], ax
+  0x41dac6 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41daca |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41dad1 |     488985b0fdffff | addlt r8, r5, r8, asr #18 | mov     [rbp+var_250], rax
+  0x41dad8 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41dadc |     48898580fdffff | addhi r8, r5, r8, asr #18 | mov     [rbp+var_280], rax
+  0x41dae3 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41dae7 |           0fb65003 | cmpeq r0, #0xf00000 | movzx   edx, byte ptr [rax+3]
+  0x41daeb |       81e280000000 | addeq lr, r0, r1, lsl #5 | and     edx, 80h
+  0x41daf1 | 48b8ae35520000000000 | strlo fp, [lr, #0x848]! | mov     rax, (offset asc_5235A9+5); ""
+  0x41dafb | 48b999f64e0000000000 |  | mov     rcx, offset aPrefix; "/prefix"
+  0x41db05 |             83fa00 |  | cmp     edx, 0
+  0x41db08 |           480f45c1 |  | cmovnz  rax, rcx
+  0x41db0c |     48898588fdffff | stmhi r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_278], rax
+  0x41db13 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41db17 |           0fb65003 | cmpeq r0, #0xf00000 | movzx   edx, byte ptr [rax+3]
+  0x41db1b |             83e240 |  | and     edx, 40h
+  0x41db1e | 48b8ae35520000000000 | strlo fp, [lr, #0x848]! | mov     rax, (offset asc_5235A9+5); ""
+  0x41db28 | 48b9a1f64e0000000000 |  | mov     rcx, offset off_4EF6A1
+  0x41db32 |             83fa00 |  | cmp     edx, 0
+  0x41db35 |           480f45c1 |  | cmovnz  rax, rcx
+  0x41db39 |     48898590fdffff | addls r8, r5, r8, asr #18 | mov     [rbp+var_270], rax
+  0x41db40 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41db44 |           0fb65003 | cmpeq r0, #0xf00000 | movzx   edx, byte ptr [rax+3]
+  0x41db48 |             83e23f |  | and     edx, 3Fh
+  0x41db4b | 48b8ae35520000000000 | strlo fp, [lr, #0x848]! | mov     rax, (offset asc_5235A9+5); ""
+  0x41db55 | 48b9a5f64e0000000000 |  | mov     rcx, offset aUnknown_1; "/unknown"
+  0x41db5f |             83fa00 |  | cmp     edx, 0
+  0x41db62 |           480f45c1 |  | cmovnz  rax, rcx
+  0x41db66 |     48898598fdffff | stmls r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_268], rax
+  0x41db6d |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41db71 |     488db540ffffff | adcsmi r8, r5, r8, asr #26 | lea     rsi, [rbp+prefix]; prefix
+  0x41db78 |     0fb69559ffffff | ldmibpl r5, {r0, r1, r2, r3, sb, sl, ip, sp, pc} | movzx   edx, [rbp+plen]; plen
+  0x41db7f |         e83c180000 | andseq r3, r8, r8, ror #25 | call    format_prefix
+  0x41db84 |     488985a0fdffff | addge r8, r5, r8, asr #18 | mov     [rbp+var_260], rax
+  0x41db8b |     0fb79d5affffff | bpl #0xfeb8b7cf | movzx   ebx, [rbp+metric]
+  0x41db92 |     0fb7855cffffff | stcpl p7, c11, [r5], {0xf} | movzx   eax, [rbp+seqno_0]
+  0x41db99 |       8985acfdffff | stc2 p5, c8, [ip, #0x224]! | mov     [rbp+var_254], eax
+  0x41db9f |     0fb7bd5effffff | cdppl p7, #0xb, c11, c13, c15, #0 | movzx   edi, [rbp+interval_2]; i
+  0x41dba6 |         e8e5180000 | andseq lr, r8, r8, ror #11 | call    format_interval_update
+  0x41dbab |     488bbd80fdffff | adcshi r8, sp, r8, asr #22 | mov     rdi, [rbp+var_280]
+  0x41dbb2 |     488b9588fdffff | ldmhi r5, {r3, r6, r8, sb, fp, pc} | mov     rdx, [rbp+var_278]
+  0x41dbb9 |     488b8d90fdffff | addls r8, sp, r8, asr #22 | mov     rcx, [rbp+var_270]
+  0x41dbc0 |     4c8b8598fdffff | stmls r5, {r2, r3, r6, r8, sb, fp, pc} | mov     r8, [rbp+var_268]
+  0x41dbc7 |     4c8b8da0fdffff | addge r8, sp, ip, asr #22 | mov     r9, [rbp+var_260]
+  0x41dbce |     448b9dacfdffff | vldmiage sp, {d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20, d21, d22, d23} | mov     r11d, [rbp+var_254]
+  0x41dbd5 |     4c8b95b0fdffff | addslt r8, r5, ip, asr #22 | mov     r10, [rbp+var_250]
+  0x41dbdc | 48beb7f64e0000000000 |  | mov     rsi, offset unk_4EF6B7
+  0x41dbe6 |             891c24 |  | mov     dword ptr [rsp+3B0h+p_r], ebx
+  0x41dbe9 |         44895c2408 | ldrbhs r8, [ip], #-0x944 | mov     [rsp+3B0h+var_3A8], r11d
+  0x41dbee |         4889442410 | strbhs r8, [r4], #-0x948 | mov     [rsp+3B0h+var_3A0], rax
+  0x41dbf3 |               b000 |  | mov     al, 0
+  0x41dbf5 |             41ffd2 |  | call    r10
+  0x41dbf8 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41dbfc |           0fb64003 | movteq fp, #0x60f | movzx   eax, byte ptr [rax+3]
+  0x41dc00 |         2580000000 | andeq r8, r0, r5, lsr #32 | and     eax, 80h
+  0x41dc05 |             83f800 |  | cmp     eax, 0
+  0x41dc08 |                    |  | jz      loc_41DC55
+BB name:       0x41dc0e
+BB preds:      ['0x41da8a']
+BB succs:      ['0x41dc1f', '0x41dc3a']
+BB disam_list: mov rax, mem movzx eax, mem cmp eax, 1 jnz func
+BB hash:       e10fdc2a4cbeea5449d0637ac6e4587a
+  0x41dc0e |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41dc12 |           0fb64002 | subeq fp, r0, #0xf00000 | movzx   eax, byte ptr [rax+2]
+  0x41dc16 |             83f801 |  | cmp     eax, 1
+  0x41dc19 |                    |  | jnz     loc_41DC3A
+BB name:       0x41dc1f
+BB preds:      ['0x41dc0e']
+BB succs:      ['0x41dc50']
+BB disam_list: mov rax, qmem mov qmem, rax mov rax, qmem mov qmem, rax jmp func
+BB hash:       1882a98f5fae46748e8b44440e1ca79c
+  0x41dc1f |     488b8540ffffff | addmi r8, r5, r8, asr #22 | mov     rax, qword ptr [rbp+prefix]
+  0x41dc26 |           488945c0 | subgt r8, r5, r8, asr #18 | mov     qword ptr [rbp+v4_prefix], rax
+  0x41dc2a |     488b8548ffffff | stmmi r5, {r3, r6, r8, sb, fp, pc} | mov     rax, qword ptr [rbp+prefix+8]
+  0x41dc31 |           488945c8 | stmdagt r5, {r3, r6, r8, fp, pc} ^ | mov     qword ptr [rbp+v4_prefix+8], rax
+  0x41dc35 |                    |  | jmp     loc_41DC50
+BB name:       0x41dc3a
+BB preds:      ['0x41dc0e']
+BB succs:      ['0x41dc50']
+BB disam_list: mov rax, qmem mov qmem, rax mov rax, qmem mov qmem, rax
+BB hash:       caa9857cab3aa52b3347992c90dfef6e
+  0x41dc3a |     488b8540ffffff | addmi r8, r5, r8, asr #22 | mov     rax, qword ptr [rbp+prefix]
+  0x41dc41 |           488945b0 | sublt r8, r5, r8, asr #18 | mov     qword ptr [rbp+v6_prefix], rax
+  0x41dc45 |     488b8548ffffff | stmmi r5, {r3, r6, r8, sb, fp, pc} | mov     rax, qword ptr [rbp+prefix+8]
+  0x41dc4c |                    |  | mov     qword ptr [rbp+v6_prefix+8], rax
+BB name:       0x41dc50
+BB preds:      ['0x41dc1f', '0x41dc3a']
+BB succs:      ['0x41dc55']
+BB disam_list: jmp $+5
+BB hash:       3da5e501534789d1c32de9e74c64760a
+  0x41dc50 |                    |  | jmp     $+5
+BB name:       0x41dc55
+BB preds:      ['0x41da8a', '0x41dc50']
+BB succs:      ['0x41dc69', '0x41dc98']
+BB disam_list: mov eax, mem mov ecx, mem sub ecx, 0Ah cmp eax, ecx jnb func
+BB hash:       a7999175d7c62f33d6cb2814b331e6c8
+  0x41dc55 |       8b8554ffffff |  | mov     eax, [rbp+rc_1]
+  0x41dc5b |             8b4da0 |  | mov     ecx, [rbp+len]
+  0x41dc5e |             83e90a |  | sub     ecx, 0Ah
+  0x41dc61 |               39c8 |  | cmp     eax, ecx
+  0x41dc63 |                    |  | jnb     loc_41DC98
+BB name:       0x41dc69
+BB preds:      ['0x41dc55']
+BB succs:      ['0x41dc98']
+BB disam_list: mov rdi, mem mov rsi, mem add rsi, 0Ch movsxd rax, mem add rsi, rax mov rdx, mem add rdx, 2 mov eax, mem add rdx, rax mov eax, mem movzx ecx, al call subtlvs_print
+BB hash:       65369419e878e793f99c4d6221a3e367
+  0x41dc69 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41dc6d |           488b75a8 | ldmdage r5!, {r3, r6, r8, sb, fp, pc} ^ | mov     rsi, [rbp+message]
+  0x41dc71 |           4883c60c | stcleq p3, c8, [r6], {0x48} | add     rsi, 0Ch
+  0x41dc75 |     48638554ffffff | strpl r6, [r5], #0x348 | movsxd  rax, [rbp+rc_1]
+  0x41dc7c |             4801c6 |  | add     rsi, rax; cp
+  0x41dc7f |           488b55a8 | ldmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rdx, [rbp+message]
+  0x41dc83 |           4883c202 | sbceq r8, r2, #72, #6 | add     rdx, 2
+  0x41dc87 |             8b45a0 |  | mov     eax, [rbp+len]
+  0x41dc8a |             4801c2 |  | add     rdx, rax; ep
+  0x41dc8d |             8b45a4 |  | mov     eax, [rbp+type]
+  0x41dc90 |             0fb6c8 |  | movzx   ecx, al; tlv_type
+  0x41dc93 |                    |  | call    subtlvs_print
+BB name:       0x41dc98
+BB preds:      ['0x41dc55', '0x41dc69']
+BB succs:      ['0x41dc9d']
+BB disam_list: jmp $+5
+BB hash:       3da5e501534789d1c32de9e74c64760a
+  0x41dc98 |                    |  | jmp     $+5
+BB name:       0x41dc9d
+BB preds:      ['0x41d97f', '0x41dc98']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41dc9d |                    |  | jmp     loc_41EA63
+BB name:       0x41dca2
+BB preds:      ['0x41d288']
+BB succs:      ['0x41dcb0', '0x41dcd2']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41dca2 |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 9
+  0x41dca6 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41dcaa |                    |  | jnz     loc_41DCD2
+BB name:       0x41dcb0
+BB preds:      ['0x41dca2']
+BB succs:      ['0x41ddf5']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aRequest mov al, 0 call rcx jmp func
+BB hash:       f78b2b58443746e489eb9a702d3c8d33
+  0x41dcb0 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41dcb4 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41dcbb |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41dcbf | 48befa3b4f0000000000 | bllo #0x2cd5e7 | mov     rsi, offset aRequest; " request"
+  0x41dcc9 |               b000 |  | mov     al, 0
+  0x41dccb |               ffd1 |  | call    rcx
+  0x41dccd |                    |  | jmp     loc_41DDF5
+BB name:       0x41dcd2
+BB preds:      ['0x41dca2']
+BB succs:      ['0x41dcf9', '0x41dcfe']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aRequest_0 mov al, 0 call rcx cmp mem, 2 jnb func
+BB hash:       3a8080f68c53fea987f2d0394d44a88e
+  0x41dcd2 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41dcd6 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41dcdd |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41dce1 | 48bee0f64e0000000000 |  | mov     rsi, offset aRequest_0; "\n\tRequest "
+  0x41dceb |               b000 |  | mov     al, 0
+  0x41dced |               ffd1 |  | call    rcx
+  0x41dcef |           837da002 | adceq r7, r0, #0x20c0 | cmp     [rbp+len], 2
+  0x41dcf3 |                    |  | jnb     loc_41DCFE
+BB name:       0x41dcf9
+BB preds:      ['0x41dcd2']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41dcf9 |                    |  | jmp     invalid
+BB name:       0x41dcfe
+BB preds:      ['0x41dcd2']
+BB succs:      ['0x41dd6b', '0x41dd70']
+BB disam_list: mov rax, mem movzx eax, mem mov rcx, mem movzx esi, mem xor ecx, ecx mov edx, 60h cmp esi, 1 cmovz ecx, edx add eax, ecx mov mem, al mov rax, mem movzx edi, mem mov rax, mem movzx esi, mem mov rcx, mem add rcx, 4 mov r9d, mem sub r9d, 2 lea rax, mem xor edx, edx xor r8d, r8d mov mem, rax call network_prefix mov mem, eax cmp mem, 0 jge func
+BB hash:       8df1ff6c1fb59e0cd3b02fa84f031a4a
+  0x41dcfe |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41dd02 |           0fb64003 | movteq fp, #0x60f | movzx   eax, byte ptr [rax+3]
+  0x41dd06 |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41dd0a |           0fb67102 | rsbseq fp, r1, #0xf00000 | movzx   esi, byte ptr [rcx+2]
+  0x41dd0e |               31c9 |  | xor     ecx, ecx
+  0x41dd10 |         ba60000000 | strheq r6, [r0], -sl | mov     edx, 60h ; '`'
+  0x41dd15 |             83fe01 |  | cmp     esi, 1
+  0x41dd18 |             0f44ca |  | cmovz   ecx, edx
+  0x41dd1b |               01c8 |  | add     eax, ecx
+  0x41dd1d |       88851fffffff |  | mov     [rbp+plen_0], al
+  0x41dd23 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41dd27 |           0fb67802 | rsbseq fp, r8, #0xf00000 | movzx   edi, byte ptr [rax+2]; ae
+  0x41dd2b |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41dd2f |           0fb67003 | cmneq r0, #0xf00000 | movzx   esi, byte ptr [rax+3]; plen
+  0x41dd33 |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41dd37 |           4883c104 | strbeq r8, [r1], #0x348 | add     rcx, 4; p
+  0x41dd3b |           448b4da0 | subge r8, sp, r4, asr #22 | mov     r9d, [rbp+len]
+  0x41dd3f |           4183e902 | rsceq r8, sb, #0x4000001 | sub     r9d, 2; len
+  0x41dd43 |     488d8520ffffff | addhs r8, r5, r8, asr #26 | lea     rax, [rbp+prefix_0]
+  0x41dd4a |               31d2 |  | xor     edx, edx; omitted
+  0x41dd4c |             4531c0 |  | xor     r8d, r8d; dp
+  0x41dd4f |           48890424 | strhs r8, [r4], #-0x948 | mov     [rsp+3B0h+p_r], rax; p_r
+  0x41dd53 |         e8c8130000 | andseq ip, r3, r8, ror #17 | call    network_prefix
+  0x41dd58 |       89853cffffff |  | mov     [rbp+rc_2], eax
+  0x41dd5e |     83bd3cffffff00 |  | cmp     [rbp+rc_2], 0
+  0x41dd65 |                    |  | jge     loc_41DD70
+BB name:       0x41dd6b
+BB preds:      ['0x41dcfe']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41dd6b |                    |  | jmp     invalid
+BB name:       0x41dd70
+BB preds:      ['0x41dcfe']
+BB succs:      ['0x41dd9e', '0x41ddb4']
+BB disam_list: mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rax, mem movzx eax, mem cmp eax, 0 jnz func
+BB hash:       6028cb158ef2944dc23f54e139a82c98
+  0x41dd70 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41dd74 |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41dd7b |     48898570fdffff | addvc r8, r5, r8, asr #18 | mov     [rbp+var_290], rax
+  0x41dd82 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41dd86 |     48898578fdffff | stmvc r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_288], rax
+  0x41dd8d |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41dd91 |           0fb64002 | subeq fp, r0, #0xf00000 | movzx   eax, byte ptr [rax+2]
+  0x41dd95 |             83f800 |  | cmp     eax, 0
+  0x41dd98 |                    |  | jnz     loc_41DDB4
+BB name:       0x41dd9e
+BB preds:      ['0x41dd70']
+BB succs:      ['0x41ddd2']
+BB disam_list: mov rax, (offset aForAny+4) mov mem, rax jmp func
+BB hash:       3d6dcb625f5f0a12784d948f41e02382
+  0x41dd9e | 48b8b8f74e0000000000 |  | mov     rax, (offset aForAny+4); "any"
+  0x41dda8 |     48898568fdffff | stmvs r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_298], rax
+  0x41ddaf |                    |  | jmp     loc_41DDD2
+BB name:       0x41ddb4
+BB preds:      ['0x41dd70']
+BB succs:      ['0x41ddd2']
+BB disam_list: mov rdi, mem lea rsi, mem movzx edx, mem call format_prefix mov mem, rax
+BB hash:       fe9abaef7779a6ecb8dea1518735bd17
+  0x41ddb4 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41ddb8 |     488db520ffffff | adcshs r8, r5, r8, asr #26 | lea     rsi, [rbp+prefix_0]; prefix
+  0x41ddbf |     0fb6951fffffff | svcne #0x95b60f | movzx   edx, [rbp+plen_0]; plen
+  0x41ddc6 |         e8f5150000 | andseq pc, r5, r8, ror #11 | call    format_prefix
+  0x41ddcb |                    |  | mov     [rbp+var_298], rax
+BB name:       0x41ddd2
+BB preds:      ['0x41dd9e', '0x41ddb4']
+BB succs:      ['0x41ddf5']
+BB disam_list: mov rcx, mem mov rdi, mem mov rdx, mem mov rsi, offset aForS mov al, 0 call rcx
+BB hash:       7c94c2d191264a63eb13a1b5734e6312
+  0x41ddd2 |     488b8d70fdffff | addvc r8, sp, r8, asr #22 | mov     rcx, [rbp+var_290]
+  0x41ddd9 |     488bbd78fdffff | popvc {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_288]
+  0x41dde0 |     488b9568fdffff | ldmvs r5, {r3, r6, r8, sb, fp, pc} | mov     rdx, [rbp+var_298]
+  0x41dde7 | 48be0a4a500000000000 | bmi #0x6cd70f | mov     rsi, offset aForS; "for %s"
+  0x41ddf1 |               b000 |  | mov     al, 0
+  0x41ddf3 |                    |  | call    rcx
+BB name:       0x41ddf5
+BB preds:      ['0x41dcb0', '0x41ddd2']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41ddf5 |                    |  | jmp     loc_41EA63
+BB name:       0x41ddfa
+BB preds:      ['0x41d288']
+BB succs:      ['0x41de08', '0x41de2a']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41ddfa |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 10
+  0x41ddfe |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41de02 |                    |  | jnz     loc_41DE2A
+BB name:       0x41de08
+BB preds:      ['0x41ddfa']
+BB succs:      ['0x41df73']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aMhRequest mov al, 0 call rcx jmp func
+BB hash:       809dd9e28293a02229b5facc9938ce21
+  0x41de08 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41de0c |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41de13 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41de17 | 48beebf64e0000000000 |  | mov     rsi, offset aMhRequest; " mh-request"
+  0x41de21 |               b000 |  | mov     al, 0
+  0x41de23 |               ffd1 |  | call    rcx
+  0x41de25 |                    |  | jmp     loc_41DF73
+BB name:       0x41de2a
+BB preds:      ['0x41ddfa']
+BB succs:      ['0x41de51', '0x41de56']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aMhRequest_0 mov al, 0 call rcx cmp mem, 0Eh jnb func
+BB hash:       6eca47c7037b4637c215f354ed53b683
+  0x41de2a |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41de2e |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41de35 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41de39 | 48bef7f64e0000000000 |  | mov     rsi, offset aMhRequest_0; "\n\tMH-Request "
+  0x41de43 |               b000 |  | mov     al, 0
+  0x41de45 |               ffd1 |  | call    rcx
+  0x41de47 |           837da00e | cdpeq p13, #0xa, c7, c0, c3, #4 | cmp     [rbp+len], 0Eh
+  0x41de4b |                    |  | jnb     loc_41DE56
+BB name:       0x41de51
+BB preds:      ['0x41de2a']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41de51 |                    |  | jmp     invalid
+BB name:       0x41de56
+BB preds:      ['0x41de2a']
+BB succs:      ['0x41deb2', '0x41deb7']
+BB disam_list: mov rdi, mem add rdi, 4 call EXTRACT_16BITS_6 mov mem, ax mov rax, mem movzx edi, mem mov rax, mem movzx esi, mem mov rcx, mem add rcx, 10h mov r9d, mem sub r9d, 0Eh lea rax, mem xor edx, edx xor r8d, r8d mov mem, rax call network_prefix mov mem, eax cmp mem, 0 jge func
+BB hash:       68561473d57c9e3cbea1dd70e69e7734
+  0x41de56 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41de5a |           4883c704 | strbeq r8, [r7], #0x348 | add     rdi, 4; p
+  0x41de5e |         e87d0c0000 | andeq r7, ip, r8, ror #27 | call    EXTRACT_16BITS_6
+  0x41de63 |     66898516ffffff | strne r8, [r5], r6, ror #18 | mov     [rbp+seqno_1], ax
+  0x41de6a |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41de6e |           0fb67802 | rsbseq fp, r8, #0xf00000 | movzx   edi, byte ptr [rax+2]; ae
+  0x41de72 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41de76 |           0fb67003 | cmneq r0, #0xf00000 | movzx   esi, byte ptr [rax+3]; plen
+  0x41de7a |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41de7e |           4883c110 | sbcne r8, r1, r8, asr #6 | add     rcx, 10h; p
+  0x41de82 |           448b4da0 | subge r8, sp, r4, asr #22 | mov     r9d, [rbp+len]
+  0x41de86 |           4183e90e | cdpeq p3, #0xe, c8, c9, c1, #2 | sub     r9d, 0Eh; len
+  0x41de8a |     488d8500ffffff | addeq r8, r5, r8, asr #26 | lea     rax, [rbp+prefix_1]
+  0x41de91 |               31d2 |  | xor     edx, edx; omitted
+  0x41de93 |             4531c0 |  | xor     r8d, r8d; dp
+  0x41de96 |           48890424 | strhs r8, [r4], #-0x948 | mov     [rsp+3B0h+p_r], rax; p_r
+  0x41de9a |         e881120000 | andseq r8, r2, r8, ror #3 | call    network_prefix
+  0x41de9f |       898518ffffff |  | mov     [rbp+rc_3], eax
+  0x41dea5 |     83bd18ffffff00 |  | cmp     [rbp+rc_3], 0
+  0x41deac |                    |  | jge     loc_41DEB7
+BB name:       0x41deb2
+BB preds:      ['0x41de56']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41deb2 |                    |  | jmp     invalid
+BB name:       0x41deb7
+BB preds:      ['0x41de56']
+BB succs:      ['0x41df73']
+BB disam_list: mov rax, mem movzx eax, mem mov rcx, mem movzx esi, mem xor ecx, ecx mov edx, 60h cmp esi, 1 cmovz ecx, edx add eax, ecx mov mem, al mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rax, mem movzx eax, mem mov mem, eax mov rdi, mem lea rsi, mem movzx edx, mem call format_prefix mov mem, rax movzx eax, mem mov mem, eax mov rdi, mem add rdi, 8 call format_id mov rdi, mem mov edx, mem mov rcx, mem mov r8d, mem mov r10, mem mov r9, rax mov rsi, offset aUHopsForSSeqno mov al, 0 call r10
+BB hash:       bd1ee859dc73e6e58d36f66825901554
+  0x41deb7 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41debb |           0fb64003 | movteq fp, #0x60f | movzx   eax, byte ptr [rax+3]
+  0x41debf |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41dec3 |           0fb67102 | rsbseq fp, r1, #0xf00000 | movzx   esi, byte ptr [rcx+2]
+  0x41dec7 |               31c9 |  | xor     ecx, ecx
+  0x41dec9 |         ba60000000 | strheq r6, [r0], -sl | mov     edx, 60h ; '`'
+  0x41dece |             83fe01 |  | cmp     esi, 1
+  0x41ded1 |             0f44ca |  | cmovz   ecx, edx
+  0x41ded4 |               01c8 |  | add     eax, ecx
+  0x41ded6 |       8885fffeffff | cdp2 p5, #0xf, c8, c15, c8, #4 | mov     [rbp+plen_1], al
+  0x41dedc |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41dee0 |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41dee7 |     48898560fdffff | addvs r8, r5, r8, asr #18 | mov     [rbp+var_2A0], rax
+  0x41deee |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41def2 |     48898540fdffff | addmi r8, r5, r8, asr #18 | mov     [rbp+var_2C0], rax
+  0x41def9 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41defd |           0fb64006 | strbeq fp, [r0], -pc, lsl #12 | movzx   eax, byte ptr [rax+6]
+  0x41df01 |       89854cfdffff | stc2l p5, c8, [ip, #-0x224] | mov     [rbp+var_2B4], eax
+  0x41df07 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41df0b |     488db500ffffff | adcseq r8, r5, r8, asr #26 | lea     rsi, [rbp+prefix_1]; prefix
+  0x41df12 |     0fb695fffeffff |  | movzx   edx, [rbp+plen_1]; plen
+  0x41df19 |         e8a2140000 | andseq sl, r4, r8, ror #5 | call    format_prefix
+  0x41df1e |     48898550fdffff | addpl r8, r5, r8, asr #18 | mov     [rbp+var_2B0], rax
+  0x41df25 |     0fb78516ffffff | strne fp, [r5], pc, lsl #14 | movzx   eax, [rbp+seqno_1]
+  0x41df2c |       89855cfdffff | ldc2l p5, c8, [ip, #-0x224] | mov     [rbp+var_2A4], eax
+  0x41df32 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41df36 |           4883c708 | stmeq r7, {r3, r6, r8, sb, pc} ^ | add     rdi, 8; id
+  0x41df3a |         e831110000 | andseq r3, r1, r8, ror #3 | call    format_id
+  0x41df3f |     488bbd40fdffff | adcsmi r8, sp, r8, asr #22 | mov     rdi, [rbp+var_2C0]
+  0x41df46 |       8b954cfdffff | stc2l p5, c9, [ip, #-0x22c] | mov     edx, [rbp+var_2B4]
+  0x41df4c |     488b8d50fdffff | addpl r8, sp, r8, asr #22 | mov     rcx, [rbp+var_2B0]
+  0x41df53 |     448b855cfdffff | vstmiapl r5, {d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20, d21, d22, d23} | mov     r8d, [rbp+var_2A4]
+  0x41df5a |     4c8b9560fdffff | addsvs r8, r5, ip, asr #22 | mov     r10, [rbp+var_2A0]
+  0x41df61 |             4989c1 |  | mov     r9, rax
+  0x41df64 | 48be05f74e0000000000 |  | mov     rsi, offset aUHopsForSSeqno; "(%u hops) for %s seqno %u id %s"
+  0x41df6e |               b000 |  | mov     al, 0
+  0x41df70 |                    |  | call    r10
+BB name:       0x41df73
+BB preds:      ['0x41de08', '0x41deb7']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41df73 |                    |  | jmp     loc_41EA63
+BB name:       0x41df78
+BB preds:      ['0x41d288']
+BB succs:      ['0x41df86', '0x41dfa8']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41df78 |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 11
+  0x41df7c |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41df80 |                    |  | jnz     loc_41DFA8
+BB name:       0x41df86
+BB preds:      ['0x41df78']
+BB succs:      ['0x41e037']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aTspc mov al, 0 call rcx jmp func
+BB hash:       7fbb2601408ade6c0e67a12198ae31c0
+  0x41df86 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41df8a |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41df91 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41df95 | 48be25f74e0000000000 |  | mov     rsi, offset aTspc; " tspc"
+  0x41df9f |               b000 |  | mov     al, 0
+  0x41dfa1 |               ffd1 |  | call    rcx
+  0x41dfa3 |                    |  | jmp     loc_41E037
+BB name:       0x41dfa8
+BB preds:      ['0x41df78']
+BB succs:      ['0x41dfcf', '0x41dfd4']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aTsPc mov al, 0 call rcx cmp mem, 6 jnb func
+BB hash:       a8a6864166ff8b15cf422eba2584d8e6
+  0x41dfa8 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41dfac |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41dfb3 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41dfb7 | 48be2bf74e0000000000 |  | mov     rsi, offset aTsPc; "\n\tTS/PC "
+  0x41dfc1 |               b000 |  | mov     al, 0
+  0x41dfc3 |               ffd1 |  | call    rcx
+  0x41dfc5 |           837da006 | strteq r7, [r0], r3, lsl #27 | cmp     [rbp+len], 6
+  0x41dfc9 |                    |  | jnb     loc_41DFD4
+BB name:       0x41dfcf
+BB preds:      ['0x41dfa8']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41dfcf |                    |  | jmp     invalid
+BB name:       0x41dfd4
+BB preds:      ['0x41dfa8']
+BB succs:      ['0x41e037']
+BB disam_list: mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem add rdi, 4 call EXTRACT_32BITS_6 mov mem, eax mov rdi, mem add rdi, 2 call EXTRACT_16BITS_6 mov rdi, mem mov edx, mem mov r8, mem movzx ecx, ax mov rsi, offset aTimestampUPack mov al, 0 call r8
+BB hash:       b506f45ba84358efc4af186cfb7c1446
+  0x41dfd4 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41dfd8 |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41dfdf |     48898538fdffff | stmlo r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_2C8], rax
+  0x41dfe6 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41dfea |     48898528fdffff | stmhs r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_2D8], rax
+  0x41dff1 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41dff5 |           4883c704 | strbeq r8, [r7], #0x348 | add     rdi, 4; p
+  0x41dff9 |         e8e2140000 | andseq lr, r4, r8, ror #5 | call    EXTRACT_32BITS_6
+  0x41dffe |       898534fdffff | ldc2 p5, c8, [r4, #-0x224]! | mov     [rbp+var_2CC], eax
+  0x41e004 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41e008 |           4883c702 | sbceq r8, r7, #72, #6 | add     rdi, 2; p
+  0x41e00c |         e8cf0a0000 | andeq ip, sl, r8, ror #31 | call    EXTRACT_16BITS_6
+  0x41e011 |     488bbd28fdffff | pophs {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_2D8]
+  0x41e018 |       8b9534fdffff | ldc2 p5, c9, [r4, #-0x22c]! | mov     edx, [rbp+var_2CC]
+  0x41e01e |     4c8b8538fdffff | stmlo r5, {r2, r3, r6, r8, sb, fp, pc} | mov     r8, [rbp+var_2C8]
+  0x41e025 |             0fb7c8 |  | movzx   ecx, ax
+  0x41e028 | 48be34f74e0000000000 |  | mov     rsi, offset aTimestampUPack; "timestamp %u packetcounter %u"
+  0x41e032 |               b000 |  | mov     al, 0
+  0x41e034 |                    |  | call    r8
+BB name:       0x41e037
+BB preds:      ['0x41df86', '0x41dfd4']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41e037 |                    |  | jmp     loc_41EA63
+BB name:       0x41e03c
+BB preds:      ['0x41d288']
+BB succs:      ['0x41e04a', '0x41e06c']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41e03c |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 12
+  0x41e040 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41e044 |                    |  | jnz     loc_41E06C
+BB name:       0x41e04a
+BB preds:      ['0x41e03c']
+BB succs:      ['0x41e14f']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aHmac mov al, 0 call rcx jmp func
+BB hash:       959b7ae101ab9bb42d5473087d1d8214
+  0x41e04a |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e04e |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e055 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e059 | 48be52f74e0000000000 |  | mov     rsi, offset aHmac; " hmac"
+  0x41e063 |               b000 |  | mov     al, 0
+  0x41e065 |               ffd1 |  | call    rcx
+  0x41e067 |                    |  | jmp     loc_41E14F
+BB name:       0x41e06c
+BB preds:      ['0x41e03c']
+BB succs:      ['0x41e093', '0x41e098']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aHmac_0 mov al, 0 call rcx cmp mem, 12h jnb func
+BB hash:       8fa184a9c96e52f226f5719dbcb5ed02
+  0x41e06c |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e070 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e077 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e07b | 48be58f74e0000000000 |  | mov     rsi, offset aHmac_0; "\n\tHMAC "
+  0x41e085 |               b000 |  | mov     al, 0
+  0x41e087 |               ffd1 |  | call    rcx
+  0x41e089 |           837da012 | adcne r7, r0, #0x20c0 | cmp     [rbp+len], 12h
+  0x41e08d |                    |  | jnb     loc_41E098
+BB name:       0x41e093
+BB preds:      ['0x41e06c']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e093 |                    |  | jmp     invalid
+BB name:       0x41e098
+BB preds:      ['0x41e06c']
+BB succs:      ['0x41e0f2']
+BB disam_list: mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem add rdi, 2 call EXTRACT_16BITS_6 mov rdi, mem mov r8, mem movzx edx, ax mov ecx, mem sub ecx, 2 mov rsi, offset aKeyIdUDigestU mov al, 0 call r8 mov mem, 0
+BB hash:       ef21397d98906f8b5fd8109fa95544d7
+  0x41e098 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e09c |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41e0a3 |     48898520fdffff | addhs r8, r5, r8, asr #18 | mov     [rbp+var_2E0], rax
+  0x41e0aa |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e0ae |     48898518fdffff | stmne r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_2E8], rax
+  0x41e0b5 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41e0b9 |           4883c702 | sbceq r8, r7, #72, #6 | add     rdi, 2; p
+  0x41e0bd |         e81e0a0000 | andeq r1, sl, r8, ror #29 | call    EXTRACT_16BITS_6
+  0x41e0c2 |     488bbd18fdffff | popne {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_2E8]
+  0x41e0c9 |     4c8b8520fdffff | addhs r8, r5, ip, asr #22 | mov     r8, [rbp+var_2E0]
+  0x41e0d0 |             0fb7d0 |  | movzx   edx, ax
+  0x41e0d3 |             8b4da0 |  | mov     ecx, [rbp+len]
+  0x41e0d6 |             83e902 |  | sub     ecx, 2
+  0x41e0d9 | 48be60f74e0000000000 |  | mov     rsi, offset aKeyIdUDigestU; "key-id %u digest-%u "
+  0x41e0e3 |               b000 |  | mov     al, 0
+  0x41e0e5 |             41ffd0 |  | call    r8
+  0x41e0e8 |                    |  | mov     [rbp+j], 0
+BB name:       0x41e0f2
+BB preds:      ['0x41e098', '0x41e106']
+BB succs:      ['0x41e106', '0x41e14a']
+BB disam_list: mov eax, mem mov ecx, mem sub ecx, 2 cmp eax, ecx jnb func
+BB hash:       f1f4838f1a4509da9e59a6ee265e9e28
+  0x41e0f2 |       8b85f8feffff | cdp2 p5, #0xf, c8, c8, c11, #4 | mov     eax, [rbp+j]
+  0x41e0f8 |             8b4da0 |  | mov     ecx, [rbp+len]
+  0x41e0fb |             83e902 |  | sub     ecx, 2
+  0x41e0fe |               39c8 |  | cmp     eax, ecx
+  0x41e100 |                    |  | jnb     loc_41E14A
+BB name:       0x41e106
+BB preds:      ['0x41e0f2']
+BB succs:      ['0x41e0f2']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rax, mem mov edx, mem add edx, 4 mov edx, edx movzx edx, mem mov rsi, offset a02x_0 mov al, 0 call rcx mov eax, mem add eax, 1 mov mem, eax jmp func
+BB hash:       19d09c491439113c33ff22fc4a116dae
+  0x41e106 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e10a |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e111 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e115 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e119 |       8b95f8feffff | cdp2 p5, #0xf, c9, c8, c11, #4 | mov     edx, [rbp+j]
+  0x41e11f |             83c204 |  | add     edx, 4
+  0x41e122 |               89d2 |  | mov     edx, edx
+  0x41e124 |           0fb61410 | andsne fp, r4, pc, lsl #12 | movzx   edx, byte ptr [rax+rdx]
+  0x41e128 | 48be75f74e0000000000 |  | mov     rsi, offset a02x_0; "%02X"
+  0x41e132 |               b000 |  | mov     al, 0
+  0x41e134 |               ffd1 |  | call    rcx
+  0x41e136 |       8b85f8feffff | cdp2 p5, #0xf, c8, c8, c11, #4 | mov     eax, [rbp+j]
+  0x41e13c |             83c001 |  | add     eax, 1
+  0x41e13f |       8985f8feffff | cdp2 p5, #0xf, c8, c8, c9, #4 | mov     [rbp+j], eax
+  0x41e145 |                    |  | jmp     loc_41E0F2
+BB name:       0x41e14a
+BB preds:      ['0x41e0f2']
+BB succs:      ['0x41e14f']
+BB disam_list: jmp $+5
+BB hash:       3da5e501534789d1c32de9e74c64760a
+  0x41e14a |                    |  | jmp     $+5
+BB name:       0x41e14f
+BB preds:      ['0x41e04a', '0x41e14a']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41e14f |                    |  | jmp     loc_41EA63
+BB name:       0x41e154
+BB preds:      ['0x41d288']
+BB succs:      ['0x41e162', '0x41e184']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41e154 |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 13
+  0x41e158 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41e15c |                    |  | jnz     loc_41E184
+BB name:       0x41e162
+BB preds:      ['0x41e154']
+BB succs:      ['0x41e4cf']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aSsUpdate mov al, 0 call rcx jmp func
+BB hash:       8dd9abf19a48850fe6359a5e03e2c1a7
+  0x41e162 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e166 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e16d |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e171 | 48be7af74e0000000000 |  | mov     rsi, offset aSsUpdate; " ss-update"
+  0x41e17b |               b000 |  | mov     al, 0
+  0x41e17d |               ffd1 |  | call    rcx
+  0x41e17f |                    |  | jmp     loc_41E4CF
+BB name:       0x41e184
+BB preds:      ['0x41e154']
+BB succs:      ['0x41e1b5', '0x41e1ba']
+BB disam_list: mov mem, 0Ah mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aSsUpdate_0 mov al, 0 call rcx cmp mem, 0Ah jnb func
+BB hash:       fb7182ac6e32ee922e363c026e1057ae
+  0x41e184 | c785bcfeffff0a000000 | cdp2 p5, #0xb, c8, c12, c7, #6 | mov     [rbp+parsed_len], 0Ah
+  0x41e18e |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e192 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e199 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e19d | 48be85f74e0000000000 |  | mov     rsi, offset aSsUpdate_0; "\n\tSS-Update"
+  0x41e1a7 |               b000 |  | mov     al, 0
+  0x41e1a9 |               ffd1 |  | call    rcx
+  0x41e1ab |           837da00a | beq #0xfec3d7bf | cmp     [rbp+len], 0Ah
+  0x41e1af |                    |  | jnb     loc_41E1BA
+BB name:       0x41e1b5
+BB preds:      ['0x41e184']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e1b5 |                    |  | jmp     invalid
+BB name:       0x41e1ba
+BB preds:      ['0x41e184']
+BB succs:      ['0x41e27a', '0x41e28a']
+BB disam_list: mov rax, mem mov al, mem mov mem, al mov rax, mem mov al, mem mov mem, al mov rax, mem mov al, mem mov mem, al mov rax, mem mov al, mem mov mem, al mov rdi, mem add rdi, 6 call EXTRACT_16BITS_6 mov mem, ax mov rdi, mem add rdi, 8 call EXTRACT_16BITS_6 mov mem, ax mov rdi, mem add rdi, 0Ah call EXTRACT_16BITS_6 mov mem, ax movzx eax, mem mov mem, eax movzx eax, mem mov mem, eax movzx eax, mem mov mem, eax mov rax, mem add rax, 2 movsxd rcx, mem add rax, rcx mov mem, rax movzx eax, mem cmp eax, 1 jnz func
+BB hash:       020e2e6c2d66bb18b52fb8712efde4d1
+  0x41e1ba |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e1be |             8a4002 |  | mov     al, [rax+2]
+  0x41e1c1 |       8885c9feffff | cdp2 p5, #0xc, c8, c9, c8, #4 | mov     [rbp+ae], al
+  0x41e1c7 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e1cb |             8a4003 |  | mov     al, [rax+3]
+  0x41e1ce |       8885c7feffff | cdp2 p5, #0xc, c8, c7, c8, #4 | mov     [rbp+src_plen], al
+  0x41e1d4 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e1d8 |             8a4004 |  | mov     al, [rax+4]
+  0x41e1db |       8885c8feffff | cdp2 p5, #0xc, c8, c8, c8, #4 | mov     [rbp+plen_2], al
+  0x41e1e1 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e1e5 |             8a4005 |  | mov     al, [rax+5]
+  0x41e1e8 |       8885c6feffff | cdp2 p5, #0xc, c8, c6, c8, #4 | mov     [rbp+omitted], al
+  0x41e1ee |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41e1f2 |           4883c706 | strbeq r8, [r7], r8, asr #6 | add     rdi, 6; p
+  0x41e1f6 |         e8e5080000 | andeq lr, r8, r8, ror #11 | call    EXTRACT_16BITS_6
+  0x41e1fb |     668985cefeffff | cdpgt p9, #8, c8, c5, c6, #3 | mov     [rbp+interval_3], ax
+  0x41e202 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41e206 |           4883c708 | stmeq r7, {r3, r6, r8, sb, pc} ^ | add     rdi, 8; p
+  0x41e20a |         e8d1080000 | andeq sp, r8, r8, ror #3 | call    EXTRACT_16BITS_6
+  0x41e20f |     668985ccfeffff | stcgt p9, c8, [r5], {0x66} | mov     [rbp+seqno_2], ax
+  0x41e216 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41e21a |           4883c70a | beq #0xff5fef42 | add     rdi, 0Ah; p
+  0x41e21e |         e8bd080000 | andeq fp, r8, r8, ror #27 | call    EXTRACT_16BITS_6
+  0x41e223 |     668985cafeffff | bgt #0xfe5807c3 | mov     [rbp+metric_0], ax
+  0x41e22a |     0fb685c9feffff | stmibgt r5, {r0, r1, r2, r3, sb, sl, ip, sp, pc} | movzx   eax, [rbp+ae]
+  0x41e231 |       898504fdffff | stc2 p5, c8, [r4, #-0x224] | mov     [rbp+var_2FC], eax
+  0x41e237 |     0fb685c8feffff | stmgt r5, {r0, r1, r2, r3, sb, sl, ip, sp, pc} | movzx   eax, [rbp+plen_2]
+  0x41e23e |       898508fdffff | stc2 p5, c8, [r8, #-0x224] | mov     [rbp+var_2F8], eax
+  0x41e244 |     0fb685c6feffff | strgt fp, [r5], pc, lsl #12 | movzx   eax, [rbp+omitted]
+  0x41e24b |       89850cfdffff | stc2 p5, c8, [ip, #-0x224] | mov     [rbp+var_2F4], eax
+  0x41e251 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e255 |           4883c002 | sbceq r8, r0, #72, #6 | add     rax, 2
+  0x41e259 |     48638dbcfeffff | stclt p3, c6, [sp], {0x48} | movsxd  rcx, [rbp+parsed_len]
+  0x41e260 |             4801c8 |  | add     rax, rcx
+  0x41e263 |     48898510fdffff | addne r8, r5, r8, asr #18 | mov     [rbp+var_2F0], rax
+  0x41e26a |     0fb685c9feffff | stmibgt r5, {r0, r1, r2, r3, sb, sl, ip, sp, pc} | movzx   eax, [rbp+ae]
+  0x41e271 |             83f801 |  | cmp     eax, 1
+  0x41e274 |                    |  | jnz     loc_41E28A
+BB name:       0x41e27a
+BB preds:      ['0x41e1ba']
+BB succs:      ['0x41e295']
+BB disam_list: lea rax, mem mov mem, rax jmp func
+BB hash:       ba4eebab62e5dfbe2137c9818e6de4d5
+  0x41e27a |           488d45c0 | subgt r8, r5, r8, asr #26 | lea     rax, [rbp+v4_prefix]
+  0x41e27e |     488985f8fcffff |  | mov     [rbp+var_308], rax
+  0x41e285 |                    |  | jmp     loc_41E295
+BB name:       0x41e28a
+BB preds:      ['0x41e1ba']
+BB succs:      ['0x41e295']
+BB disam_list: lea rax, mem mov mem, rax
+BB hash:       f767615ef7f98f8627fedef860f1955d
+  0x41e28a |           488d45b0 | sublt r8, r5, r8, asr #26 | lea     rax, [rbp+v6_prefix]
+  0x41e28e |                    |  | mov     [rbp+var_308], rax
+BB name:       0x41e295
+BB preds:      ['0x41e27a', '0x41e28a']
+BB succs:      ['0x41e2e3', '0x41e2e8']
+BB disam_list: mov rcx, mem mov edx, mem mov esi, mem mov edi, mem mov r8, mem mov r9d, mem sub r9d, mem lea rax, mem mov mem, rax call network_prefix mov mem, eax cmp mem, 0 jge func
+BB hash:       5ec9a2561eb9c104eede5ad9a3005e13
+  0x41e295 |     488b8d10fdffff | addne r8, sp, r8, asr #22 | mov     rcx, [rbp+var_2F0]; p
+  0x41e29c |       8b950cfdffff | stc2 p5, c9, [ip, #-0x22c] | mov     edx, [rbp+var_2F4]; omitted
+  0x41e2a2 |       8bb508fdffff | stc2 p5, c11, [r8, #-0x22c] | mov     esi, [rbp+var_2F8]; plen
+  0x41e2a8 |       8bbd04fdffff | stc2 p13, c11, [r4, #-0x22c] | mov     edi, [rbp+var_2FC]; ae
+  0x41e2ae |     4c8b85f8fcffff |  | mov     r8, [rbp+var_308]; dp
+  0x41e2b5 |           448b4da0 | subge r8, sp, r4, asr #22 | mov     r9d, [rbp+len]
+  0x41e2b9 |     442b8dbcfeffff | vstmialt sp, {d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17} | sub     r9d, [rbp+parsed_len]; len
+  0x41e2c0 |     488d85e0feffff | add r8, r5, r8, asr #26 | lea     rax, [rbp+prefix_2]
+  0x41e2c7 |           48890424 | strhs r8, [r4], #-0x948 | mov     [rsp+3B0h+p_r], rax; p_r
+  0x41e2cb |         e8500e0000 | andeq r5, lr, r8, ror #1 | call    network_prefix
+  0x41e2d0 |       8985c0feffff | cdp2 p5, #0xc, c8, c0, c9, #4 | mov     [rbp+rc_4], eax
+  0x41e2d6 |     83bdc0feffff00 | cdp2 p13, #0xc, c11, c0, c3, #4 | cmp     [rbp+rc_4], 0
+  0x41e2dd |                    |  | jge     loc_41E2E8
+BB name:       0x41e2e3
+BB preds:      ['0x41e295']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e2e3 |                    |  | jmp     invalid
+BB name:       0x41e2e8
+BB preds:      ['0x41e295']
+BB succs:      ['0x41e2f8', '0x41e308']
+BB disam_list: movzx eax, mem cmp eax, 1 jnz func
+BB hash:       6724f7fb199aaa13a2fbdb16324b2120
+  0x41e2e8 |     0fb685c9feffff | stmibgt r5, {r0, r1, r2, r3, sb, sl, ip, sp, pc} | movzx   eax, [rbp+ae]
+  0x41e2ef |             83f801 |  | cmp     eax, 1
+  0x41e2f2 |                    |  | jnz     loc_41E308
+BB name:       0x41e2f8
+BB preds:      ['0x41e2e8']
+BB succs:      ['0x41e308']
+BB disam_list: movzx eax, mem add eax, 60h mov mem, al
+BB hash:       bf97563564a823cabd3ef084c5dbf23a
+  0x41e2f8 |     0fb685c8feffff | stmgt r5, {r0, r1, r2, r3, sb, sl, ip, sp, pc} | movzx   eax, [rbp+plen_2]
+  0x41e2ff |             83c060 |  | add     eax, 60h ; '`'
+  0x41e302 |                    |  | mov     [rbp+plen_2], al
+BB name:       0x41e308
+BB preds:      ['0x41e2e8', '0x41e2f8']
+BB succs:      ['0x41e36d', '0x41e372']
+BB disam_list: mov eax, mem add eax, mem mov mem, eax movzx edi, mem movzx esi, mem mov rcx, mem add rcx, 2 movsxd rax, mem add rcx, rax mov r9d, mem sub r9d, mem lea rax, mem xor edx, edx xor r8d, r8d mov mem, rax call network_prefix mov mem, eax cmp mem, 0 jge func
+BB hash:       f84eaf6e8d83a96c8ea0acbd8a458ef2
+  0x41e308 |       8b85c0feffff | cdp2 p5, #0xc, c8, c0, c11, #4 | mov     eax, [rbp+rc_4]
+  0x41e30e |       0385bcfeffff | cdp2 p5, #0xb, c8, c12, c3, #0 | add     eax, [rbp+parsed_len]
+  0x41e314 |       8985bcfeffff | cdp2 p5, #0xb, c8, c12, c9, #4 | mov     [rbp+parsed_len], eax
+  0x41e31a |     0fb6bdc9feffff | ldmibgt sp!, {r0, r1, r2, r3, sb, sl, ip, sp, pc} | movzx   edi, [rbp+ae]; ae
+  0x41e321 |     0fb6b5c7feffff | ldrgt fp, [r5, pc, lsl #12]! | movzx   esi, [rbp+src_plen]; plen
+  0x41e328 |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41e32c |           4883c102 | sbceq r8, r1, #72, #6 | add     rcx, 2
+  0x41e330 |     486385bcfeffff | stclt p3, c6, [r5], {0x48} | movsxd  rax, [rbp+parsed_len]
+  0x41e337 |             4801c1 |  | add     rcx, rax; p
+  0x41e33a |           448b4da0 | subge r8, sp, r4, asr #22 | mov     r9d, [rbp+len]
+  0x41e33e |     442b8dbcfeffff | vstmialt sp, {d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17} | sub     r9d, [rbp+parsed_len]; len
+  0x41e345 |     488d85d0feffff | addle r8, r5, r8, asr #26 | lea     rax, [rbp+src_prefix]
+  0x41e34c |               31d2 |  | xor     edx, edx; omitted
+  0x41e34e |             4531c0 |  | xor     r8d, r8d; dp
+  0x41e351 |           48890424 | strhs r8, [r4], #-0x948 | mov     [rsp+3B0h+p_r], rax; p_r
+  0x41e355 |         e8c60d0000 | andeq ip, sp, r8, ror #13 | call    network_prefix
+  0x41e35a |       8985c0feffff | cdp2 p5, #0xc, c8, c0, c9, #4 | mov     [rbp+rc_4], eax
+  0x41e360 |     83bdc0feffff00 | cdp2 p13, #0xc, c11, c0, c3, #4 | cmp     [rbp+rc_4], 0
+  0x41e367 |                    |  | jge     loc_41E372
+BB name:       0x41e36d
+BB preds:      ['0x41e308']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e36d |                    |  | jmp     invalid
+BB name:       0x41e372
+BB preds:      ['0x41e308']
+BB succs:      ['0x41e382', '0x41e392']
+BB disam_list: movzx eax, mem cmp eax, 1 jnz func
+BB hash:       6724f7fb199aaa13a2fbdb16324b2120
+  0x41e372 |     0fb685c9feffff | stmibgt r5, {r0, r1, r2, r3, sb, sl, ip, sp, pc} | movzx   eax, [rbp+ae]
+  0x41e379 |             83f801 |  | cmp     eax, 1
+  0x41e37c |                    |  | jnz     loc_41E392
+BB name:       0x41e382
+BB preds:      ['0x41e372']
+BB succs:      ['0x41e392']
+BB disam_list: movzx eax, mem add eax, 60h mov mem, al
+BB hash:       bf97563564a823cabd3ef084c5dbf23a
+  0x41e382 |     0fb685c7feffff | strgt fp, [r5, pc, lsl #12] | movzx   eax, [rbp+src_plen]
+  0x41e389 |             83c060 |  | add     eax, 60h ; '`'
+  0x41e38c |                    |  | mov     [rbp+src_plen], al
+BB name:       0x41e392
+BB preds:      ['0x41e372', '0x41e382']
+BB succs:      ['0x41e49b', '0x41e4ca']
+BB disam_list: mov eax, mem add eax, mem mov mem, eax mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem lea rsi, mem movzx edx, mem call format_prefix mov rdi, mem mov rcx, mem mov rdx, rax mov rsi, offset aSFrom mov al, 0 call rcx mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem lea rsi, mem movzx edx, mem call format_prefix mov mem, rax movzx eax, mem mov mem, eax movzx eax, mem mov mem, eax movzx edi, mem call format_interval_update mov rdi, mem mov rdx, mem mov ecx, mem mov r8d, mem mov r10, mem mov r9, rax mov rsi, offset func mov al, 0 call r10 mov eax, mem cmp eax, mem jnb func
+BB hash:       ca798f35eed2e72c62b2865b21a7b587
+  0x41e392 |       8b85c0feffff | cdp2 p5, #0xc, c8, c0, c11, #4 | mov     eax, [rbp+rc_4]
+  0x41e398 |       0385bcfeffff | cdp2 p5, #0xb, c8, c12, c3, #0 | add     eax, [rbp+parsed_len]
+  0x41e39e |       8985bcfeffff | cdp2 p5, #0xb, c8, c12, c9, #4 | mov     [rbp+parsed_len], eax
+  0x41e3a4 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e3a8 |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41e3af |     488985d0fcffff | addle r8, r5, r8, asr #18 | mov     [rbp+var_330], rax
+  0x41e3b6 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e3ba |     488985c8fcffff | stmgt r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_338], rax
+  0x41e3c1 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41e3c5 |     488db5e0feffff | adcs r8, r5, r8, asr #26 | lea     rsi, [rbp+prefix_2]; prefix
+  0x41e3cc |     0fb695c8feffff | ldmgt r5, {r0, r1, r2, r3, sb, sl, ip, sp, pc} | movzx   edx, [rbp+plen_2]; plen
+  0x41e3d3 |         e8e80f0000 | andeq lr, pc, r8, ror #17 | call    format_prefix
+  0x41e3d8 |     488bbdc8fcffff | popgt {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_338]
+  0x41e3df |     488b8dd0fcffff | addle r8, sp, r8, asr #22 | mov     rcx, [rbp+var_330]
+  0x41e3e6 |             4889c2 |  | mov     rdx, rax
+  0x41e3e9 | 48be91f74e0000000000 |  | mov     rsi, offset aSFrom; " %s from"
+  0x41e3f3 |               b000 |  | mov     al, 0
+  0x41e3f5 |               ffd1 |  | call    rcx
+  0x41e3f7 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e3fb |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41e402 |     488985f0fcffff |  | mov     [rbp+var_310], rax
+  0x41e409 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e40d |     488985d8fcffff | stmle r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_328], rax
+  0x41e414 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41e418 |     488db5d0feffff | adcsle r8, r5, r8, asr #26 | lea     rsi, [rbp+src_prefix]; prefix
+  0x41e41f |     0fb695c7feffff | ldrgt fp, [r5, pc, lsl #12] | movzx   edx, [rbp+src_plen]; plen
+  0x41e426 |         e8950f0000 | andeq sb, pc, r8, ror #11 | call    format_prefix
+  0x41e42b |     488985e0fcffff | add r8, r5, r8, asr #18 | mov     [rbp+var_320], rax
+  0x41e432 |     0fb785cafeffff | bgt #0xfe58c076 | movzx   eax, [rbp+metric_0]
+  0x41e439 |       8985e8fcffff | stc2l p5, c8, [r8], #0x224 | mov     [rbp+var_318], eax
+  0x41e43f |     0fb785ccfeffff | stcgt p7, c11, [r5], {0xf} | movzx   eax, [rbp+seqno_2]
+  0x41e446 |       8985ecfcffff | stc2l p5, c8, [ip], #0x224 | mov     [rbp+var_314], eax
+  0x41e44c |     0fb7bdcefeffff | cdpgt p7, #0xb, c11, c13, c15, #0 | movzx   edi, [rbp+interval_3]; i
+  0x41e453 |         e838100000 | andseq r3, r0, r8, ror #17 | call    format_interval_update
+  0x41e458 |     488bbdd8fcffff | pople {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_328]
+  0x41e45f |     488b95e0fcffff | adds r8, r5, r8, asr #22 | mov     rdx, [rbp+var_320]
+  0x41e466 |       8b8de8fcffff | stc2l p13, c8, [r8], #0x22c | mov     ecx, [rbp+var_318]
+  0x41e46c |     448b85ecfcffff | vstmia r5, {d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20, d21, d22, d23} | mov     r8d, [rbp+var_314]
+  0x41e473 |     4c8b95f0fcffff |  | mov     r10, [rbp+var_310]
+  0x41e47a |             4989c1 |  | mov     r9, rax
+  0x41e47d | 48bebdf64e0000000000 |  | mov     rsi, offset unk_4EF6BD
+  0x41e487 |               b000 |  | mov     al, 0
+  0x41e489 |             41ffd2 |  | call    r10
+  0x41e48c |       8b85bcfeffff | cdp2 p5, #0xb, c8, c12, c11, #4 | mov     eax, [rbp+parsed_len]
+  0x41e492 |             3b45a0 |  | cmp     eax, [rbp+len]
+  0x41e495 |                    |  | jnb     loc_41E4CA
+BB name:       0x41e49b
+BB preds:      ['0x41e392']
+BB succs:      ['0x41e4ca']
+BB disam_list: mov rdi, mem mov rsi, mem add rsi, 2 movsxd rax, mem add rsi, rax mov rdx, mem add rdx, 2 mov eax, mem add rdx, rax mov eax, mem movzx ecx, al call subtlvs_print
+BB hash:       e2eb0d4565cbe1a53e2cae3b2473cefc
+  0x41e49b |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41e49f |           488b75a8 | ldmdage r5!, {r3, r6, r8, sb, fp, pc} ^ | mov     rsi, [rbp+message]
+  0x41e4a3 |           4883c602 | sbceq r8, r6, #72, #6 | add     rsi, 2
+  0x41e4a7 |     486385bcfeffff | stclt p3, c6, [r5], {0x48} | movsxd  rax, [rbp+parsed_len]
+  0x41e4ae |             4801c6 |  | add     rsi, rax; cp
+  0x41e4b1 |           488b55a8 | ldmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rdx, [rbp+message]
+  0x41e4b5 |           4883c202 | sbceq r8, r2, #72, #6 | add     rdx, 2
+  0x41e4b9 |             8b45a0 |  | mov     eax, [rbp+len]
+  0x41e4bc |             4801c2 |  | add     rdx, rax; ep
+  0x41e4bf |             8b45a4 |  | mov     eax, [rbp+type]
+  0x41e4c2 |             0fb6c8 |  | movzx   ecx, al; tlv_type
+  0x41e4c5 |                    |  | call    subtlvs_print
+BB name:       0x41e4ca
+BB preds:      ['0x41e392', '0x41e49b']
+BB succs:      ['0x41e4cf']
+BB disam_list: jmp $+5
+BB hash:       3da5e501534789d1c32de9e74c64760a
+  0x41e4ca |                    |  | jmp     $+5
+BB name:       0x41e4cf
+BB preds:      ['0x41e162', '0x41e4ca']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41e4cf |                    |  | jmp     loc_41EA63
+BB name:       0x41e4d4
+BB preds:      ['0x41d288']
+BB succs:      ['0x41e4e2', '0x41e504']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41e4d4 |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 14
+  0x41e4d8 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41e4dc |                    |  | jnz     loc_41E504
+BB name:       0x41e4e2
+BB preds:      ['0x41e4d4']
+BB succs:      ['0x41e752']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aSsRequest mov al, 0 call rcx jmp func
+BB hash:       d6882af07bafb8edef06982d13d72ea0
+  0x41e4e2 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e4e6 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e4ed |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e4f1 | 48be9af74e0000000000 |  | mov     rsi, offset aSsRequest; " ss-request"
+  0x41e4fb |               b000 |  | mov     al, 0
+  0x41e4fd |               ffd1 |  | call    rcx
+  0x41e4ff |                    |  | jmp     loc_41E752
+BB name:       0x41e504
+BB preds:      ['0x41e4d4']
+BB succs:      ['0x41e535', '0x41e53a']
+BB disam_list: mov mem, 3 mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aSsRequest_0 mov al, 0 call rcx cmp mem, 3 jnb func
+BB hash:       114c6995ded82c76347b76c32a3e09df
+  0x41e504 | c785b4feffff03000000 | cdp2 p5, #0xb, c8, c4, c7, #6 | mov     [rbp+parsed_len_0], 3
+  0x41e50e |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e512 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e519 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e51d | 48bea6f74e0000000000 |  | mov     rsi, offset aSsRequest_0; "\n\tSS-Request "
+  0x41e527 |               b000 |  | mov     al, 0
+  0x41e529 |               ffd1 |  | call    rcx
+  0x41e52b |           837da003 | moveq r7, #0x20c0 | cmp     [rbp+len], 3
+  0x41e52f |                    |  | jnb     loc_41E53A
+BB name:       0x41e535
+BB preds:      ['0x41e504']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e535 |                    |  | jmp     invalid
+BB name:       0x41e53a
+BB preds:      ['0x41e504']
+BB succs:      ['0x41e5b4', '0x41e5b9']
+BB disam_list: mov rax, mem mov al, mem mov mem, al mov rax, mem mov al, mem mov mem, al mov rax, mem mov al, mem mov mem, al movzx edi, mem movzx esi, mem mov rcx, mem add rcx, 2 movsxd rax, mem add rcx, rax mov r9d, mem sub r9d, mem lea rax, mem xor edx, edx xor r8d, r8d mov mem, rax call network_prefix mov mem, eax cmp mem, 0 jge func
+BB hash:       854e401540836463d8d7e9fd27b0388c
+  0x41e53a |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e53e |             8a4002 |  | mov     al, [rax+2]
+  0x41e541 |       8885b3feffff | cdp2 p5, #0xb, c8, c3, c8, #4 | mov     [rbp+ae_0], al
+  0x41e547 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e54b |             8a4003 |  | mov     al, [rax+3]
+  0x41e54e |       8885b2feffff | cdp2 p5, #0xb, c8, c2, c8, #4 | mov     [rbp+plen_3], al
+  0x41e554 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e558 |             8a4004 |  | mov     al, [rax+4]
+  0x41e55b |       8885b1feffff | cdp2 p5, #0xb, c8, c1, c8, #4 | mov     [rbp+src_plen_0], al
+  0x41e561 |     0fb6bdb3feffff |  | movzx   edi, [rbp+ae_0]; ae
+  0x41e568 |     0fb6b5b2feffff | adcslt fp, r5, #0xf00000 | movzx   esi, [rbp+plen_3]; plen
+  0x41e56f |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41e573 |           4883c102 | sbceq r8, r1, #72, #6 | add     rcx, 2
+  0x41e577 |     486385b4feffff | strlt r6, [r5], #0x348 | movsxd  rax, [rbp+parsed_len_0]
+  0x41e57e |             4801c1 |  | add     rcx, rax; p
+  0x41e581 |           448b4da0 | subge r8, sp, r4, asr #22 | mov     r9d, [rbp+len]
+  0x41e585 |     442b8db4feffff | strlt r2, [sp], #0xb44 | sub     r9d, [rbp+parsed_len_0]; len
+  0x41e58c |     488d85a0feffff | addge r8, r5, r8, asr #26 | lea     rax, [rbp+prefix_3]
+  0x41e593 |               31d2 |  | xor     edx, edx; omitted
+  0x41e595 |             4531c0 |  | xor     r8d, r8d; dp
+  0x41e598 |           48890424 | strhs r8, [r4], #-0x948 | mov     [rsp+3B0h+p_r], rax; p_r
+  0x41e59c |         e87f0b0000 | andeq r7, fp, r8, ror #31 | call    network_prefix
+  0x41e5a1 |       8985b8feffff | cdp2 p5, #0xb, c8, c8, c9, #4 | mov     [rbp+rc_5], eax
+  0x41e5a7 |     83bdb8feffff00 | cdp2 p13, #0xb, c11, c8, c3, #4 | cmp     [rbp+rc_5], 0
+  0x41e5ae |                    |  | jge     loc_41E5B9
+BB name:       0x41e5b4
+BB preds:      ['0x41e53a']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e5b4 |                    |  | jmp     invalid
+BB name:       0x41e5b9
+BB preds:      ['0x41e53a']
+BB succs:      ['0x41e5c9', '0x41e5d9']
+BB disam_list: movzx eax, mem cmp eax, 1 jnz func
+BB hash:       6724f7fb199aaa13a2fbdb16324b2120
+  0x41e5b9 |     0fb685b3feffff | orrlt fp, r5, #0xf00000 | movzx   eax, [rbp+ae_0]
+  0x41e5c0 |             83f801 |  | cmp     eax, 1
+  0x41e5c3 |                    |  | jnz     loc_41E5D9
+BB name:       0x41e5c9
+BB preds:      ['0x41e5b9']
+BB succs:      ['0x41e5d9']
+BB disam_list: movzx eax, mem add eax, 60h mov mem, al
+BB hash:       bf97563564a823cabd3ef084c5dbf23a
+  0x41e5c9 |     0fb685b2feffff | addlt fp, r5, #0xf00000 | movzx   eax, [rbp+plen_3]
+  0x41e5d0 |             83c060 |  | add     eax, 60h ; '`'
+  0x41e5d3 |                    |  | mov     [rbp+plen_3], al
+BB name:       0x41e5d9
+BB preds:      ['0x41e5b9', '0x41e5c9']
+BB succs:      ['0x41e63e', '0x41e643']
+BB disam_list: mov eax, mem add eax, mem mov mem, eax movzx edi, mem movzx esi, mem mov rcx, mem add rcx, 2 movsxd rax, mem add rcx, rax mov r9d, mem sub r9d, mem lea rax, mem xor edx, edx xor r8d, r8d mov mem, rax call network_prefix mov mem, eax cmp mem, 0 jge func
+BB hash:       f84eaf6e8d83a96c8ea0acbd8a458ef2
+  0x41e5d9 |       8b85b8feffff | cdp2 p5, #0xb, c8, c8, c11, #4 | mov     eax, [rbp+rc_5]
+  0x41e5df |       0385b4feffff | cdp2 p5, #0xb, c8, c4, c3, #0 | add     eax, [rbp+parsed_len_0]
+  0x41e5e5 |       8985b4feffff | cdp2 p5, #0xb, c8, c4, c9, #4 | mov     [rbp+parsed_len_0], eax
+  0x41e5eb |     0fb6bdb3feffff |  | movzx   edi, [rbp+ae_0]; ae
+  0x41e5f2 |     0fb6b5b1feffff |  | movzx   esi, [rbp+src_plen_0]; plen
+  0x41e5f9 |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41e5fd |           4883c102 | sbceq r8, r1, #72, #6 | add     rcx, 2
+  0x41e601 |     486385b4feffff | strlt r6, [r5], #0x348 | movsxd  rax, [rbp+parsed_len_0]
+  0x41e608 |             4801c1 |  | add     rcx, rax; p
+  0x41e60b |           448b4da0 | subge r8, sp, r4, asr #22 | mov     r9d, [rbp+len]
+  0x41e60f |     442b8db4feffff | strlt r2, [sp], #0xb44 | sub     r9d, [rbp+parsed_len_0]; len
+  0x41e616 |     488d8590feffff | addls r8, r5, r8, asr #26 | lea     rax, [rbp+src_prefix_0]
+  0x41e61d |               31d2 |  | xor     edx, edx; omitted
+  0x41e61f |             4531c0 |  | xor     r8d, r8d; dp
+  0x41e622 |           48890424 | strhs r8, [r4], #-0x948 | mov     [rsp+3B0h+p_r], rax; p_r
+  0x41e626 |         e8f50a0000 | andeq pc, sl, r8, ror #11 | call    network_prefix
+  0x41e62b |       8985b8feffff | cdp2 p5, #0xb, c8, c8, c9, #4 | mov     [rbp+rc_5], eax
+  0x41e631 |     83bdb8feffff00 | cdp2 p13, #0xb, c11, c8, c3, #4 | cmp     [rbp+rc_5], 0
+  0x41e638 |                    |  | jge     loc_41E643
+BB name:       0x41e63e
+BB preds:      ['0x41e5d9']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e63e |                    |  | jmp     invalid
+BB name:       0x41e643
+BB preds:      ['0x41e5d9']
+BB succs:      ['0x41e653', '0x41e663']
+BB disam_list: movzx eax, mem cmp eax, 1 jnz func
+BB hash:       6724f7fb199aaa13a2fbdb16324b2120
+  0x41e643 |     0fb685b3feffff | orrlt fp, r5, #0xf00000 | movzx   eax, [rbp+ae_0]
+  0x41e64a |             83f801 |  | cmp     eax, 1
+  0x41e64d |                    |  | jnz     loc_41E663
+BB name:       0x41e653
+BB preds:      ['0x41e643']
+BB succs:      ['0x41e663']
+BB disam_list: movzx eax, mem add eax, 60h mov mem, al
+BB hash:       bf97563564a823cabd3ef084c5dbf23a
+  0x41e653 |     0fb685b1feffff | orrlt fp, r5, pc, lsl #12 | movzx   eax, [rbp+src_plen_0]
+  0x41e65a |             83c060 |  | add     eax, 60h ; '`'
+  0x41e65d |                    |  | mov     [rbp+src_plen_0], al
+BB name:       0x41e663
+BB preds:      ['0x41e643', '0x41e653']
+BB succs:      ['0x41e685', '0x41e6a7']
+BB disam_list: mov eax, mem add eax, mem mov mem, eax movzx eax, mem cmp eax, 0 jnz func
+BB hash:       803a48613bcdeedf29897b3d50866801
+  0x41e663 |       8b85b8feffff | cdp2 p5, #0xb, c8, c8, c11, #4 | mov     eax, [rbp+rc_5]
+  0x41e669 |       0385b4feffff | cdp2 p5, #0xb, c8, c4, c3, #0 | add     eax, [rbp+parsed_len_0]
+  0x41e66f |       8985b4feffff | cdp2 p5, #0xb, c8, c4, c9, #4 | mov     [rbp+parsed_len_0], eax
+  0x41e675 |     0fb685b3feffff | orrlt fp, r5, #0xf00000 | movzx   eax, [rbp+ae_0]
+  0x41e67c |             83f800 |  | cmp     eax, 0
+  0x41e67f |                    |  | jnz     loc_41E6A7
+BB name:       0x41e685
+BB preds:      ['0x41e663']
+BB succs:      ['0x41e74d']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aForAny mov al, 0 call rcx jmp func
+BB hash:       c685b65a5e6420e1ce5cdabe1ca43ec8
+  0x41e685 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e689 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e690 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e694 | 48beb4f74e0000000000 |  | mov     rsi, offset aForAny; "for any"
+  0x41e69e |               b000 |  | mov     al, 0
+  0x41e6a0 |               ffd1 |  | call    rcx
+  0x41e6a2 |                    |  | jmp     loc_41E74D
+BB name:       0x41e6a7
+BB preds:      ['0x41e663']
+BB succs:      ['0x41e74d']
+BB disam_list: mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem lea rsi, mem movzx edx, mem call format_prefix mov rdi, mem mov rcx, mem mov rdx, rax mov rsi, offset aForS_0 mov al, 0 call rcx mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem lea rsi, mem movzx edx, mem call format_prefix mov rdi, mem mov rcx, mem mov rdx, rax mov rsi, (offset aS_17+1) mov al, 0 call rcx
+BB hash:       3baf2fd0c57bfaf294515b50cc01a581
+  0x41e6a7 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e6ab |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41e6b2 |     488985b0fcffff | addlt r8, r5, r8, asr #18 | mov     [rbp+var_350], rax
+  0x41e6b9 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e6bd |     488985a8fcffff | stmge r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_358], rax
+  0x41e6c4 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41e6c8 |     488db5a0feffff | adcsge r8, r5, r8, asr #26 | lea     rsi, [rbp+prefix_3]; prefix
+  0x41e6cf |     0fb695b2feffff | addslt fp, r5, #0xf00000 | movzx   edx, [rbp+plen_3]; plen
+  0x41e6d6 |         e8e50c0000 | andeq lr, ip, r8, ror #11 | call    format_prefix
+  0x41e6db |     488bbda8fcffff | popge {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_358]
+  0x41e6e2 |     488b8db0fcffff | addlt r8, sp, r8, asr #22 | mov     rcx, [rbp+var_350]
+  0x41e6e9 |             4889c2 |  | mov     rdx, rax
+  0x41e6ec | 48bee6f74e0000000000 |  | mov     rsi, offset aForS_0; "for (%s, "
+  0x41e6f6 |               b000 |  | mov     al, 0
+  0x41e6f8 |               ffd1 |  | call    rcx
+  0x41e6fa |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e6fe |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41e705 |     488985c0fcffff | addgt r8, r5, r8, asr #18 | mov     [rbp+var_340], rax
+  0x41e70c |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e710 |     488985b8fcffff | stmlt r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_348], rax
+  0x41e717 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41e71b |     488db590feffff | adcsls r8, r5, r8, asr #26 | lea     rsi, [rbp+src_prefix_0]; prefix
+  0x41e722 |     0fb695b1feffff | orrslt fp, r5, pc, lsl #12 | movzx   edx, [rbp+src_plen_0]; plen
+  0x41e729 |         e8920c0000 | andeq sb, ip, r8, ror #5 | call    format_prefix
+  0x41e72e |     488bbdb8fcffff | poplt {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_348]
+  0x41e735 |     488b8dc0fcffff | addgt r8, sp, r8, asr #22 | mov     rcx, [rbp+var_340]
+  0x41e73c |             4889c2 |  | mov     rdx, rax
+  0x41e73f | 48be12f2500000000000 |  | mov     rsi, (offset aS_17+1); "%s)"
+  0x41e749 |               b000 |  | mov     al, 0
+  0x41e74b |                    |  | call    rcx
+BB name:       0x41e74d
+BB preds:      ['0x41e685', '0x41e6a7']
+BB succs:      ['0x41e752']
+BB disam_list: jmp $+5
+BB hash:       3da5e501534789d1c32de9e74c64760a
+  0x41e74d |                    |  | jmp     $+5
+BB name:       0x41e752
+BB preds:      ['0x41e4e2', '0x41e74d']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41e752 |                    |  | jmp     loc_41EA63
+BB name:       0x41e757
+BB preds:      ['0x41d288']
+BB succs:      ['0x41e765', '0x41e787']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41e757 |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 case 15
+  0x41e75b |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41e75f |                    |  | jnz     loc_41E787
+BB name:       0x41e765
+BB preds:      ['0x41e757']
+BB succs:      ['0x41ea09']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aSsMhRequest mov al, 0 call rcx jmp func
+BB hash:       91980d6d9aa28f543fd2aff45c4218ab
+  0x41e765 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e769 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e770 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e774 | 48bebcf74e0000000000 |  | mov     rsi, offset aSsMhRequest; " ss-mh-request"
+  0x41e77e |               b000 |  | mov     al, 0
+  0x41e780 |               ffd1 |  | call    rcx
+  0x41e782 |                    |  | jmp     loc_41EA09
+BB name:       0x41e787
+BB preds:      ['0x41e757']
+BB succs:      ['0x41e7c3', '0x41e7c8']
+BB disam_list: mov mem, 0Eh mov mem, 0 mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset aSsMhRequest_0 mov al, 0 call rcx cmp mem, 0Eh jnb func
+BB hash:       74d24c1c8f2efc8c28b9806ae2e63c49
+  0x41e787 | c78588feffff0e000000 | cdp2 p5, #8, c8, c8, c7, #6 | mov     [rbp+parsed_len_1], 0Eh
+  0x41e791 | 48c78550feffff00000000 | addpl ip, r5, r8, asr #14 | mov     [rbp+router_id], 0
+  0x41e79c |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e7a0 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41e7a7 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41e7ab | 48becbf74e0000000000 |  | mov     rsi, offset aSsMhRequest_0; "\n\tSS-MH-Request "
+  0x41e7b5 |               b000 |  | mov     al, 0
+  0x41e7b7 |               ffd1 |  | call    rcx
+  0x41e7b9 |           837da00e | cdpeq p13, #0xa, c7, c0, c3, #4 | cmp     [rbp+len], 0Eh
+  0x41e7bd |                    |  | jnb     loc_41E7C8
+BB name:       0x41e7c3
+BB preds:      ['0x41e787']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e7c3 |                    |  | jmp     invalid
+BB name:       0x41e7c8
+BB preds:      ['0x41e787']
+BB succs:      ['0x41e872', '0x41e877']
+BB disam_list: mov rax, mem mov al, mem mov mem, al mov rax, mem mov al, mem mov mem, al mov rdi, mem add rdi, 4 call EXTRACT_16BITS_6 mov mem, ax mov rax, mem mov al, mem mov mem, al mov rax, mem mov al, mem mov mem, al mov rax, mem add rax, 8 mov mem, rax movzx edi, mem movzx esi, mem mov rcx, mem add rcx, 2 movsxd rax, mem add rcx, rax mov r9d, mem sub r9d, mem lea rax, mem xor edx, edx xor r8d, r8d mov mem, rax call network_prefix mov mem, eax cmp mem, 0 jge func
+BB hash:       ab4b4d15760f8163f4e6845f0538f950
+  0x41e7c8 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e7cc |             8a4002 |  | mov     al, [rax+2]
+  0x41e7cf |       888585feffff | cdp2 p5, #8, c8, c5, c8, #4 | mov     [rbp+ae_1], al
+  0x41e7d5 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e7d9 |             8a4003 |  | mov     al, [rax+3]
+  0x41e7dc |       888584feffff | cdp2 p5, #8, c8, c4, c8, #4 | mov     [rbp+plen_4], al
+  0x41e7e2 |           488b7da8 | ldmdage sp!, {r3, r6, r8, sb, fp, pc} ^ | mov     rdi, [rbp+message]
+  0x41e7e6 |           4883c704 | strbeq r8, [r7], #0x348 | add     rdi, 4; p
+  0x41e7ea |         e8f1020000 | andeq pc, r2, r8, ror #3 | call    EXTRACT_16BITS_6
+  0x41e7ef |     66898586feffff | strhi r8, [r5], r6, ror #18 | mov     [rbp+seqno_3], ax
+  0x41e7f6 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e7fa |             8a4006 |  | mov     al, [rax+6]
+  0x41e7fd |       88855ffeffff | cdp2 p5, #5, c8, c15, c8, #4 | mov     [rbp+hopc], al
+  0x41e803 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e807 |             8a4007 |  | mov     al, [rax+7]
+  0x41e80a |       888583feffff | cdp2 p5, #8, c8, c3, c8, #4 | mov     [rbp+src_plen_1], al
+  0x41e810 |           488b45a8 | stmdage r5, {r3, r6, r8, sb, fp, pc} ^ | mov     rax, [rbp+message]
+  0x41e814 |           4883c008 | stmeq r0, {r3, r6, r8, sb, pc} ^ | add     rax, 8
+  0x41e818 |     48898550feffff | addpl r8, r5, r8, asr #18 | mov     [rbp+router_id], rax
+  0x41e81f |     0fb6bd85feffff | ldrhi fp, [sp, #0x60f]! | movzx   edi, [rbp+ae_1]; ae
+  0x41e826 |     0fb6b584feffff | ldrthi fp, [r5], #0x60f | movzx   esi, [rbp+plen_4]; plen
+  0x41e82d |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41e831 |           4883c102 | sbceq r8, r1, #72, #6 | add     rcx, 2
+  0x41e835 |     48638588feffff | stmhi r5, {r3, r6, r8, sb, sp, lr} | movsxd  rax, [rbp+parsed_len_1]
+  0x41e83c |             4801c1 |  | add     rcx, rax; p
+  0x41e83f |           448b4da0 | subge r8, sp, r4, asr #22 | mov     r9d, [rbp+len]
+  0x41e843 |     442b8d88feffff | stmhi sp, {r2, r6, r8, sb, fp, sp} | sub     r9d, [rbp+parsed_len_1]; len
+  0x41e84a |     488d8570feffff | addvc r8, r5, r8, asr #26 | lea     rax, [rbp+prefix_4]
+  0x41e851 |               31d2 |  | xor     edx, edx; omitted
+  0x41e853 |             4531c0 |  | xor     r8d, r8d; dp
+  0x41e856 |           48890424 | strhs r8, [r4], #-0x948 | mov     [rsp+3B0h+p_r], rax; p_r
+  0x41e85a |         e8c1080000 | andeq ip, r8, r8, ror #3 | call    network_prefix
+  0x41e85f |       89858cfeffff | cdp2 p5, #8, c8, c12, c9, #4 | mov     [rbp+rc_6], eax
+  0x41e865 |     83bd8cfeffff00 | cdp2 p13, #8, c11, c12, c3, #4 | cmp     [rbp+rc_6], 0
+  0x41e86c |                    |  | jge     loc_41E877
+BB name:       0x41e872
+BB preds:      ['0x41e7c8']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e872 |                    |  | jmp     invalid
+BB name:       0x41e877
+BB preds:      ['0x41e7c8']
+BB succs:      ['0x41e887', '0x41e897']
+BB disam_list: movzx eax, mem cmp eax, 1 jnz func
+BB hash:       6724f7fb199aaa13a2fbdb16324b2120
+  0x41e877 |     0fb68585feffff | strhi fp, [r5, #0x60f] | movzx   eax, [rbp+ae_1]
+  0x41e87e |             83f801 |  | cmp     eax, 1
+  0x41e881 |                    |  | jnz     loc_41E897
+BB name:       0x41e887
+BB preds:      ['0x41e877']
+BB succs:      ['0x41e897']
+BB disam_list: movzx eax, mem add eax, 60h mov mem, al
+BB hash:       bf97563564a823cabd3ef084c5dbf23a
+  0x41e887 |     0fb68584feffff | strhi fp, [r5], #0x60f | movzx   eax, [rbp+plen_4]
+  0x41e88e |             83c060 |  | add     eax, 60h ; '`'
+  0x41e891 |                    |  | mov     [rbp+plen_4], al
+BB name:       0x41e897
+BB preds:      ['0x41e877', '0x41e887']
+BB succs:      ['0x41e8fc', '0x41e901']
+BB disam_list: mov eax, mem add eax, mem mov mem, eax movzx edi, mem movzx esi, mem mov rcx, mem add rcx, 2 movsxd rax, mem add rcx, rax mov r9d, mem sub r9d, mem lea rax, mem xor edx, edx xor r8d, r8d mov mem, rax call network_prefix mov mem, eax cmp mem, 0 jge func
+BB hash:       f84eaf6e8d83a96c8ea0acbd8a458ef2
+  0x41e897 |       8b858cfeffff | cdp2 p5, #8, c8, c12, c11, #4 | mov     eax, [rbp+rc_6]
+  0x41e89d |       038588feffff | cdp2 p5, #8, c8, c8, c3, #0 | add     eax, [rbp+parsed_len_1]
+  0x41e8a3 |       898588feffff | cdp2 p5, #8, c8, c8, c9, #4 | mov     [rbp+parsed_len_1], eax
+  0x41e8a9 |     0fb6bd85feffff | ldrhi fp, [sp, #0x60f]! | movzx   edi, [rbp+ae_1]; ae
+  0x41e8b0 |     0fb6b583feffff |  | movzx   esi, [rbp+src_plen_1]; plen
+  0x41e8b7 |           488b4da8 | stmdage sp, {r3, r6, r8, sb, fp, pc} ^ | mov     rcx, [rbp+message]
+  0x41e8bb |           4883c102 | sbceq r8, r1, #72, #6 | add     rcx, 2
+  0x41e8bf |     48638588feffff | stmhi r5, {r3, r6, r8, sb, sp, lr} | movsxd  rax, [rbp+parsed_len_1]
+  0x41e8c6 |             4801c1 |  | add     rcx, rax; p
+  0x41e8c9 |           448b4da0 | subge r8, sp, r4, asr #22 | mov     r9d, [rbp+len]
+  0x41e8cd |     442b8d88feffff | stmhi sp, {r2, r6, r8, sb, fp, sp} | sub     r9d, [rbp+parsed_len_1]; len
+  0x41e8d4 |     488d8560feffff | addvs r8, r5, r8, asr #26 | lea     rax, [rbp+src_prefix_1]
+  0x41e8db |               31d2 |  | xor     edx, edx; omitted
+  0x41e8dd |             4531c0 |  | xor     r8d, r8d; dp
+  0x41e8e0 |           48890424 | strhs r8, [r4], #-0x948 | mov     [rsp+3B0h+p_r], rax; p_r
+  0x41e8e4 |         e837080000 | andeq r3, r8, r8, ror #15 | call    network_prefix
+  0x41e8e9 |       89858cfeffff | cdp2 p5, #8, c8, c12, c9, #4 | mov     [rbp+rc_6], eax
+  0x41e8ef |     83bd8cfeffff00 | cdp2 p13, #8, c11, c12, c3, #4 | cmp     [rbp+rc_6], 0
+  0x41e8f6 |                    |  | jge     loc_41E901
+BB name:       0x41e8fc
+BB preds:      ['0x41e897']
+BB succs:      ['0x41eaa5']
+BB disam_list: jmp invalid
+BB hash:       e10129915d41c2488a020f9faa23cfb3
+  0x41e8fc |                    |  | jmp     invalid
+BB name:       0x41e901
+BB preds:      ['0x41e897']
+BB succs:      ['0x41e911', '0x41e921']
+BB disam_list: movzx eax, mem cmp eax, 1 jnz func
+BB hash:       6724f7fb199aaa13a2fbdb16324b2120
+  0x41e901 |     0fb68585feffff | strhi fp, [r5, #0x60f] | movzx   eax, [rbp+ae_1]
+  0x41e908 |             83f801 |  | cmp     eax, 1
+  0x41e90b |                    |  | jnz     loc_41E921
+BB name:       0x41e911
+BB preds:      ['0x41e901']
+BB succs:      ['0x41e921']
+BB disam_list: movzx eax, mem add eax, 60h mov mem, al
+BB hash:       bf97563564a823cabd3ef084c5dbf23a
+  0x41e911 |     0fb68583feffff | orrhi fp, r5, #0xf00000 | movzx   eax, [rbp+src_plen_1]
+  0x41e918 |             83c060 |  | add     eax, 60h ; '`'
+  0x41e91b |                    |  | mov     [rbp+src_plen_1], al
+BB name:       0x41e921
+BB preds:      ['0x41e901', '0x41e911']
+BB succs:      ['0x41ea09']
+BB disam_list: mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax movzx eax, mem mov mem, eax mov rdi, mem lea rsi, mem movzx edx, mem call format_prefix mov rdi, mem mov edx, mem mov r8, mem mov rcx, rax mov rsi, offset func mov al, 0 call r8 mov rax, mem mov rax, mem mov mem, rax mov rax, mem mov mem, rax mov rdi, mem lea rsi, mem movzx edx, mem call format_prefix mov mem, rax movzx eax, mem mov mem, eax mov rdi, mem call format_id mov rdi, mem mov rdx, mem mov ecx, mem mov r9, mem mov r8, rax mov rsi, offset aSSeqnoUIdS mov al, 0 call r9
+BB hash:       fe5d99a630c48b08b9af9de088a42cd3
+  0x41e921 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e925 |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41e92c |     48898580fcffff | addhi r8, r5, r8, asr #18 | mov     [rbp+var_380], rax
+  0x41e933 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e937 |     48898570fcffff | addvc r8, r5, r8, asr #18 | mov     [rbp+var_390], rax
+  0x41e93e |     0fb6855ffeffff | svcpl #0x85b60f | movzx   eax, [rbp+hopc]
+  0x41e945 |       89857cfcffff | ldc2l p5, c8, [ip], #-0x224 | mov     [rbp+var_384], eax
+  0x41e94b |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41e94f |     488db570feffff | adcsvc r8, r5, r8, asr #26 | lea     rsi, [rbp+prefix_4]; prefix
+  0x41e956 |     0fb69584feffff | ldrhi fp, [r5], #0x60f | movzx   edx, [rbp+plen_4]; plen
+  0x41e95d |         e85e0a0000 | andeq r5, sl, r8, ror #29 | call    format_prefix
+  0x41e962 |     488bbd70fcffff | adcsvc r8, sp, r8, asr #22 | mov     rdi, [rbp+var_390]
+  0x41e969 |       8b957cfcffff | ldc2l p5, c9, [ip], #-0x22c | mov     edx, [rbp+var_384]
+  0x41e96f |     4c8b8580fcffff | addhi r8, r5, ip, asr #22 | mov     r8, [rbp+var_380]
+  0x41e976 |             4889c1 |  | mov     rcx, rax
+  0x41e979 | 48bedcf74e0000000000 |  | mov     rsi, offset unk_4EF7DC
+  0x41e983 |               b000 |  | mov     al, 0
+  0x41e985 |             41ffd0 |  | call    r8
+  0x41e988 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e98c |     488b8098000000 | stmls r0, {r3, r6, r8, sb, fp, pc} | mov     rax, [rax+98h]
+  0x41e993 |     488985a0fcffff | addge r8, r5, r8, asr #18 | mov     [rbp+var_360], rax
+  0x41e99a |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41e99e |     48898588fcffff | stmhi r5, {r3, r6, r8, fp, pc} | mov     [rbp+var_378], rax
+  0x41e9a5 |           488b7df0 |  | mov     rdi, [rbp+ndo]; ndo
+  0x41e9a9 |     488db560feffff | adcsvs r8, r5, r8, asr #26 | lea     rsi, [rbp+src_prefix_1]; prefix
+  0x41e9b0 |     0fb69583feffff | orrshi fp, r5, #0xf00000 | movzx   edx, [rbp+src_plen_1]; plen
+  0x41e9b7 |         e8040a0000 | andeq r0, sl, r8, ror #9 | call    format_prefix
+  0x41e9bc |     48898590fcffff | addls r8, r5, r8, asr #18 | mov     [rbp+var_370], rax
+  0x41e9c3 |     0fb78586feffff | strhi fp, [r5], pc, lsl #14 | movzx   eax, [rbp+seqno_3]
+  0x41e9ca |       89859cfcffff | ldc2 p5, c8, [ip], {0x89} | mov     [rbp+var_364], eax
+  0x41e9d0 |     488bbd50feffff | adcspl r8, sp, r8, asr #22 | mov     rdi, [rbp+router_id]; id
+  0x41e9d7 |         e894060000 | andeq sb, r6, r8, ror #9 | call    format_id
+  0x41e9dc |     488bbd88fcffff | pophi {r3, r6, r8, sb, fp, pc} | mov     rdi, [rbp+var_378]
+  0x41e9e3 |     488b9590fcffff | addsls r8, r5, r8, asr #22 | mov     rdx, [rbp+var_370]
+  0x41e9ea |       8b8d9cfcffff | ldc2 p13, c8, [ip], {0x8b} | mov     ecx, [rbp+var_364]
+  0x41e9f0 |     4c8b8da0fcffff | addge r8, sp, ip, asr #22 | mov     r9, [rbp+var_360]
+  0x41e9f7 |             4989c0 |  | mov     r8, rax
+  0x41e9fa | 48bef0f74e0000000000 |  | mov     rsi, offset aSSeqnoUIdS; "%s) seqno %u id %s"
+  0x41ea04 |               b000 |  | mov     al, 0
+  0x41ea06 |                    |  | call    r9
+BB name:       0x41ea09
+BB preds:      ['0x41e765', '0x41e921']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41ea09 |                    |  | jmp     loc_41EA63
+BB name:       0x41ea0e
+BB preds:      ['0x41d270']
+BB succs:      ['0x41ea1c', '0x41ea3e']
+BB disam_list: mov rax, mem cmp mem, 0 jnz func
+BB hash:       3830868e9455a7bed64d235bc0a48716
+  0x41ea0e |           488b45f0 |  | mov     rax, [rbp+ndo]; jumptable 000000000041D297 default case
+  0x41ea12 |           83782800 | eoreq r7, r8, r3, lsl #17 | cmp     dword ptr [rax+28h], 0
+  0x41ea16 |                    |  | jnz     loc_41EA3E
+BB name:       0x41ea1c
+BB preds:      ['0x41ea0e']
+BB succs:      ['0x41ea5e']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, offset func mov al, 0 call rcx jmp func
+BB hash:       5bd7d86c1d2edf99d4a1dbe58f07a8e3
+  0x41ea1c |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41ea20 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41ea27 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41ea2b | 48bea3bb4f0000000000 | bllt #0xfed0e353 | mov     rsi, offset unk_4FBBA3
+  0x41ea35 |               b000 |  | mov     al, 0
+  0x41ea37 |               ffd1 |  | call    rcx
+  0x41ea39 |                    |  | jmp     loc_41EA5E
+BB name:       0x41ea3e
+BB preds:      ['0x41ea0e']
+BB succs:      ['0x41ea5e']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov edx, mem mov rsi, offset aUnknownMessage mov al, 0 call rcx
+BB hash:       f80dbbdbb802182795372c14d9a41525
+  0x41ea3e |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41ea42 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41ea49 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41ea4d |             8b55a4 |  | mov     edx, [rbp+type]
+  0x41ea50 | 48be03f84e0000000000 |  | mov     rsi, offset aUnknownMessage; "\n\tUnknown message type %d"
+  0x41ea5a |               b000 |  | mov     al, 0
+  0x41ea5c |                    |  | call    rcx
+BB name:       0x41ea5e
+BB preds:      ['0x41ea1c', '0x41ea3e']
+BB succs:      ['0x41ea63']
+BB disam_list: jmp $+5
+BB hash:       3da5e501534789d1c32de9e74c64760a
+  0x41ea5e |                    |  | jmp     $+5
+BB name:       0x41ea63
+BB preds:      ['0x41d2ec', '0x41d3c5', '0x41d458', '0x41d565', '0x41d61a', '0x41d6ff', '0x41d7a9', '0x41d890', '0x41dc9d', '0x41ddf5', '0x41df73', '0x41e037', '0x41e14f', '0x41e4cf', '0x41e752', '0x41ea09', '0x41ea5e']
+BB succs:      ['0x41d0a0']
+BB disam_list: mov eax, mem add eax, 2 add eax, mem mov mem, eax jmp func
+BB hash:       5ab08f3784d9f3abbf62c2220e21587e
+  0x41ea63 |             8b45a0 |  | mov     eax, [rbp+len]
+  0x41ea66 |             83c002 |  | add     eax, 2
+  0x41ea69 |             0345e0 |  | add     eax, [rbp+i]
+  0x41ea6c |             8945e0 |  | mov     [rbp+i], eax
+  0x41ea6f |                    |  | jmp     loc_41D0A0
+BB name:       0x41ea74
+BB preds:      ['0x41d0a0']
+BB succs:      ['0x41eacc']
+BB disam_list: jmp func
+BB hash:       6c64eaafdcb2d6ebd96fc3dc6cab1911
+  0x41ea74 |                    |  | jmp     loc_41EACC
+BB name:       0x41ea79
+BB preds:      ['0x41d03e', '0x41d100', '0x41d19a', '0x41d23b']
+BB succs:      ['0x41eacc']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, 4ED752h mov rdx, offset tstr_5 mov al, 0 call rcx jmp func
+BB hash:       751e59d79eb7c73bcc541f56139a783a
+  0x41ea79 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41ea7d |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41ea84 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41ea88 | 48be52d74e0000000000 | ldrble fp, [r2, -r8, asr #28] | mov     rsi, 4ED752h
+  0x41ea92 | 48ba58f54e0000000000 |  | mov     rdx, offset tstr_5; "[|babel]"
+  0x41ea9c |               b000 |  | mov     al, 0
+  0x41ea9e |               ffd1 |  | call    rcx
+  0x41eaa0 |                    |  | jmp     loc_41EACC
+BB name:       0x41eaa5
+BB preds:      ['0x41d04d', '0x41d094', '0x41d1c0', '0x41d26b', '0x41d348', '0x41d421', '0x41d4b4', '0x41d5c1', '0x41d75b', '0x41d805', '0x41d83f', '0x41d9ab', '0x41da85', '0x41dcf9', '0x41dd6b', '0x41de51', '0x41deb2', '0x41dfcf', '0x41e093', '0x41e1b5', '0x41e2e3', '0x41e36d', '0x41e535', '0x41e5b4', '0x41e63e', '0x41e7c3', '0x41e872', '0x41e8fc']
+BB succs:      ['0x41eacc']
+BB disam_list: mov rax, mem mov rcx, mem mov rdi, mem mov rsi, (offset aS_32+3) mov rdx, offset istr mov al, 0 call rcx
+BB hash:       4dda57e91932efa00e6ffbc879f09187
+  0x41eaa5 |           488b45f0 |  | mov     rax, [rbp+ndo]
+  0x41eaa9 |     488b8898000000 | stmls r8, {r3, r6, r8, sb, fp, pc} | mov     rcx, [rax+98h]
+  0x41eab0 |           488b7df0 |  | mov     rdi, [rbp+ndo]
+  0x41eab4 | 48bea3ea500000000000 | b #0xfed0e3dc | mov     rsi, (offset aS_32+3); "%s"
+  0x41eabe | 48bad057520000000000 | ldrbpl fp, [r0, r8, asr #20] | mov     rdx, offset istr; " (invalid)"
+  0x41eac8 |               b000 |  | mov     al, 0
+  0x41eaca |                    |  | call    rcx
+BB name:       0x41eacc
+BB preds:      ['0x41ea74', '0x41ea79', '0x41eaa5']
+BB succs:      []
+BB disam_list: add rsp, 3A8h pop rbx pop rbp retn
+BB hash:       5f7e9c2cb13b30ce32cac0543fe5a745
+  0x41eacc |     4881c4a8030000 | stmge r4, {r3, r6, r8, pc} ^ | add     rsp, 3A8h
+  0x41ead3 |                 5b |  | pop     rbx
+  0x41ead4 |                 5d |  | pop     rbp
+  0x41ead5 |                    |  | retn
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\user\workspace\IDA\procs\pc64.dll...
