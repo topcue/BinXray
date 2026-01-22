@@ -842,17 +842,20 @@ def match_decision(target_func, sig):
     same_p = isEmpty(diff_p_to_t)
 
     if same_v and same_p:
-        return "N VT/PT no diff",[]
+        return "N VT/PT no diff", []
     elif same_p:
-        return "P",[]
+        return "P", []
     elif same_v:
-        return "V",[]
+        return "V", []
 
     print()
     print("[*] handle")
 
     s_v = find_surruding(diff[0], vul_func)
     s_p = find_surruding(diff[1], patch_func)
+
+    print(f"s_v: {s_v}")
+    print(f"s_p: {s_p}")
 
     matched_bb_list_v_t = []
     if s_v:
@@ -896,6 +899,8 @@ def match_decision(target_func, sig):
         cbb1 = set(diff_v_to_t[1])
         bbb1 = set(matched_bb_list_v_t).union(cbb1)
     print("get T3")
+
+    # print(f"matched_bb_list_v_t: {matched_bb_list_v_t}") # matched_bb_list_v_t = []
 
     if matched_bb_list_v_t:
         tar_pt = build_trace_graph_v2(diff_p_to_t[1] , matched_bb_list_v_t, target_func) #T5
@@ -1058,10 +1063,12 @@ def controler(n_v):
             f_count += f[1]
         idx += 1
 
+        print("=" * 100)
         print("[RESULT]")
         for item in my_result_list:
             file_name, decision = item.split(':')
-            print(f"[*] {file_name} : {decision}")
+            print(f"[*] {file_name.ljust(41)} : {decision}")
+        print("=" * 100)
 
     print("cost:",cost)
     print("func_count:",func_count)
@@ -1303,8 +1310,8 @@ def unit_test(out, n_v):
     r = controler(n_v)
     for rr in r:
         print(f"[*] rr: {rr}")
-        for item in rr:
-            print(item)
+        # for item in rr:
+        #     print(item)
 
     with open(out, 'w', encoding='utf-8', newline='') as f:
         json.dump(r, f)
@@ -1436,8 +1443,6 @@ def main():
     print(f"[DEBUG] invoke unit_test({OUTPUT_PATH}, {num_vers})")
     unit_test(OUTPUT_PATH, num_vers)
     print(f"[DEBUG] unit_test() done..")
-
-    # return
 
     with open(OUTPUT_PATH,'r', encoding='utf-8', errors='ignore')as f:
         res = json.load(f)
