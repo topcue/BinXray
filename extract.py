@@ -53,12 +53,15 @@ def _get_input_basename():
 
 
 def dump_function_details(func_ea, name=None):
+    print(f"  [DEBUG] dump_function_details({func_ea})")
     # NOTE: original code hard-coded ARM mode.
     md = Cs(CS_ARCH_ARM, CS_MODE_ARM)
 
     func_name = name if name else idc.get_func_name(func_ea)
     if not func_name:
         func_name = f"sub_{func_ea:X}"
+
+    print(f"  [DEBUG] func_name: {func_name}")
 
     bFunc = BFunc(func_ea)
     bFunc.name = func_name
@@ -67,6 +70,8 @@ def dump_function_details(func_ea, name=None):
     if not f:
         # Not a function in IDA database
         return None
+
+    print(f"  [DEBUG] {func_name} in ida_funcs")
 
     # flags=idaapi.FC_PREDS keeps predecessor info similar to original
     for bb in ida_gdl.FlowChart(f, flags=idaapi.FC_PREDS):
@@ -135,18 +140,24 @@ def dump_function_details(func_ea, name=None):
     return bFunc
 
 
-def dump_one_function(func_name):
-    for seg_ea in idautils.Segments():
-        if ida_segment.get_segm_name(ida_segment.getseg(seg_ea)) == ".text":
-            for func_ea in idautils.Functions(seg_ea):
-                name = idc.get_func_name(func_ea)
-                if name == func_name:
-                    dump_function_details(func_ea)
-                    return
+# def dump_one_function(func_name):
+#     for seg_ea in idautils.Segments():
+#         if ida_segment.get_segm_name(ida_segment.getseg(seg_ea)) == ".text":
+#             for func_ea in idautils.Functions(seg_ea):
+#                 name = idc.get_func_name(func_ea)
+#                 if name == func_name:
+#                     dump_function_details(func_ea)
+#                     return
 
 
 def dump_functions(dbg):  # dbg = {name: addr}
     func_list = get_list()
+
+    print()
+    print(f"[DEBUG] func_list from {CSV_PATH}")
+    for func in func_list:
+        print(f"[DEBUG] func: {func}")
+    print()
 
     if dbg:
         # Preserve original behavior: process the first match and return
@@ -158,9 +169,11 @@ def dump_functions(dbg):  # dbg = {name: addr}
 
     for seg_ea in idautils.Segments():
         if ida_segment.get_segm_name(ida_segment.getseg(seg_ea)) == ".text":
+            print(f"[DEBUG] Segment name: .text")
             for func_ea in idautils.Functions(seg_ea):
                 name = idc.get_func_name(func_ea)
                 if name in func_list:
+                    print(f"[DEBUG] func_name from ida: {name}")
                     dump_function_details(func_ea)
 
 
