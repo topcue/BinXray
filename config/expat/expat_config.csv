@@ -1,0 +1,2 @@
+CVE-2012-6702,2.1.1-2,2.1.1-3,generate_hash_secret_salt
+CVE-2017-9233,2.2.0-2,2.2.1-1,entityValueInitProcessor
