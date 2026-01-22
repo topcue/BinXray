@@ -4,9 +4,7 @@ import networkx as nx
 import editdistance
 import csv
 from math import *
-import re
 import os
-import matplotlib.pyplot as plt
 import json
 import time
 
@@ -18,9 +16,8 @@ from my_config import (
 )
 
 #! Test expat
-# PICKLE_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/pkl"
-CONFIG_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_config.csv"
-VERSION_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_version.csv"
+# CONFIG_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_config.csv"
+# VERSION_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/expat/expat_version.csv"
 BIN_NAME = ""
 
 #! Test d_link -> failed due to BIN_NAME
@@ -28,6 +25,8 @@ BIN_NAME = ""
 # CONFIG_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/d_link_config.csv"
 # VERSION_CSV_PATH = "/home/user/win_workspace/storage/binxray/dataset_sample/d_link/d_link_version.csv"
 # BIN_NAME = "openssl"
+
+#! Test ffmpeg
 
 
 CMP_REGS_X64 = ["rax", "eax", "ax", "al", "rbx", "ebx", "bx", "bl", "rcx", "ecx", "cx", "cl",

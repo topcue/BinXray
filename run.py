@@ -20,6 +20,8 @@ IDB_PATH_WIN = wsl_to_win_path(IDB_PATH)
 
 
 def main():
+    DEBUG = True
+
     INPUT_DIR = os.path.join(BASE_PATH, DATASET_NAME, PROJECT_NAME, "bin")
 
     print(f"[*] IDA_SCRIPT_PATH: {IDA_SCRIPT_PATH}")
@@ -40,7 +42,7 @@ def main():
         if (".i64" not in f) and ("idb" not in f):
             file_list.append(f)
 
-    
+
 
     file_list = file_list
 
@@ -52,12 +54,12 @@ def main():
         LOG_FILE = os.path.join(LOG_PATH, f"{file_name}.log")
         LOG_FILE_WIN = wsl_to_win_path(LOG_FILE)
 
-        print(f"[*] TARGET_PATH:     {TARGET_PATH}")
-        print(f"[*] TARGET_PATH_WIN: {TARGET_PATH_WIN}")
-        print(f"[*] LOG_FILE:        {LOG_FILE}")
-        print(f"[*] LOG_FILE_WIN:    {LOG_FILE_WIN}")
-
-        print()
+        if DEBUG:
+            print(f"[*] TARGET_PATH:     {TARGET_PATH}")
+            print(f"[*] TARGET_PATH_WIN: {TARGET_PATH_WIN}")
+            print(f"[*] LOG_FILE:        {LOG_FILE}")
+            print(f"[*] LOG_FILE_WIN:    {LOG_FILE_WIN}")
+            print()
 
         cmd = [
             IDA_PATH,
