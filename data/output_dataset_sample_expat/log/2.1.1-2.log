@@ -102,9 +102,17 @@ You may start to explore the input file right now.
 [IDAPY] 12 C:\Users\user\AppData\Roaming\Hex-Rays\IDA Pro\python\3
 [IDAPY] 13 C:/Users/user/workspace/IDA/loaders
 [IDAPY] 14 /home/user/BinXray
+[DEBUG] invoke idaapi.auto_wait()
 Propagating type information...
 Function argument information has been propagated
 The initial autoanalysis has been finished.
+[DEBUG] complete idaapi.auto_wait()
+
+[DEBUG] func_list from C:/Users/user/workspace/storage/binxray\dataset_sample\expat\expat_funcs.csv
+[DEBUG] func: generate_hash_secret_salt
+[DEBUG] func: entityValueInitProcessor
+
+[DEBUG] Segment name: .text
 BB name:       0x3d96
 BB preds:      []
 BB succs:      []

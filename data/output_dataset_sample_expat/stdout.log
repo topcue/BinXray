@@ -52,9 +52,9 @@ decision: V
 [DEBUG] input_path: /home/user/win_workspace/storage/binxray/output_dataset_sample_expat/pkl/2.2.1-1_entityValueInitProcessor.pkl
 success: entityValueInitProcessor
 decision: P
-cost: 0.0013148784637451172
+cost: 0.0019953250885009766
 func_count: 8
-one func time: 0.00016435980796813965
+one func time: 0.00024941563606262207
 cbb: 6
 bbb: 6
 b_count: 1
