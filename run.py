@@ -19,6 +19,47 @@ from my_config import (
 IDB_PATH_WIN = wsl_to_win_path(IDB_PATH)
 
 
+def collect_targets(input_dir: str, idb_dir: str):
+    """
+    Collect target binaries from input_dir.
+    Skip binaries that already have IDA results (.idb or .i64) in idb_dir.
+    """
+
+    # Collect already-processed binary names (stems)
+    done = set()
+    for name in os.listdir(idb_dir):
+        lname = name.lower()
+        if lname.endswith(".i64") or lname.endswith(".idb"):
+            stem, _ = os.path.splitext(name)
+            done.add(stem)
+
+    # Collect input binaries
+    all_inputs = []
+    for name in os.listdir(input_dir):
+        lname = name.lower()
+        # Exclude IDA database files if they exist in input_dir
+        if lname.endswith(".i64") or lname.endswith(".idb"):
+            continue
+        all_inputs.append(name)
+
+    # Filter targets that are not yet processed
+    targets = []
+    for name in sorted(all_inputs):
+        if name in done:
+            continue
+        targets.append(name)
+
+    # Print summary information
+    print(
+        "[*] Target collection summary\n"
+        f"    - Input binaries      : {len(all_inputs)}\n"
+        f"    - Already processed   : {len(done)}\n"
+        f"    - Targets to process  : {len(targets)}"
+    )
+
+    return targets
+
+
 def main():
     DEBUG = True
 
@@ -36,15 +77,14 @@ def main():
     os.makedirs(PICKLE_PATH, exist_ok=True)
     os.makedirs(IDB_PATH, exist_ok=True)
 
-    all_file_list = os.listdir(INPUT_DIR)
-    file_list = []
-    for f in all_file_list:
-        if (".i64" not in f) and ("idb" not in f):
-            file_list.append(f)
+    if DEBUG:
+        print(f"[DEBUG] INPUT_DIR: {INPUT_DIR}")
+        print(f"[DEBUG] IDB_PATH:  {IDB_PATH}")
 
-
-
-    file_list = file_list
+    file_list = collect_targets(INPUT_DIR, IDB_PATH)
+    if DEBUG:
+        for f in file_list:
+            print(f"[DEBUG] target file: {f}")
 
     jobs = []
     for item in file_list:
@@ -56,10 +96,10 @@ def main():
 
         if DEBUG:
             print(f"[*] TARGET_PATH:     {TARGET_PATH}")
-            print(f"[*] TARGET_PATH_WIN: {TARGET_PATH_WIN}")
-            print(f"[*] LOG_FILE:        {LOG_FILE}")
-            print(f"[*] LOG_FILE_WIN:    {LOG_FILE_WIN}")
-            print()
+            # print(f"[*] TARGET_PATH_WIN: {TARGET_PATH_WIN}")
+            # print(f"[*] LOG_FILE:        {LOG_FILE}")
+            # print(f"[*] LOG_FILE_WIN:    {LOG_FILE_WIN}")
+            # print()
 
         cmd = [
             IDA_PATH,
